@@ -1,0 +1,2069 @@
+        {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5fa7fe3b63075859184e205e",
+                "name": "Thoughts",
+                "shortLink": "srMPINCH"
+            },
+            "card": {
+                "id": "5fa7fe8a1d0e6d611f5e6050",
+                "idShort": 1,
+                "name": "Daychanger - App for getting out of comfort zone or stay inside current free time activities.",
+                "shortLink": "ApcUCokj"
+            },
+            "list": {
+                "id": "5fa7fe50d966ea2d062c91df",
+                "name": "Project thoughts"
+            }
+        },
+        "date": "2020-11-08T14:19:54.069Z",
+        "id": "5fa7fe8a1d0e6d611f5e6051",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "createCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5fa7fe3b63075859184e205e",
+                "name": "Thoughts",
+                "shortLink": "srMPINCH"
+            },
+            "list": {
+                "id": "5fa7fe50d966ea2d062c91df",
+                "name": "Project thoughts"
+            }
+        },
+        "date": "2020-11-08T14:18:56.509Z",
+        "id": "5fa7fe50d966ea2d062c91e1",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "createList"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5fa7fe3b63075859184e205e",
+                "name": "Thoughts",
+                "shortLink": "srMPINCH"
+            }
+        },
+        "date": "2020-11-08T14:18:35.377Z",
+        "id": "5fa7fe3b63075859184e2060",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "createBoard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5e9d77ee577ddc8b18ad335d",
+                "name": "esp32",
+                "shortLink": "gN7aqqz2"
+            },
+            "card": {
+                "id": "5f6f5e7aae2b2821e746f74c",
+                "idShort": 35,
+                "name": "report 25.10",
+                "shortLink": "VR88onSG"
+            },
+            "list": {
+                "id": "5ea36c127fb2b46bddf5ec18",
+                "name": "report"
+            }
+        },
+        "date": "2020-09-26T15:30:02.502Z",
+        "id": "5f6f5e7aae2b2821e746f74d",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "createCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5e9d77ee577ddc8b18ad335d",
+                "name": "esp32",
+                "shortLink": "gN7aqqz2"
+            },
+            "card": {
+                "id": "5e9dcc2523be003756bd66c2",
+                "idList": "5f6f5e07dabb4a54c8096879",
+                "idShort": 8,
+                "name": "https://github.com/espressif/esp-iot-solution#components",
+                "shortLink": "D5NsH3jn"
+            },
+            "listAfter": {
+                "id": "5f6f5e07dabb4a54c8096879",
+                "name": "Dokoncene"
+            },
+            "listBefore": {
+                "id": "5e9d786d91e16f8acace04c6",
+                "name": "linky"
+            },
+            "old": {
+                "idList": "5e9d786d91e16f8acace04c6"
+            }
+        },
+        "date": "2020-09-26T15:29:04.022Z",
+        "id": "5f6f5e40a6705a50e56293d9",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5e9d77ee577ddc8b18ad335d",
+                "name": "esp32",
+                "shortLink": "gN7aqqz2"
+            },
+            "card": {
+                "id": "5e9d787d66aa8b60b04f6846",
+                "idShort": 2,
+                "name": "https://github.com/espressif/esp-iot-solution#solutions",
+                "pos": 131071,
+                "shortLink": "eBDbZDiL"
+            },
+            "list": {
+                "id": "5f6f5e07dabb4a54c8096879",
+                "name": "Dokoncene"
+            },
+            "old": {
+                "pos": 65535
+            }
+        },
+        "date": "2020-09-26T15:28:24.381Z",
+        "id": "5f6f5e1843badb64d7251aa5",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5e9d77ee577ddc8b18ad335d",
+                "name": "esp32",
+                "shortLink": "gN7aqqz2"
+            },
+            "card": {
+                "id": "5e9d787d66aa8b60b04f6846",
+                "idList": "5f6f5e07dabb4a54c8096879",
+                "idShort": 2,
+                "name": "https://github.com/espressif/esp-iot-solution#solutions",
+                "shortLink": "eBDbZDiL"
+            },
+            "listAfter": {
+                "id": "5f6f5e07dabb4a54c8096879",
+                "name": "Dokoncene"
+            },
+            "listBefore": {
+                "id": "5e9d786d91e16f8acace04c6",
+                "name": "linky"
+            },
+            "old": {
+                "idList": "5e9d786d91e16f8acace04c6"
+            }
+        },
+        "date": "2020-09-26T15:28:24.358Z",
+        "id": "5f6f5e1843badb64d7251aa3",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5e9d77ee577ddc8b18ad335d",
+                "name": "esp32",
+                "shortLink": "gN7aqqz2"
+            },
+            "card": {
+                "id": "5e9dd44e8122483bbaf0c220",
+                "idList": "5f6f5e07dabb4a54c8096879",
+                "idShort": 15,
+                "name": "Vytvorit GUI, bez implementace ESP",
+                "shortLink": "w2ASGfMY"
+            },
+            "listAfter": {
+                "id": "5f6f5e07dabb4a54c8096879",
+                "name": "Dokoncene"
+            },
+            "listBefore": {
+                "id": "5e9d77ee577ddc8b18ad335e",
+                "name": "Ud\u011blat"
+            },
+            "old": {
+                "idList": "5e9d77ee577ddc8b18ad335e"
+            }
+        },
+        "date": "2020-09-26T15:28:16.965Z",
+        "id": "5f6f5e1016f0182cfbbbdc70",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5e9d77ee577ddc8b18ad335d",
+                "name": "esp32",
+                "shortLink": "gN7aqqz2"
+            },
+            "list": {
+                "id": "5f6f5e07dabb4a54c8096879",
+                "name": "Dokoncene",
+                "pos": 20480
+            },
+            "old": {
+                "pos": 393216
+            }
+        },
+        "date": "2020-09-26T15:28:10.648Z",
+        "id": "5f6f5e0a14c4ef549117a7a1",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateList"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5e9d77ee577ddc8b18ad335d",
+                "name": "esp32",
+                "shortLink": "gN7aqqz2"
+            },
+            "list": {
+                "id": "5f6f5e07dabb4a54c8096879",
+                "name": "Dokoncene"
+            }
+        },
+        "date": "2020-09-26T15:28:07.263Z",
+        "id": "5f6f5e07dabb4a54c809687b",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "createList"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5e9d77ee577ddc8b18ad335d",
+                "name": "esp32",
+                "shortLink": "gN7aqqz2"
+            },
+            "card": {
+                "id": "5e9dd357e67fd727d63d8e55",
+                "idShort": 13,
+                "name": "tlacitko https://arduino-shop.cz/arduino/1006-arduino-klavesnice-membranova-1x4.html",
+                "shortLink": "Z4rcOqm8"
+            },
+            "list": {
+                "id": "5e9d77ee577ddc8b18ad335f",
+                "name": "Periferie"
+            },
+            "old": {
+                "name": "tlacitko    https://arduino-shop.cz/arduino/1006-arduino-klavesnice-membranova-1x4.html"
+            }
+        },
+        "date": "2020-09-26T15:27:56.716Z",
+        "id": "5f6f5dfcbaf8d640cb6e41b6",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "5e9d77ee577ddc8b18ad335d",
+                "name": "esp32",
+                "shortLink": "gN7aqqz2"
+            },
+            "idMemberAdded": "57d6ab9bf92531682f328cec",
+            "memberType": "normal"
+        },
+        "date": "2020-09-26T15:25:12.706Z",
+        "id": "5f6f5d581c4fba73d8671d8c",
+        "idMemberCreator": "5e3316c5552bfe5d5b84c37f",
+        "limits": {},
+        "member": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Petr Timr",
+            "id": "5e3316c5552bfe5d5b84c37f",
+            "idMemberReferrer": null,
+            "initials": "PT",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "petrtimr"
+        },
+        "type": "addMemberToBoard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cdaa181f9452a73f89c4",
+                "idShort": 18,
+                "name": "[Test] Benchmark + report",
+                "pos": 983039,
+                "shortLink": "OGzSC6Ab"
+            },
+            "list": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "pos": 457343
+            }
+        },
+        "date": "2016-12-15T17:45:50.340Z",
+        "id": "5852d6ce7337114a0f8a1a68",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cdaa181f9452a73f89c4",
+                "idList": "57f6af1fa694cd003a4e939f",
+                "idShort": 18,
+                "name": "[Test] Benchmark + report",
+                "shortLink": "OGzSC6Ab"
+            },
+            "listAfter": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "listBefore": {
+                "id": "57eae8f690091bcbc520af4a",
+                "name": "Done"
+            },
+            "old": {
+                "idList": "57eae8f690091bcbc520af4a"
+            }
+        },
+        "date": "2016-12-15T17:45:50.298Z",
+        "id": "5852d6ce7337114a0f8a1a67",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cd01d2bb3fd8a8b32b67",
+                "idShort": 16,
+                "name": "[Doc] Lexer state diagram (TikZ)",
+                "pos": 753663,
+                "shortLink": "gcIUgSHK"
+            },
+            "list": {
+                "id": "57eae8f690091bcbc520af4a",
+                "name": "Done"
+            },
+            "old": {
+                "pos": 851967
+            }
+        },
+        "date": "2016-12-09T11:27:17.657Z",
+        "id": "584a9515ba9a04c0250ddcd2",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cd01d2bb3fd8a8b32b67",
+                "idList": "57eae8f690091bcbc520af4a",
+                "idShort": 16,
+                "name": "[Doc] Lexer state diagram (TikZ)",
+                "shortLink": "gcIUgSHK"
+            },
+            "listAfter": {
+                "id": "57eae8f690091bcbc520af4a",
+                "name": "Done"
+            },
+            "listBefore": {
+                "id": "57eae8ea0703c231550a9cff",
+                "name": "Michal"
+            },
+            "old": {
+                "idList": "57eae8ea0703c231550a9cff"
+            }
+        },
+        "date": "2016-12-09T11:27:17.639Z",
+        "id": "584a9515ba9a04c0250ddcd1",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cfd811f8c45e12af88cc",
+                "idList": "57eae8ea0703c231550a9cff",
+                "idShort": 22,
+                "name": "[Ext] BASE",
+                "shortLink": "97VP23Hi"
+            },
+            "listAfter": {
+                "id": "57eae8ea0703c231550a9cff",
+                "name": "Michal"
+            },
+            "listBefore": {
+                "id": "57f6c7656f00c691ad2c78da",
+                "name": "Kuba"
+            },
+            "old": {
+                "idList": "57f6c7656f00c691ad2c78da"
+            }
+        },
+        "date": "2016-12-09T11:27:13.052Z",
+        "id": "584a9511ee4b1bb7856d6cfe",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f7f65616974e5187e0814c",
+                "idShort": 32,
+                "name": "[Doc] LL grammar, operator table",
+                "pos": 217087.5,
+                "shortLink": "KZFohyeB"
+            },
+            "list": {
+                "id": "57f6c7656f00c691ad2c78da",
+                "name": "Kuba"
+            },
+            "old": {
+                "pos": 884735
+            }
+        },
+        "date": "2016-12-01T10:44:14.911Z",
+        "id": "583ffefed0ddd4b7473f0fca",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f7f65616974e5187e0814c",
+                "idList": "57f6c7656f00c691ad2c78da",
+                "idShort": 32,
+                "name": "[Doc] LL grammar, operator table",
+                "shortLink": "KZFohyeB"
+            },
+            "listAfter": {
+                "id": "57f6c7656f00c691ad2c78da",
+                "name": "Kuba"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-12-01T10:44:14.889Z",
+        "id": "583ffefed0ddd4b7473f0fc9",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cdaa181f9452a73f89c4",
+                "idList": "57eae8e5f30422fa1b63d538",
+                "idShort": 18,
+                "name": "[Test] Benchmark + report",
+                "shortLink": "OGzSC6Ab"
+            },
+            "listAfter": {
+                "id": "57eae8e5f30422fa1b63d538",
+                "name": "Martin"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-12-01T10:44:07.990Z",
+        "id": "583ffef7b6bf25e5f39a502f",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cc36afd8d5f34361f628",
+                "idList": "57f6c7656f00c691ad2c78da",
+                "idShort": 10,
+                "name": "Parser",
+                "shortLink": "mNpZUscH"
+            },
+            "listAfter": {
+                "id": "57f6c7656f00c691ad2c78da",
+                "name": "Kuba"
+            },
+            "listBefore": {
+                "id": "57eae8f690091bcbc520af4a",
+                "name": "Done"
+            },
+            "old": {
+                "idList": "57eae8f690091bcbc520af4a"
+            }
+        },
+        "date": "2016-12-01T10:43:52.440Z",
+        "id": "583ffee8c324b564ac7c1357",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6d01df0909108a8928c4f",
+                "idList": "57f6c7656f00c691ad2c78da",
+                "idShort": 26,
+                "name": "[Ext] UNARY",
+                "shortLink": "m0cl4rff"
+            },
+            "listAfter": {
+                "id": "57f6c7656f00c691ad2c78da",
+                "name": "Kuba"
+            },
+            "listBefore": {
+                "id": "57eae8ea0703c231550a9cff",
+                "name": "Michal"
+            },
+            "old": {
+                "idList": "57eae8ea0703c231550a9cff"
+            }
+        },
+        "date": "2016-12-01T10:43:49.402Z",
+        "id": "583ffee5ac8fd42648872a3a",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cfff339066207e04c137",
+                "idList": "57f6c7656f00c691ad2c78da",
+                "idShort": 24,
+                "name": "[Ext] BOOLOP",
+                "shortLink": "9Jsbp3Tq"
+            },
+            "listAfter": {
+                "id": "57f6c7656f00c691ad2c78da",
+                "name": "Kuba"
+            },
+            "listBefore": {
+                "id": "57eae8ea0703c231550a9cff",
+                "name": "Michal"
+            },
+            "old": {
+                "idList": "57eae8ea0703c231550a9cff"
+            }
+        },
+        "date": "2016-12-01T10:43:47.825Z",
+        "id": "583ffee3637134654ff266a3",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cfd811f8c45e12af88cc",
+                "idList": "57f6c7656f00c691ad2c78da",
+                "idShort": 22,
+                "name": "[Ext] BASE",
+                "shortLink": "97VP23Hi"
+            },
+            "listAfter": {
+                "id": "57f6c7656f00c691ad2c78da",
+                "name": "Kuba"
+            },
+            "listBefore": {
+                "id": "57eae8ea0703c231550a9cff",
+                "name": "Michal"
+            },
+            "old": {
+                "idList": "57eae8ea0703c231550a9cff"
+            }
+        },
+        "date": "2016-12-01T10:43:45.482Z",
+        "id": "583ffee12a6292d4ab8de364",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "58335e44579329c8a44b2220",
+                "idShort": 50,
+                "name": "Test memory managemetu",
+                "pos": 1900543,
+                "shortLink": "EpFI28lx"
+            },
+            "list": {
+                "id": "57eae8f690091bcbc520af4a",
+                "name": "Done"
+            },
+            "old": {
+                "pos": 638975
+            }
+        },
+        "date": "2016-12-01T10:43:28.395Z",
+        "id": "583ffed0128e79f2c7ec4f77",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "58335e44579329c8a44b2220",
+                "idList": "57eae8f690091bcbc520af4a",
+                "idShort": 50,
+                "name": "Test memory managemetu",
+                "shortLink": "EpFI28lx"
+            },
+            "listAfter": {
+                "id": "57eae8f690091bcbc520af4a",
+                "name": "Done"
+            },
+            "listBefore": {
+                "id": "57eae8e5f30422fa1b63d538",
+                "name": "Martin"
+            },
+            "old": {
+                "idList": "57eae8e5f30422fa1b63d538"
+            }
+        },
+        "date": "2016-12-01T10:43:28.370Z",
+        "id": "583ffed0128e79f2c7ec4f76",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6d00df5e8fc6dca45442d",
+                "idList": "57f6c7656f00c691ad2c78da",
+                "idShort": 25,
+                "name": "[Ext] CYCLES",
+                "shortLink": "wCFsKug4"
+            },
+            "listAfter": {
+                "id": "57f6c7656f00c691ad2c78da",
+                "name": "Kuba"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-11-22T17:54:03.443Z",
+        "id": "5834863b24db20c3f9c78644",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6d01df0909108a8928c4f",
+                "idList": "57eae8ea0703c231550a9cff",
+                "idShort": 26,
+                "name": "[Ext] UNARY",
+                "shortLink": "m0cl4rff"
+            },
+            "listAfter": {
+                "id": "57eae8ea0703c231550a9cff",
+                "name": "Michal"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-11-22T17:54:00.079Z",
+        "id": "583486381dd9812227f05b8d",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cfff339066207e04c137",
+                "idList": "57eae8ea0703c231550a9cff",
+                "idShort": 24,
+                "name": "[Ext] BOOLOP",
+                "shortLink": "9Jsbp3Tq"
+            },
+            "listAfter": {
+                "id": "57eae8ea0703c231550a9cff",
+                "name": "Michal"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-11-22T17:53:58.138Z",
+        "id": "5834863642c88022135d875a",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cfd811f8c45e12af88cc",
+                "idList": "57eae8ea0703c231550a9cff",
+                "idShort": 22,
+                "name": "[Ext] BASE",
+                "shortLink": "97VP23Hi"
+            },
+            "listAfter": {
+                "id": "57eae8ea0703c231550a9cff",
+                "name": "Michal"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-11-22T17:53:57.196Z",
+        "id": "583486358ec59a5383d443bb",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "58335e2b06b3315f0667c9c1",
+                "idList": "57eae8efa1aea5bb1baaab2a",
+                "idShort": 49,
+                "name": "[Interpret] return",
+                "shortLink": "S4bakSOX"
+            },
+            "listAfter": {
+                "id": "57eae8efa1aea5bb1baaab2a",
+                "name": "Marek"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-11-22T17:53:51.136Z",
+        "id": "5834862f0a91e34a9ec28c8e",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "58335e1a1b8d515cfe820360",
+                "idList": "57eae8efa1aea5bb1baaab2a",
+                "idShort": 47,
+                "name": "[Interpret] while",
+                "shortLink": "l55iXmVM"
+            },
+            "listAfter": {
+                "id": "57eae8efa1aea5bb1baaab2a",
+                "name": "Marek"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-11-22T17:53:48.164Z",
+        "id": "5834862c6a5a6194a5168eae",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f7f68f5dc65063f034bd73",
+                "idShort": 33,
+                "name": "Sanity check - undefined",
+                "pos": 1835007,
+                "shortLink": "irCS4t49"
+            },
+            "list": {
+                "id": "57eae8f690091bcbc520af4a",
+                "name": "Done"
+            },
+            "old": {
+                "pos": 573439
+            }
+        },
+        "date": "2016-11-22T17:53:36.040Z",
+        "id": "58348620a045b8a4133f891b",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f7f68f5dc65063f034bd73",
+                "idList": "57eae8f690091bcbc520af4a",
+                "idShort": 33,
+                "name": "Sanity check - undefined",
+                "shortLink": "irCS4t49"
+            },
+            "listAfter": {
+                "id": "57eae8f690091bcbc520af4a",
+                "name": "Done"
+            },
+            "listBefore": {
+                "id": "57eae8e5f30422fa1b63d538",
+                "name": "Martin"
+            },
+            "old": {
+                "idList": "57eae8e5f30422fa1b63d538"
+            }
+        },
+        "date": "2016-11-22T17:53:35.973Z",
+        "id": "5834861fa045b8a4133f891a",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "582f5a288f3d19d6a42f02ce",
+                "idList": "57eae8e5f30422fa1b63d538",
+                "idShort": 39,
+                "name": "[Sanity] C_BREAK, C_CONTINUE jen v t\u011ble cyklu",
+                "shortLink": "Nihiy4ja"
+            },
+            "listAfter": {
+                "id": "57eae8e5f30422fa1b63d538",
+                "name": "Martin"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-11-21T22:35:25.023Z",
+        "id": "583376ad91a9774ed8892fe7",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cc9596faa0d87a915d93",
+                "idList": "57eae8e5f30422fa1b63d538",
+                "idShort": 15,
+                "name": "[Test] Full test suite",
+                "shortLink": "m5GfkuQY"
+            },
+            "listAfter": {
+                "id": "57eae8e5f30422fa1b63d538",
+                "name": "Martin"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-11-21T22:35:15.393Z",
+        "id": "583376a38fbe28b8d7bd4356",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "58335e44579329c8a44b2220",
+                "idShort": 50,
+                "name": "Test memory managemetu",
+                "pos": 638975,
+                "shortLink": "EpFI28lx"
+            },
+            "list": {
+                "id": "57eae8e5f30422fa1b63d538",
+                "name": "Martin"
+            },
+            "old": {
+                "pos": 188415.75
+            }
+        },
+        "date": "2016-11-21T22:35:12.523Z",
+        "id": "583376a0507ef958f61ee459",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "58335e44579329c8a44b2220",
+                "idList": "57eae8e5f30422fa1b63d538",
+                "idShort": 50,
+                "name": "Test memory managemetu",
+                "shortLink": "EpFI28lx"
+            },
+            "listAfter": {
+                "id": "57eae8e5f30422fa1b63d538",
+                "name": "Martin"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-11-21T22:35:12.497Z",
+        "id": "583376a0507ef958f61ee458",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6d343b12b5a6640b3d071",
+                "idList": "57eae8f690091bcbc520af4a",
+                "idShort": 29,
+                "name": "M\u00e1me na to dva m\u011bs\u00edce, zkusme ud\u011blat funk\u010dn\u00ed interpreter do konce \u0159\u00edjna, dokumentaci apod. m\u016f\u017eeme p\u0159idat pozd\u011bji.",
+                "shortLink": "vXG0ymD1"
+            },
+            "listAfter": {
+                "id": "57eae8f690091bcbc520af4a",
+                "name": "Done"
+            },
+            "listBefore": {
+                "id": "57eae8d28ce363e19a5bf115",
+                "name": "Info"
+            },
+            "old": {
+                "idList": "57eae8d28ce363e19a5bf115"
+            }
+        },
+        "date": "2016-11-14T12:33:04.598Z",
+        "id": "5829af009db600f96f7dda6c",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "582854dd24120d07f34f59dc",
+                "idShort": 37,
+                "name": "[Doc]Popis va\u0161eho zpusobu re\u0161en\u00ed radic\u00edho algoritmu, vyhled\u00e1v\u00e1n\u00ed podretezce v \u02c7 retezci a tabulky symbolu (z pohledu predmetu IAL).",
+                "pos": 901119,
+                "shortLink": "aZ0N0rpI"
+            },
+            "list": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "pos": 1310719
+            }
+        },
+        "date": "2016-11-13T11:56:18.914Z",
+        "id": "582854e24450e353fc3d621f",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "582854dd24120d07f34f59dc",
+                "idShort": 37,
+                "name": "[Doc]Popis va\u0161eho zpusobu re\u0161en\u00ed radic\u00edho algoritmu, vyhled\u00e1v\u00e1n\u00ed podretezce v \u02c7 retezci a tabulky symbolu (z pohledu predmetu IAL).",
+                "shortLink": "aZ0N0rpI"
+            },
+            "list": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            }
+        },
+        "date": "2016-11-13T11:56:13.586Z",
+        "id": "582854dd24120d07f34f59dd",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "createCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "58048a47b791dcd217fa88b5",
+                "idShort": 35,
+                "name": "Symbol table iterator",
+                "pos": 786431,
+                "shortLink": "D7MssoW6"
+            },
+            "list": {
+                "id": "57eae8f690091bcbc520af4a",
+                "name": "Done"
+            },
+            "old": {
+                "pos": 65535
+            }
+        },
+        "date": "2016-10-23T09:37:18.920Z",
+        "id": "580c84cea9a3e64cc86e953d",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "58048a47b791dcd217fa88b5",
+                "idList": "57eae8f690091bcbc520af4a",
+                "idShort": 35,
+                "name": "Symbol table iterator",
+                "shortLink": "D7MssoW6"
+            },
+            "listAfter": {
+                "id": "57eae8f690091bcbc520af4a",
+                "name": "Done"
+            },
+            "listBefore": {
+                "id": "57eae8e5f30422fa1b63d538",
+                "name": "Martin"
+            },
+            "old": {
+                "idList": "57eae8e5f30422fa1b63d538"
+            }
+        },
+        "date": "2016-10-23T09:37:18.873Z",
+        "id": "580c84cea9a3e64cc86e953c",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6d343b12b5a6640b3d071",
+                "idShort": 29,
+                "name": "M\u00e1me na to dva m\u011bs\u00edce, zkusme ud\u011blat funk\u010dn\u00ed interpreter do konce \u0159\u00edjna, dokumentaci apod. m\u016f\u017eeme p\u0159idat pozd\u011bji.",
+                "pos": 819199,
+                "shortLink": "vXG0ymD1"
+            },
+            "list": {
+                "id": "57eae8d28ce363e19a5bf115",
+                "name": "Info"
+            },
+            "old": {
+                "pos": 622591
+            }
+        },
+        "date": "2016-10-11T10:12:15.027Z",
+        "id": "57fcbaff21e5d9aa60a8ab3e",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6d364fe16f55722ba7d02",
+                "idShort": 30,
+                "name": "Komentujte sv\u016fj k\u00f3d!!!",
+                "pos": 589823,
+                "shortLink": "Zoyew8LK"
+            },
+            "list": {
+                "id": "57eae8d28ce363e19a5bf115",
+                "name": "Info"
+            },
+            "old": {
+                "pos": 688127
+            }
+        },
+        "date": "2016-10-11T10:12:12.993Z",
+        "id": "57fcbafc52d04dbf75165dff",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cd01d2bb3fd8a8b32b67",
+                "idList": "57eae8ea0703c231550a9cff",
+                "idShort": 16,
+                "name": "[Doc] Lexer state diagram (TikZ)",
+                "shortLink": "gcIUgSHK"
+            },
+            "listAfter": {
+                "id": "57eae8ea0703c231550a9cff",
+                "name": "Michal"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-10-11T10:11:53.213Z",
+        "id": "57fcbae9bb9b11d66a7e16fe",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cc7c819b8b07af6574e2",
+                "idShort": 13,
+                "name": "[Lib] I/O functions",
+                "pos": 655359,
+                "shortLink": "867AmpeK"
+            },
+            "list": {
+                "id": "57f6c76160906137af9badcd",
+                "name": "Jirka"
+            },
+            "old": {
+                "pos": 524287
+            }
+        },
+        "date": "2016-10-11T10:11:36.672Z",
+        "id": "57fcbad8b1d7e6a2fcc8a474",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cc7c819b8b07af6574e2",
+                "idList": "57f6c76160906137af9badcd",
+                "idShort": 13,
+                "name": "[Lib] I/O functions",
+                "shortLink": "867AmpeK"
+            },
+            "listAfter": {
+                "id": "57f6c76160906137af9badcd",
+                "name": "Jirka"
+            },
+            "listBefore": {
+                "id": "57eae8e5f30422fa1b63d538",
+                "name": "Martin"
+            },
+            "old": {
+                "idList": "57eae8e5f30422fa1b63d538"
+            }
+        },
+        "date": "2016-10-11T10:11:36.633Z",
+        "id": "57fcbad8b1d7e6a2fcc8a473",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    },
+    {
+        "appCreator": null,
+        "data": {
+            "board": {
+                "id": "57eae8cc0b2b2d98d6b1a025",
+                "name": "IFJ projekt",
+                "shortLink": "L0quDqu4"
+            },
+            "card": {
+                "id": "57f6cc7c819b8b07af6574e2",
+                "idList": "57eae8e5f30422fa1b63d538",
+                "idShort": 13,
+                "name": "Library - I/O functions",
+                "shortLink": "867AmpeK"
+            },
+            "listAfter": {
+                "id": "57eae8e5f30422fa1b63d538",
+                "name": "Martin"
+            },
+            "listBefore": {
+                "id": "57f6af1fa694cd003a4e939f",
+                "name": "Available"
+            },
+            "old": {
+                "idList": "57f6af1fa694cd003a4e939f"
+            }
+        },
+        "date": "2016-10-07T12:22:33.194Z",
+        "id": "57f7938942a0b21430b6dcde",
+        "idMemberCreator": "57d6ab9bf92531682f328cec",
+        "limits": {},
+        "memberCreator": {
+            "activityBlocked": false,
+            "avatarHash": null,
+            "avatarUrl": null,
+            "fullName": "Matovidlo",
+            "id": "57d6ab9bf92531682f328cec",
+            "idMemberReferrer": null,
+            "initials": "M",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "matovidlo"
+        },
+        "type": "updateCard"
+    }
+]

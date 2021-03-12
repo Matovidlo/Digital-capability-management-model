@@ -1,0 +1,2219 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project description,Project url,Priority,Resolution,Assignee,Reporter,Creator,Created,Updated,Last Viewed,Resolved,Affects Version/s,Affects Version/s,Affects Version/s,Component/s,Component/s,Due Date,Votes,Labels,Description,Environment,Original Estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Outward issue link (Incorporates),Outward issue link (Incorporates),Outward issue link (Incorporates),Outward issue link (Incorporates),Outward issue link (Incorporates),Outward issue link (Incorporates),Outward issue link (Incorporates),Outward issue link (Reference),Outward issue link (Reference),Outward issue link (dependent),Attachment,Attachment,Attachment,Attachment,Custom field (Affects version (Component)),Custom field (Attachment count),Custom field (Blog - New Blog Administrators),Custom field (Blog - New Blog PMC),Custom field (Blog - Write access),Custom field (Blog Administrator?),Custom field (Blogs - Admin for blog),Custom field (Blogs - Email Address),Custom field (Blogs - Existing Blog Access Level),Custom field (Blogs - Existing Blog Name),Custom field (Blogs - New Blog Write Access),Custom field (Blogs - Username),Custom field (Bug Category),Custom field (Bugzilla - Email Notification Address),Custom field (Bugzilla - List of usernames),Custom field (Bugzilla - PMC Name),Custom field (Bugzilla - Project Name),Custom field (Bugzilla Id),Custom field (Bugzilla Id),Custom field (Change Category),Custom field (Complexity),Custom field (Date of First Response),Custom field (Discovered By),Custom field (Docs Text),Custom field (Enable Automatic Patch Review),Custom field (Epic Link),Custom field (Estimated Complexity),Custom field (Evidence Of Open Source Adoption),Custom field (Evidence Of Registration),Custom field (Evidence Of Use On World Wide Web),Custom field (Existing GitBox Approval),Custom field (External issue ID),Custom field (External issue URL),Custom field (Fix version (Component)),Custom field (Flags),Custom field (Git Notification Mailing List),Custom field (Git Repository Import Path),Custom field (Git Repository Name),Custom field (Git Repository Type),Custom field (GitHub Options),Custom field (Github Integration),Custom field (Github Integrations - Other),Custom field (Global Rank),Custom field (INFRA - Subversion Repository Path),Custom field (Initial Confluence Contributors),Custom field (Last public comment date),Custom field (Level of effort),Custom field (Machine Readable Info),Custom field (New-TLP-TLPName),Custom field (Priority),Custom field (Project),Custom field (Protected Branch),Custom field (Rank),Custom field (Rank (Obsolete)),Custom field (Review Date),Custom field (Reviewer),Custom field (Severity),Custom field (Severity),Custom field (Shepherd),Custom field (Skill Level),Custom field (Source Control Link),Custom field (Space Description),Custom field (Space Key),Custom field (Space Name),Custom field (Tags),Custom field (Test and Documentation Plan),Custom field (Testcase included),Custom field (Tester),Custom field (Workaround),Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment
+Unify DSv1 and DSv2 command tests,SPARK-33381,13339335,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,maxgekk,maxgekk,07/Nov/20 18:31,17/Feb/21 08:33,18/Feb/21 10:01,,3.1.0,3.2.0,,SQL,,,0,,"Create unified test suites for DSv1 and DSv2 commands like CREATE TABLE, SHOW TABLES and etc. Put datasource specific tests to separate test suites. ",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,2020-11-07 18:31:00.0,,,,,,,"0|z0kdb4:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+HiveOrcHadoopFsRelationSuite fails with seed 610710213676,SPARK-34424,13358411,Test,In Progress,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,maxgekk,maxgekk,12/Feb/21 20:00,12/Feb/21 20:23,18/Feb/21 10:01,,3.0.2,3.1.1,3.2.0,SQL,,,0,,"The test ""test all data types"" in HiveOrcHadoopFsRelationSuite fails with:
+{code:java}
+== Results ==
+!== Correct Answer - 20 ==    == Spark Answer - 20 ==
+ struct<index:int,col:date>   struct<index:int,col:date>
+ [1,1582-10-15]               [1,1582-10-15]
+ [2,null]                     [2,null]
+ [3,1970-01-01]               [3,1970-01-01]
+ [4,1681-08-06]               [4,1681-08-06]
+ [5,1582-10-15]               [5,1582-10-15]
+ [6,9999-12-31]               [6,9999-12-31]
+ [7,0583-01-04]               [7,0583-01-04]
+ [8,6077-03-04]               [8,6077-03-04]
+![9,1582-10-06]               [9,1582-10-15]
+ [10,1582-10-15]              [10,1582-10-15]
+ [11,9999-12-31]              [11,9999-12-31]
+ [12,9722-10-04]              [12,9722-10-04]
+ [13,0243-12-19]              [13,0243-12-19]
+ [14,9999-12-31]              [14,9999-12-31]
+ [15,8743-01-24]              [15,8743-01-24]
+ [16,1039-10-31]              [16,1039-10-31]
+ [17,9999-12-31]              [17,9999-12-31]
+ [18,1582-10-15]              [18,1582-10-15]
+ [19,1582-10-15]              [19,1582-10-15]
+ [20,1582-10-15]              [20,1582-10-15]
+{code}",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2021-02-12 20:22:59.096,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Fri Feb 12 20:22:59 UTC 2021,,,,,,,"0|z0nn3s:",9223372036854775807,,,,,,,,,,,,,,,,"12/Feb/21 20:22;apachespark;User 'MaxGekk' has created a pull request for this issue:
+https://github.com/apache/spark/pull/31552",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Install numpydoc in Jenkins machines,SPARK-33242,13337137,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,shaneknapp,hyukjin.kwon,hyukjin.kwon,26/Oct/20 06:14,05/Jan/21 05:54,18/Feb/21 10:01,,3.1.0,,,Project Infra,PySpark,,0,,"To switch to reST style to numpydoc style, we should install numpydoc as well. This is being used in Sphinx. See the parent JIRA as well.",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2020-12-07 18:06:17.59,,,false,SPARK-32082,,,,,,,,,,,,,,,,,9223372036854775807,,,Wed Dec 09 00:27:06 UTC 2020,,,,,,,"0|z0jzrc:",9223372036854775807,,,,,,,,,,,,,,,,"07/Dec/20 18:06;shaneknapp;should this be installed for both pyton2.7 and 3.6?","09/Dec/20 00:27;hyukjin.kwon;Python 2 is dropped in the master and branch-3.1. So, Python 3.6 needs it in master and branch-3.1.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Install pydata_sphinx_theme in Jenkins machines,SPARK-32391,13318701,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,shaneknapp,hyukjin.kwon,hyukjin.kwon,22/Jul/20 12:28,04/Jan/21 05:43,18/Feb/21 10:01,,3.0.1,,,Project Infra,PySpark,,0,,"After SPARK-32179, {{pydata_sphinx_theme}} https://pypi.org/project/pydata-sphinx-theme/ is needed as a new Python dependency for PySpark documentation build.
+We should install it in Jenkins to test PySpark documentation build in Python 3.",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2020-12-08 18:15:16.274,,,false,SPARK-32082,,,,,,,,,,,,,,,,,9223372036854775807,,,Mon Jan 04 05:42:18 UTC 2021,,,,,,,"0|z0h368:",9223372036854775807,,,,,,,,,,,,,,,,"03/Sep/20 06:30;hyukjin.kwon;[~shaneknapp], it's not urgent but when you available, can we install {{pydata_sphinx_theme}} package (via {{pip}}) in Python 3 at Jenkins nodes?","08/Dec/20 18:15;shaneknapp;yeah, i'll be getting to this (and the other package reqs) in the next week or so.","09/Dec/20 00:22;hyukjin.kwon;Thank you [~shaneknapp]!","04/Jan/21 05:42;hyukjin.kwon;I will get this out of the parent JIRA because it can be separately fixed.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+readImages test fails due to NoClassDefFoundError for ImageTypeSpecifier,SPARK-33953,13348640,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,yuzhihong@gmail.com,yuzhihong@gmail.com,01/Jan/21 02:00,01/Jan/21 02:00,18/Feb/21 10:01,,3.0.1,,,ML,,,0,,"From https://github.com/apache/spark/pull/30984/checks?check_run_id=1630709203 :
+```
+[info]   org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 21.0 failed 1 times, most recent failure: Lost task 1.0 in stage 21.0 (TID 20) (fv-az212-589.internal.cloudapp.net executor driver): java.lang.NoClassDefFoundError: Could not initialize class javax.imageio.ImageTypeSpecifier
+[info]  at com.sun.imageio.plugins.png.PNGImageReader.getImageTypes(PNGImageReader.java:1531)
+[info]  at com.sun.imageio.plugins.png.PNGImageReader.readImage(PNGImageReader.java:1318)
+```
+It seems some dependency is missing.",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,2021-01-01 02:00:52.0,,,,,,,"0|z0lyo0:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Improve showing the differences between approved and actual plans,SPARK-32984,13329120,Test,In Progress,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,Ngone51,Ngone51,24/Sep/20 03:20,24/Sep/20 03:32,18/Feb/21 10:01,,3.1.0,,,Tests,,,0,,"It's hard to find the difference between the approved and actual plan since the plans of TPC-DS queries are often huge. We could add hint, e.g., caret (^), to help developers locate the differences quickly.",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2020-09-24 03:32:05.26,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Thu Sep 24 03:32:05 UTC 2020,,,,,,,"0|z0iva0:",9223372036854775807,,,,,,,,,,,,,,,,"24/Sep/20 03:32;apachespark;User 'Ngone51' has created a pull request for this issue:
+https://github.com/apache/spark/pull/29860",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Add tests for arrays/maps of nested structs to ReadSchemaSuite to test structs reuse,SPARK-32731,13325085,Test,In Progress,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,samkhan,samkhan,28/Aug/20 21:50,28/Aug/20 22:03,18/Feb/21 10:01,,3.0.0,,,SQL,Tests,,0,,"Splitting tests originally posted in [PR|[https://github.com/apache/spark/pull/29352]] for SPARK-32531. The added tests cover cases for maps and arrays of nested structs for different file formats. Eg, [https://github.com/apache/spark/pull/29353] and [https://github.com/apache/spark/pull/29354] add object reuse when reading ORC and Avro files. However, for dynamic data structures like arrays and maps, we do not know just by looking at the schema what the size of the data structure will be so it has to be allocated when reading the data points. The added tests provide coverage so that objects are not accidentally reused when encountering maps and arrays.
+
+AFAIK this is not covered by existing tests.",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2020-08-28 22:02:37.694,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Fri Aug 28 22:03:34 UTC 2020,,,,,,,"0|z0i6f4:",9223372036854775807,,,,,,,,,,,,,,,,"28/Aug/20 22:02;apachespark;User 'msamirkhan' has created a pull request for this issue:
+https://github.com/apache/spark/pull/29573","28/Aug/20 22:03;apachespark;User 'msamirkhan' has created a pull request for this issue:
+https://github.com/apache/spark/pull/29573",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Add benchmarks for nested structs and arrays for different file formats,SPARK-32531,13320945,Test,In Progress,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,samkhan,samkhan,04/Aug/20 19:54,28/Aug/20 21:58,18/Feb/21 10:01,,3.0.0,,,SQL,Tests,,0,,"We had found that Spark performance was slow as compared to PIG on some schemas in our pipelines. On investigation, it was found that Spark performance was slow for nested structs and array'd structs and these cases were not being profiled by the current benchmarks. I have some improvements for ORC (SPARK-32532) and Avro (SPARK-32533) file formats which improve the performance in these cases and will be putting up the PRs soon.",,,,,,,,,,,,,,,,,SPARK-32731,SPARK-32550,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2020-08-04 20:39:22.38,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Tue Aug 04 20:40:08 UTC 2020,,,,,,,"0|z0hgzs:",9223372036854775807,,,,,,,,,,,,,,,,"04/Aug/20 20:39;apachespark;User 'msamirkhan' has created a pull request for this issue:
+https://github.com/apache/spark/pull/29352","04/Aug/20 20:40;apachespark;User 'msamirkhan' has created a pull request for this issue:
+https://github.com/apache/spark/pull/29352",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Install ipython and nbsphinx in Jenkins for Binder integration,SPARK-32666,13323699,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,hyukjin.kwon,hyukjin.kwon,20/Aug/20 08:25,20/Aug/20 08:29,18/Feb/21 10:00,,3.1.0,,,Project Infra,,,0,,"Binder integration requires IPython and nbsphinx to use the notebook file as the documentation in PySpark.
+See SPARK-32204 and its PR for more details.",,,,,,,,,,,,,,,,,SPARK-32182,SPARK-32204,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,SPARK-32082,,,,,,,,,,,,,,,,,9223372036854775807,,,2020-08-20 08:25:45.0,,,,,,,"0|z0hxw0:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Allow DataSourceReadBenchmark to run for select formats,SPARK-32561,13321372,Test,In Progress,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,samkhan,samkhan,06/Aug/20 19:42,06/Aug/20 20:05,18/Feb/21 10:01,,3.0.0,,,SQL,Tests,,0,,"Currently DataSourceReadBenchmark runs benchmarks for Parquet, ORC, CSV, and Json file formats and there is no way to specify at runtime a single format or a subset of formats, like there is for BuiltInDataSourceWriteBenchmark.",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2020-08-06 20:04:19.552,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Thu Aug 06 20:05:45 UTC 2020,,,,,,,"0|z0hjkg:",9223372036854775807,,,,,,,,,,,,,,,,"06/Aug/20 20:04;apachespark;User 'msamirkhan' has created a pull request for this issue:
+https://github.com/apache/spark/pull/29381","06/Aug/20 20:05;apachespark;User 'msamirkhan' has created a pull request for this issue:
+https://github.com/apache/spark/pull/29381",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Add a hint-specific suite for CTE for test coverage,SPARK-32537,13321024,Test,In Progress,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,cltlfcjin,cltlfcjin,05/Aug/20 07:23,05/Aug/20 09:35,18/Feb/21 10:01,,3.1.0,,,SQL,Tests,,0,,"This ticket is to address the below comments to help us understand the test coverage of SQL HINT for CTE.
+https://github.com/apache/spark/pull/29062#discussion_r463247491
+https://github.com/apache/spark/pull/29062#discussion_r463248167",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2020-08-05 09:35:05.633,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Wed Aug 05 09:35:05 UTC 2020,,,,,,,"0|z0hhgo:",9223372036854775807,,,,,,,,,,,,,,,,"05/Aug/20 09:35;apachespark;User 'LantaoJin' has created a pull request for this issue:
+https://github.com/apache/spark/pull/29359",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Apply SharedThriftServer to all ThriftServer related tests,SPARK-31914,13309720,Test,In Progress,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,Qin Yao,Qin Yao,05/Jun/20 12:36,05/Jun/20 12:47,18/Feb/21 10:01,,3.1.0,,,SQL,Tests,,0,,"To add 
+{code:java}
+HiveThriftBinaryServerSuite
+HiveThriftCleanUpScratchDirSuite
+HiveThriftHttpServerSuite
+JdbcConnectionUriSuite
+SingleSessionSuite
+SparkMetadataOperationSuite
+SparkThriftServerProtocolVersionsSuite
+UISeleniumSuite
+{code}
+
+exist ones
+
+{code:java}
+ThriftServerQueryTestSuite
+ThriftServerWithSparkContextSuite
+{code}
+",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2020-06-05 12:46:29.165,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Fri Jun 05 12:47:08 UTC 2020,,,,,,,"0|z0fk1c:",9223372036854775807,,,,,,,,,,,,,,,,"05/Jun/20 12:46;apachespark;User 'yaooqinn' has created a pull request for this issue:
+https://github.com/apache/spark/pull/28738","05/Jun/20 12:47;apachespark;User 'yaooqinn' has created a pull request for this issue:
+https://github.com/apache/spark/pull/28738",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Enable Hive related test cases of SparkR in AppVeyor,SPARK-31745,13305566,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,hyukjin.kwon,hyukjin.kwon,18/May/20 01:28,18/May/20 01:28,18/Feb/21 10:01,,3.1.0,,,SparkR,Tests,,0,,"Hive related tests look being skipped in AppVeyor:
+
+{code}
+test_sparkSQL.R:307: skip: create DataFrame from RDD
+Reason: Hive is not build with SparkSQL, skipped
+test_sparkSQL.R:1341: skip: test HiveContext
+Reason: Hive is not build with SparkSQL, skipped
+test_sparkSQL.R:2813: skip: read/write ORC files
+Reason: Hive is not build with SparkSQL, skipped
+test_sparkSQL.R:2834: skip: read/write ORC files - compression option
+Reason: Hive is not build with SparkSQL, skipped
+test_sparkSQL.R:3727: skip: enableHiveSupport on SparkSession
+Reason: Hive is not build with SparkSQL, skipped
+{code}",,,,,,,,,,,,,,,,,SPARK-31744,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,2020-05-18 01:28:05.0,,,,,,,"0|z0euh4:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Flaky test: pyspark.sql.dataframe.DataFrame.intersectAll,SPARK-31741,13305560,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,hyukjin.kwon,hyukjin.kwon,18/May/20 00:28,18/May/20 00:58,18/Feb/21 10:01,,3.1.0,,,PySpark,Tests,,0,,"https://amplab.cs.berkeley.edu/jenkins/job/spark-master-test-sbt-hadoop-2.7-hive-2.3/695/console
+https://amplab.cs.berkeley.edu/jenkins/job/spark-master-test-sbt-hadoop-2.7-hive-2.3/693/console
+
+{code}
+File ""/home/jenkins/workspace/spark-master-test-sbt-hadoop-2.7-hive-2.3/python/pyspark/sql/dataframe.py"", line 1600, in pyspark.sql.dataframe.DataFrame.intersectAll
+Failed example:
+    df1.intersectAll(df2).sort(""C1"", ""C2"").show()
+Exception raised:
+    Traceback (most recent call last):
+      File ""/usr/lib64/pypy-2.5.1/lib-python/2.7/doctest.py"", line 1315, in __run
+        compileflags, 1) in test.globs
+      File ""<doctest pyspark.sql.dataframe.DataFrame.intersectAll[2]>"", line 1, in <module>
+        df1.intersectAll(df2).sort(""C1"", ""C2"").show()
+      File ""/home/jenkins/workspace/spark-master-test-sbt-hadoop-2.7-hive-2.3/python/pyspark/sql/dataframe.py"", line 1182, in sort
+        jdf = self._jdf.sort(self._sort_cols(cols, kwargs))
+      File ""/home/jenkins/workspace/spark-master-test-sbt-hadoop-2.7-hive-2.3/python/pyspark/sql/dataframe.py"", line 1221, in _sort_cols
+        return self._jseq(jcols)
+      File ""/home/jenkins/workspace/spark-master-test-sbt-hadoop-2.7-hive-2.3/python/pyspark/sql/dataframe.py"", line 1189, in _jseq
+        return _to_seq(self.sql_ctx._sc, cols, converter)
+      File ""/home/jenkins/workspace/spark-master-test-sbt-hadoop-2.7-hive-2.3/python/pyspark/sql/column.py"", line 69, in _to_seq
+        return sc._jvm.PythonUtils.toSeq(cols)
+      File ""/home/jenkins/workspace/spark-master-test-sbt-hadoop-2.7-hive-2.3/python/lib/py4j-0.10.9-src.zip/py4j/java_gateway.py"", line 1305, in __call__
+        answer, self.gateway_client, self.target_id, self.name)
+      File ""/home/jenkins/workspace/spark-master-test-sbt-hadoop-2.7-hive-2.3/python/pyspark/sql/utils.py"", line 98, in deco
+        return f(*a, **kw)
+      File ""/home/jenkins/workspace/spark-master-test-sbt-hadoop-2.7-hive-2.3/python/lib/py4j-0.10.9-src.zip/py4j/protocol.py"", line 342, in get_return_value
+        return OUTPUT_CONVERTER[type](answer[2:], gateway_client)
+      File ""/home/jenkins/workspace/spark-master-test-sbt-hadoop-2.7-hive-2.3/python/lib/py4j-0.10.9-src.zip/py4j/java_gateway.py"", line 2525, in <lambda>
+        lambda target_id, gateway_client: JavaObject(target_id, gateway_client))
+      File ""/home/jenkins/workspace/spark-master-test-sbt-hadoop-2.7-hive-2.3/python/lib/py4j-0.10.9-src.zip/py4j/java_gateway.py"", line 1343, in __init__
+        ThreadSafeFinalizer.add_finalizer(key, value)
+      File ""/home/jenkins/workspace/spark-master-test-sbt-hadoop-2.7-hive-2.3/python/lib/py4j-0.10.9-src.zip/py4j/finalizer.py"", line 43, in add_finalizer
+        cls.finalizers[id] = weak_ref
+      File ""/usr/lib64/pypy-2.5.1/lib-python/2.7/threading.py"", line 216, in __exit__
+        self.release()
+      File ""/usr/lib64/pypy-2.5.1/lib-python/2.7/threading.py"", line 204, in release
+        raise RuntimeError(""cannot release un-acquired lock"")
+    RuntimeError: cannot release un-acquired lock
+**********************************************************************
+   1 of   3 in pyspark.sql.dataframe.DataFrame.intersectAll
+***Test Failed*** 1 failures.
+{code}
+",,,,,,,,,,,,,,,,,SPARK-28358,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,2020-05-18 00:28:21.0,,,,,,,"0|z0eufs:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Flaky test: org.apache.spark.sql.kafka010.KafkaMicroBatchV1SourceSuite,SPARK-31731,13305346,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,cloud_fan,cloud_fan,16/May/20 06:01,18/May/20 00:27,18/Feb/21 10:01,,3.0.0,,,Tests,,,0,,"https://amplab.cs.berkeley.edu/jenkins/view/Spark%20QA%20Test/job/spark-master-test-sbt-hadoop-2.7-hive-1.2/668/testReport/
+
+KafkaMicroBatchV1SourceSuite.subscribing topic by pattern with topic deletions
+{code}
+sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedException: 
+Timed out waiting for stream: The code passed to eventually never returned normally. Attempted 304 times over 1.0008425216666668 minutes. Last failure message: KafkaTestUtils.this.zkClient.isTopicMarkedForDeletion(topic) was true topic is still marked for deletion.
+org.scalatest.concurrent.Eventually.tryTryAgain$1(Eventually.scala:432)
+	org.scalatest.concurrent.Eventually.eventually(Eventually.scala:439)
+	org.scalatest.concurrent.Eventually.eventually$(Eventually.scala:391)
+	org.scalatest.concurrent.Eventually$.eventually(Eventually.scala:479)
+	org.scalatest.concurrent.Eventually.eventually(Eventually.scala:308)
+	org.scalatest.concurrent.Eventually.eventually$(Eventually.scala:307)
+	org.scalatest.concurrent.Eventually$.eventually(Eventually.scala:479)
+	org.apache.spark.sql.kafka010.KafkaTestUtils.verifyTopicDeletionWithRetries(KafkaTestUtils.scala:618)
+	org.apache.spark.sql.kafka010.KafkaTestUtils.deleteTopic(KafkaTestUtils.scala:410)
+	org.apache.spark.sql.kafka010.KafkaMicroBatchSourceSuiteBase.$anonfun$new$20(KafkaMicroBatchSourceSuite.scala:379)
+
+	Caused by: 	KafkaTestUtils.this.zkClient.isTopicMarkedForDeletion(topic) was true topic is still marked for deletion
+	org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+		org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+		org.scalatest.Assertions$.newAssertionFailedException(Assertions.scala:1389)
+		org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+		org.apache.spark.sql.kafka010.KafkaTestUtils.verifyTopicDeletion(KafkaTestUtils.scala:590)
+		org.apache.spark.sql.kafka010.KafkaTestUtils.$anonfun$verifyTopicDeletionWithRetries$1(KafkaTestUtils.scala:620)
+		scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+		org.scalatest.concurrent.Eventually.makeAValiantAttempt$1(Eventually.scala:395)
+		org.scalatest.concurrent.Eventually.tryTryAgain$1(Eventually.scala:409)
+		org.scalatest.concurrent.Eventually.eventually(Eventually.scala:439)
+
+
+== Progress ==
+   AssertOnQuery(<condition>, )
+   AddKafkaData(topics = Set(topic-31-seems), data = WrappedArray(1, 2, 3), message = )
+   CheckAnswer: [2],[3],[4]
+=> Assert(<condition>, )
+   AddKafkaData(topics = Set(topic-31-bad), data = WrappedArray(4, 5, 6), message = )
+   CheckAnswer: [2],[3],[4],[5],[6],[7]
+
+== Stream ==
+Output Mode: Append
+Stream state: {KafkaSourceV1[SubscribePattern[topic-31-.*]]: {}}
+Thread state: alive
+Thread stack trace: java.lang.Thread.sleep(Native Method)
+org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:241)
+org.apache.spark.sql.execution.streaming.MicroBatchExecution$$Lambda$2829/1543669599.apply$mcZ$sp(Unknown Source)
+org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:57)
+org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:185)
+org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:333)
+org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:244)
+
+
+== Sink ==
+0: 
+1: [2]
+2: [4] [3]
+3: 
+
+
+== Plan ==
+== Parsed Logical Plan ==
+WriteToDataSourceV2 org.apache.spark.sql.execution.streaming.sources.MicroBatchWrite@2f31f781
++- SerializeFromObject [input[0, int, false] AS value#8108]
+   +- MapElements org.apache.spark.sql.kafka010.KafkaMicroBatchSourceSuiteBase$$Lambda$5466/109510938@420a5093, class scala.Tuple2, [StructField(_1,StringType,true), StructField(_2,StringType,true)], obj#8107: int
+      +- DeserializeToObject newInstance(class scala.Tuple2), obj#8106: scala.Tuple2
+         +- Project [cast(key#8082 as string) AS key#8096, cast(value#8083 as string) AS value#8097]
+            +- Project [key#8183 AS key#8082, value#8184 AS value#8083, topic#8185 AS topic#8084, partition#8186 AS partition#8085, offset#8187L AS offset#8086L, timestamp#8188 AS timestamp#8087, timestampType#8189 AS timestampType#8088]
+               +- LogicalRDD [key#8183, value#8184, topic#8185, partition#8186, offset#8187L, timestamp#8188, timestampType#8189], true
+
+== Analyzed Logical Plan ==
+
+WriteToDataSourceV2 org.apache.spark.sql.execution.streaming.sources.MicroBatchWrite@2f31f781
++- SerializeFromObject [input[0, int, false] AS value#8108]
+   +- MapElements org.apache.spark.sql.kafka010.KafkaMicroBatchSourceSuiteBase$$Lambda$5466/109510938@420a5093, class scala.Tuple2, [StructField(_1,StringType,true), StructField(_2,StringType,true)], obj#8107: int
+      +- DeserializeToObject newInstance(class scala.Tuple2), obj#8106: scala.Tuple2
+         +- Project [cast(key#8082 as string) AS key#8096, cast(value#8083 as string) AS value#8097]
+            +- Project [key#8183 AS key#8082, value#8184 AS value#8083, topic#8185 AS topic#8084, partition#8186 AS partition#8085, offset#8187L AS offset#8086L, timestamp#8188 AS timestamp#8087, timestampType#8189 AS timestampType#8088]
+               +- LogicalRDD [key#8183, value#8184, topic#8185, partition#8186, offset#8187L, timestamp#8188, timestampType#8189], true
+
+== Optimized Logical Plan ==
+WriteToDataSourceV2 org.apache.spark.sql.execution.streaming.sources.MicroBatchWrite@2f31f781
++- SerializeFromObject [input[0, int, false] AS value#8108]
+   +- MapElements org.apache.spark.sql.kafka010.KafkaMicroBatchSourceSuiteBase$$Lambda$5466/109510938@420a5093, class scala.Tuple2, [StructField(_1,StringType,true), StructField(_2,StringType,true)], obj#8107: int
+      +- DeserializeToObject newInstance(class scala.Tuple2), obj#8106: scala.Tuple2
+         +- Project [cast(key#8183 as string) AS key#8096, cast(value#8184 as string) AS value#8097]
+            +- LogicalRDD [key#8183, value#8184, topic#8185, partition#8186, offset#8187L, timestamp#8188, timestampType#8189], true
+
+== Physical Plan ==
+WriteToDataSourceV2 org.apache.spark.sql.execution.streaming.sources.MicroBatchWrite@2f31f781
++- *(1) SerializeFromObject [input[0, int, false] AS value#8108]
+   +- *(1) MapElements org.apache.spark.sql.kafka010.KafkaMicroBatchSourceSuiteBase$$Lambda$5466/109510938@420a5093, obj#8107: int
+      +- *(1) DeserializeToObject newInstance(class scala.Tuple2), obj#8106: scala.Tuple2
+         +- *(1) Project [cast(key#8183 as string) AS key#8096, cast(value#8184 as string) AS value#8097]
+            +- *(1) Scan ExistingRDD kafka[key#8183,value#8184,topic#8185,partition#8186,offset#8187L,timestamp#8188,timestampType#8189]
+
+         
+         
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at org.scalatest.Assertions.fail(Assertions.scala:1091)
+	at org.scalatest.Assertions.fail$(Assertions.scala:1087)
+	at org.scalatest.FunSuite.fail(FunSuite.scala:1560)
+	at org.apache.spark.sql.streaming.StreamTest.failTest$1(StreamTest.scala:452)
+	at org.apache.spark.sql.streaming.StreamTest.liftedTree1$1(StreamTest.scala:788)
+	at org.apache.spark.sql.streaming.StreamTest.testStream(StreamTest.scala:764)
+	at org.apache.spark.sql.streaming.StreamTest.testStream$(StreamTest.scala:334)
+	at org.apache.spark.sql.kafka010.KafkaSourceTest.testStream(KafkaMicroBatchSourceSuite.scala:53)
+	at org.apache.spark.sql.kafka010.KafkaMicroBatchSourceSuiteBase.$anonfun$new$18(KafkaMicroBatchSourceSuite.scala:384)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:20)
+	at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at org.apache.spark.SparkFunSuite.withFixture(SparkFunSuite.scala:151)
+	at org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterEach$$super$runTest(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterEach.runTest(BeforeAndAfterEach.scala:221)
+	at org.scalatest.BeforeAndAfterEach.runTest$(BeforeAndAfterEach.scala:214)
+	at org.apache.spark.SparkFunSuite.runTest(SparkFunSuite.scala:58)
+	at org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at org.scalatest.Suite.run(Suite.scala:1124)
+	at org.scalatest.Suite.run$(Suite.scala:1106)
+	at org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterAll$$super$run(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterAll.liftedTree1$1(BeforeAndAfterAll.scala:213)
+	at org.scalatest.BeforeAndAfterAll.run(BeforeAndAfterAll.scala:210)
+	at org.scalatest.BeforeAndAfterAll.run$(BeforeAndAfterAll.scala:208)
+	at org.apache.spark.SparkFunSuite.run(SparkFunSuite.scala:58)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:317)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:510)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:296)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:286)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+{code}",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,2020-05-16 06:01:08.0,,,,,,,"0|z0et48:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Flaky test: org.apache.spark.streaming.StreamingContextSuite,SPARK-31728,13305343,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,cloud_fan,cloud_fan,16/May/20 05:52,18/May/20 00:27,18/Feb/21 10:01,,3.0.0,,,Tests,,,0,,"https://amplab.cs.berkeley.edu/jenkins/job/NewSparkPullRequestBuilder/5021/testReport/
+
+StreamingContextSuite.stop gracefully
+{code}
+sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedDueToTimeoutException: The code passed to eventually never returned normally. Attempted 517 times over 30.977750175999997 seconds. Last failure message: 0 was not greater than 0.
+	at org.scalatest.concurrent.Eventually.tryTryAgain$1(Eventually.scala:432)
+	at org.scalatest.concurrent.Eventually.eventually(Eventually.scala:439)
+	at org.scalatest.concurrent.Eventually.eventually$(Eventually.scala:391)
+	at org.scalatest.concurrent.Eventually$.eventually(Eventually.scala:479)
+	at org.scalatest.concurrent.Eventually.eventually(Eventually.scala:308)
+	at org.scalatest.concurrent.Eventually.eventually$(Eventually.scala:307)
+	at org.scalatest.concurrent.Eventually$.eventually(Eventually.scala:479)
+	at org.apache.spark.streaming.StreamingContextSuite.$anonfun$new$33(StreamingContextSuite.scala:312)
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:158)
+	at org.apache.spark.streaming.StreamingContextSuite.$anonfun$new$32(StreamingContextSuite.scala:300)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:20)
+	at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at org.apache.spark.SparkFunSuite.withFixture(SparkFunSuite.scala:151)
+	at org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterEach$$super$runTest(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterEach.runTest(BeforeAndAfterEach.scala:221)
+	at org.scalatest.BeforeAndAfterEach.runTest$(BeforeAndAfterEach.scala:214)
+	at org.apache.spark.SparkFunSuite.runTest(SparkFunSuite.scala:58)
+	at org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at org.scalatest.Suite.run(Suite.scala:1124)
+	at org.scalatest.Suite.run$(Suite.scala:1106)
+	at org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterAll$$super$run(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterAll.liftedTree1$1(BeforeAndAfterAll.scala:213)
+	at org.scalatest.BeforeAndAfterAll.run(BeforeAndAfterAll.scala:210)
+	at org.scalatest.BeforeAndAfterAll.run$(BeforeAndAfterAll.scala:208)
+	at org.apache.spark.SparkFunSuite.run(SparkFunSuite.scala:58)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:317)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:510)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:296)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:286)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedException: 0 was not greater than 0
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at org.apache.spark.streaming.StreamingContextSuite.$anonfun$new$37(StreamingContextSuite.scala:313)
+	at org.scalatest.concurrent.Eventually.makeAValiantAttempt$1(Eventually.scala:395)
+	at org.scalatest.concurrent.Eventually.tryTryAgain$1(Eventually.scala:409)
+	... 55 more
+{code}
+",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,2020-05-16 05:52:00.0,,,,,,,"0|z0et3k:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Flaky test: org.apache.spark.sql.kafka010.KafkaRelationSuiteV2,SPARK-31729,13305344,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,cloud_fan,cloud_fan,16/May/20 05:53,18/May/20 00:27,18/Feb/21 10:01,,3.0.0,,,Tests,,,0,,"https://amplab.cs.berkeley.edu/jenkins/job/NewSparkPullRequestBuilder/5012/testReport/
+
+KafkaRelationSuiteV2.timestamp provided for starting, offset provided for ending
+{code}
+sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedDueToTimeoutException: The code passed to eventually never returned normally. Attempted 3817 times over 1.0002091606166668 minutes. Last failure message: isPropagated was false Partition [topic-5, 0] metadata not propagated after timeout.
+	at org.scalatest.concurrent.Eventually.tryTryAgain$1(Eventually.scala:432)
+	at org.scalatest.concurrent.Eventually.eventually(Eventually.scala:439)
+	at org.scalatest.concurrent.Eventually.eventually$(Eventually.scala:391)
+	at org.scalatest.concurrent.Eventually$.eventually(Eventually.scala:479)
+	at org.scalatest.concurrent.Eventually.eventually(Eventually.scala:337)
+	at org.scalatest.concurrent.Eventually.eventually$(Eventually.scala:336)
+	at org.scalatest.concurrent.Eventually$.eventually(Eventually.scala:479)
+	at org.apache.spark.sql.kafka010.KafkaTestUtils.waitUntilMetadataIsPropagated(KafkaTestUtils.scala:643)
+	at org.apache.spark.sql.kafka010.KafkaTestUtils.$anonfun$createTopic$1(KafkaTestUtils.scala:393)
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:158)
+	at org.apache.spark.sql.kafka010.KafkaTestUtils.createTopic(KafkaTestUtils.scala:392)
+	at org.apache.spark.sql.kafka010.KafkaRelationSuiteBase.prepareTimestampRelatedUnitTest(KafkaRelationSuite.scala:322)
+	at org.apache.spark.sql.kafka010.KafkaRelationSuiteBase.$anonfun$new$31(KafkaRelationSuite.scala:201)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:20)
+	at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at org.apache.spark.SparkFunSuite.withFixture(SparkFunSuite.scala:151)
+	at org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterEach$$super$runTest(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterEach.runTest(BeforeAndAfterEach.scala:221)
+	at org.scalatest.BeforeAndAfterEach.runTest$(BeforeAndAfterEach.scala:214)
+	at org.apache.spark.SparkFunSuite.runTest(SparkFunSuite.scala:58)
+	at org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at org.scalatest.Suite.run(Suite.scala:1124)
+	at org.scalatest.Suite.run$(Suite.scala:1106)
+	at org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterAll$$super$run(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterAll.liftedTree1$1(BeforeAndAfterAll.scala:213)
+	at org.scalatest.BeforeAndAfterAll.run(BeforeAndAfterAll.scala:210)
+	at org.scalatest.BeforeAndAfterAll.run$(BeforeAndAfterAll.scala:208)
+	at org.apache.spark.SparkFunSuite.run(SparkFunSuite.scala:58)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:317)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:510)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:296)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:286)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedException: isPropagated was false Partition [topic-5, 0] metadata not propagated after timeout
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at org.scalatest.Assertions$.newAssertionFailedException(Assertions.scala:1389)
+	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at org.apache.spark.sql.kafka010.KafkaTestUtils.$anonfun$waitUntilMetadataIsPropagated$1(KafkaTestUtils.scala:644)
+	at org.scalatest.concurrent.Eventually.makeAValiantAttempt$1(Eventually.scala:395)
+	at org.scalatest.concurrent.Eventually.tryTryAgain$1(Eventually.scala:409)
+	... 58 more
+{code}",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,2020-05-16 05:53:45.0,,,,,,,"0|z0et3s:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Flaky test: org.apache.spark.streaming.kafka010.DirectKafkaStreamSuite,SPARK-31722,13305227,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,cloud_fan,cloud_fan,15/May/20 15:48,18/May/20 00:27,18/Feb/21 10:01,,3.0.0,,,DStreams,,,0,,"https://amplab.cs.berkeley.edu/jenkins/job/NewSparkPullRequestBuilder/5022/testReport/
+
+DirectKafkaStreamSuite.offset recovery
+{code}
+sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedDueToTimeoutException: The code passed to eventually never returned normally. Attempted 399 times over 20.030118815 seconds. Last failure message: 55 did not equal 210.
+	at org.scalatest.concurrent.Eventually.tryTryAgain$1(Eventually.scala:432)
+	at org.scalatest.concurrent.Eventually.eventually(Eventually.scala:439)
+	at org.scalatest.concurrent.Eventually.eventually$(Eventually.scala:391)
+	at org.apache.spark.streaming.kafka010.DirectKafkaStreamSuite.eventually(DirectKafkaStreamSuite.scala:45)
+	at org.scalatest.concurrent.Eventually.eventually(Eventually.scala:308)
+	at org.scalatest.concurrent.Eventually.eventually$(Eventually.scala:307)
+	at org.apache.spark.streaming.kafka010.DirectKafkaStreamSuite.eventually(DirectKafkaStreamSuite.scala:45)
+	at org.apache.spark.streaming.kafka010.DirectKafkaStreamSuite.$anonfun$new$39(DirectKafkaStreamSuite.scala:415)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:20)
+	at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at org.apache.spark.SparkFunSuite.withFixture(SparkFunSuite.scala:151)
+	at org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterEach$$super$runTest(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterEach.runTest(BeforeAndAfterEach.scala:221)
+	at org.scalatest.BeforeAndAfterEach.runTest$(BeforeAndAfterEach.scala:214)
+	at org.apache.spark.SparkFunSuite.runTest(SparkFunSuite.scala:58)
+	at org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at org.scalatest.Suite.run(Suite.scala:1124)
+	at org.scalatest.Suite.run$(Suite.scala:1106)
+	at org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterAll$$super$run(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterAll.liftedTree1$1(BeforeAndAfterAll.scala:213)
+	at org.scalatest.BeforeAndAfterAll.run(BeforeAndAfterAll.scala:210)
+	at org.scalatest.BeforeAndAfterAll.run$(BeforeAndAfterAll.scala:208)
+	at org.apache.spark.SparkFunSuite.run(SparkFunSuite.scala:58)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:317)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:510)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:296)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:286)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedException: 55 did not equal 210
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at org.apache.spark.streaming.kafka010.DirectKafkaStreamSuite.$anonfun$new$56(DirectKafkaStreamSuite.scala:416)
+	at org.scalatest.concurrent.Eventually.makeAValiantAttempt$1(Eventually.scala:395)
+	at org.scalatest.concurrent.Eventually.tryTryAgain$1(Eventually.scala:409)
+	... 53 more
+{code}
+
+
+DirectKafkaStreamSuite.offset recovery from kafka
+{code}
+sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedException: 0 was not greater than 0
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at org.apache.spark.streaming.kafka010.DirectKafkaStreamSuite.$anonfun$new$70(DirectKafkaStreamSuite.scala:480)
+	at scala.collection.Iterator.foreach(Iterator.scala:941)
+	at scala.collection.Iterator.foreach$(Iterator.scala:941)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1429)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.streaming.kafka010.DirectKafkaStreamSuite.$anonfun$new$57(DirectKafkaStreamSuite.scala:477)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:20)
+	at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at org.apache.spark.SparkFunSuite.withFixture(SparkFunSuite.scala:151)
+	at org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterEach$$super$runTest(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterEach.runTest(BeforeAndAfterEach.scala:221)
+	at org.scalatest.BeforeAndAfterEach.runTest$(BeforeAndAfterEach.scala:214)
+	at org.apache.spark.SparkFunSuite.runTest(SparkFunSuite.scala:58)
+	at org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at org.scalatest.Suite.run(Suite.scala:1124)
+	at org.scalatest.Suite.run$(Suite.scala:1106)
+	at org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterAll$$super$run(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterAll.liftedTree1$1(BeforeAndAfterAll.scala:213)
+	at org.scalatest.BeforeAndAfterAll.run(BeforeAndAfterAll.scala:210)
+	at org.scalatest.BeforeAndAfterAll.run$(BeforeAndAfterAll.scala:208)
+	at org.apache.spark.SparkFunSuite.run(SparkFunSuite.scala:58)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:317)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:510)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:296)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:286)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+{code}",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Fri May 15 16:17:00 UTC 2020,,,,,,,"0|z0esds:",9223372036854775807,,,,,,,,,,,,,,,,"15/May/20 16:17;cloud_fan;cc [~kabhwan]",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Add e2e test for using kubectl proxy for submitting spark jobs,SPARK-24055,13154611,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,foxish,foxish,23/Apr/18 20:53,17/May/20 18:25,18/Feb/21 10:01,,3.0.0,,,Kubernetes,Spark Core,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,2018-04-23 20:53:46.0,,,,,,,"0|i3sx5z:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Kubernetes version support strategy on test nodes / backend,SPARK-26973,13217484,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,skonto,skonto,22/Feb/19 16:26,17/May/20 18:25,18/Feb/21 10:01,,3.0.0,,,Kubernetes,Spark Core,,1,,"Kubernetes has a policy for supporting three minor releases and the current ones are defined here: [https://github.com/kubernetes/sig-release/blob/master/releases/patch-releases.md.|https://github.com/kubernetes/sig-release/blob/master/releases/patch-releases.md]
+
+Moving from release 1.x to 1.(x+1) happens roughly every 100 days:[https://gravitational.com/blog/kubernetes-release-cycle.]
+
+This has an effect on dependencies upgrade at the Spark on K8s backend and the version of Minikube required to be supported for testing. One other issue is what the users actually want at the given time of a release. Some popular vendors like EKS([https://aws.amazon.com/eks/faqs/]) have their own roadmap for releases and may not catch up fast (what is our view on this).
+
+Follow the comments for a recent discussion on the topic: [https://github.com/apache/spark/pull/23814.]
+
+Clearly we need a strategy for this.
+
+A couple of options for the current state of things:
+
+a) Support only the last two versions, but that leaves out a version that still receives patches.
+
+b) Support only the latest, which makes testing easier, but leaves out other currently maintained version.
+
+A good strategy will optimize at least the following:
+
+1) percentage of users satisfied at release time.
+
+2) how long it takes to support the latest K8s version
+
+3) testing requirements eg. minikube versions used
+
+ ",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2019-02-22 16:37:26.739,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Fri Feb 22 17:40:44 UTC 2019,,,,,,,"0|yi1a2w:",9223372036854775807,,,,,,,,,,,,,,,,"22/Feb/19 16:28;skonto;[~foxish] [~srowen] [~shaneknapp] [~vanzin] fyi.","22/Feb/19 16:37;srowen;I think I'd suggest testing against one version or else this could get complicated fast. The latest version we support is a good place to start. How about that until something tells us we miss too many big problems without more tests?","22/Feb/19 17:17;shaneknapp;i was chatting over email w/[~eje] about this yesterday, and the TL;DR is:  only one version to test against, please!
+
+here are some bullet points, in no particular order, to summarize what ~[~eje] and i discussed:
+* we can easily test against any version of k8s via the {{--kubernetes-version}} flag passed to {{minikube start}}, so testing against N versions shouldn't be hard. 
+* there is a moving range of k8s versions that a specific minikube release can support (ie:  minikube v.0.23.0 only supports up to k8s 1.13.1).  
+* we are limited to *one* k8s/minikube build per node at any time, so adding tests for more than one k8s version to the suite will definitely increase resource contention.  currently spark is the only minikube consumer, but some upcoming lab projects will need their own k8s integration tests.
+* the operational overhead of managing minikube, k8s and all of the VM-layer drivers is highly non-trivial.
+
+","22/Feb/19 17:40;eje;A couple other points:
+ * Currently, k8s is evolving in a manner where breakage of existing functionality is low probability, and so testing against the earliest version we wish to support is probably optimal in a scenario where we are choosing one version to test against. (This heuristic might change in the future, for example if k8s goes to a 2.x series where backward compatibility may be broken)
+ * The integration testing was designed to support running against external clusters (GCP, etc) - this might provide an approach to supporting testing against multiple k8s versions. However, it would come with additional op-ex costs and decreased control over the environment. I mention it mostly because it's a plausible path to outsourcing some of the combinatorics that [~shaneknapp] discussed above",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Integration Testing for Kerberos Support for Spark on Kubernetes,SPARK-25750,13192032,Test,In Progress,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,ifilonenko,ifilonenko,16/Oct/18 20:34,17/May/20 18:24,18/Feb/21 10:01,,3.0.0,,,Kubernetes,Spark Core,,0,,Integration testing for Secure HDFS interaction for Spark on Kubernetes. ,,,,,,,,,,,,,,,,,,,SPARK-23257,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2018-10-16 20:35:50.149,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Tue Oct 16 20:35:50 UTC 2018,,,,,,,"0|i3z9vb:",9223372036854775807,,,,,,,,,,,,,,,,"16/Oct/18 20:35;apachespark;User 'ifilonenko' has created a pull request for this issue:
+https://github.com/apache/spark/pull/22608",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+The spark-streaming-kafka-0-10_2.11 test cases are failing on ppc64le,SPARK-30364,13276579,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,AK2019,AK2019,27/Dec/19 09:54,15/Apr/20 12:08,18/Feb/21 10:01,,2.4.0,,,Build,DStreams,,0,,"I have been trying to build the Apache Spark on rhel_7.6/ppc64le; however, the spark-streaming-kafka-0-10_2.11 test cases are failing with following error :
+
+{code}
+[ERROR] /opt/spark/external/kafka-0-10/src/test/scala/org/apache/spark/streaming/kafka010/KafkaDataConsumerSuite.scala:85: Symbol 'term org.eclipse' is missing from the classpath.
+This symbol is required by 'method org.apache.spark.metrics.MetricsSystem.getServletHandlers'.
+Make sure that term eclipse is in your classpath and check for conflicting dependencies with `-Ylog-classpath`.
+A full rebuild may help if 'MetricsSystem.class' was compiled against an incompatible version of org.
+[ERROR]     testUtils.sendMessages(topic, data.toArray)                                  ^
+{code}
+
+
+Would like some help on understanding the cause for the same . I am running it on a High end VM with good connectivity.","
+os: rhel 7.6
+arch: ppc64le",,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2020-04-15 12:08:19.552,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Wed Apr 15 12:08:19 UTC 2020,,,,,,,"0|z0a128:",9223372036854775807,,,,,,,,,,,,,,,,"15/Apr/20 12:08;hryhoriev.nick;I have the same issue with the spark app on Mac OS with 2.4.3 spark.
+The issue appeared only when I extend Spark Metrics With custom Source.
+Any known way to avoid it?",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Flaky Test: StreamingContextSuite.stop gracefully,SPARK-31251,13293823,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,hyukjin.kwon,hyukjin.kwon,25/Mar/20 13:45,25/Mar/20 13:45,18/Feb/21 10:01,,3.1.0,,,Tests,,,0,,"https://amplab.cs.berkeley.edu/jenkins/job/SparkPullRequestBuilder/120337/testReport/
+
+{code}
+sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedDueToTimeoutException: The code passed to eventually never returned normally. Attempted 532 times over 10.005647871999999 seconds. Last failure message: 0 was not greater than 0.
+	at org.scalatest.concurrent.Eventually.tryTryAgain$1(Eventually.scala:432)
+	at org.scalatest.concurrent.Eventually.eventually(Eventually.scala:439)
+	at org.scalatest.concurrent.Eventually.eventually$(Eventually.scala:391)
+	at org.scalatest.concurrent.Eventually$.eventually(Eventually.scala:479)
+	at org.scalatest.concurrent.Eventually.eventually(Eventually.scala:308)
+	at org.scalatest.concurrent.Eventually.eventually$(Eventually.scala:307)
+	at org.scalatest.concurrent.Eventually$.eventually(Eventually.scala:479)
+	at org.apache.spark.streaming.StreamingContextSuite.$anonfun$new$33(StreamingContextSuite.scala:312)
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:158)
+	at org.apache.spark.streaming.StreamingContextSuite.$anonfun$new$32(StreamingContextSuite.scala:300)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:20)
+	at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at org.apache.spark.SparkFunSuite.withFixture(SparkFunSuite.scala:151)
+	at org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterEach$$super$runTest(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterEach.runTest(BeforeAndAfterEach.scala:221)
+	at org.scalatest.BeforeAndAfterEach.runTest$(BeforeAndAfterEach.scala:214)
+	at org.apache.spark.SparkFunSuite.runTest(SparkFunSuite.scala:58)
+	at org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at org.scalatest.Suite.run(Suite.scala:1124)
+	at org.scalatest.Suite.run$(Suite.scala:1106)
+	at org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at org.apache.spark.SparkFunSuite.org$scalatest$BeforeAndAfterAll$$super$run(SparkFunSuite.scala:58)
+	at org.scalatest.BeforeAndAfterAll.liftedTree1$1(BeforeAndAfterAll.scala:213)
+	at org.scalatest.BeforeAndAfterAll.run(BeforeAndAfterAll.scala:210)
+	at org.scalatest.BeforeAndAfterAll.run$(BeforeAndAfterAll.scala:208)
+	at org.apache.spark.SparkFunSuite.run(SparkFunSuite.scala:58)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:317)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:510)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:296)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:286)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: sbt.ForkMain$ForkError: org.scalatest.exceptions.TestFailedException: 0 was not greater than 0
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at org.apache.spark.streaming.StreamingContextSuite.$anonfun$new$37(StreamingContextSuite.scala:313)
+	at org.scalatest.concurrent.Eventually.makeAValiantAttempt$1(Eventually.scala:395)
+	at org.scalatest.concurrent.Eventually.tryTryAgain$1(Eventually.scala:409)
+	... 55 more
+{code}",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,2020-03-25 13:45:47.0,,,,,,,"0|z0cw4o:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Flaky Test: KafkaDelegationTokenSuite.(It is not a test it is a sbt.testing.SuiteSelector),SPARK-31250,13293822,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,hyukjin.kwon,hyukjin.kwon,25/Mar/20 13:44,25/Mar/20 13:44,18/Feb/21 10:01,,3.1.0,,,Tests,,,0,,"https://amplab.cs.berkeley.edu/jenkins/job/SparkPullRequestBuilder/120321/testReport/
+
+{code}
+sbt.ForkMain$ForkError: org.apache.kafka.common.KafkaException: Failed to create new KafkaAdminClient
+	at org.apache.kafka.clients.admin.KafkaAdminClient.createInternal(KafkaAdminClient.java:451)
+	at org.apache.kafka.clients.admin.Admin.create(Admin.java:59)
+	at org.apache.kafka.clients.admin.AdminClient.create(AdminClient.java:39)
+	at org.apache.spark.sql.kafka010.KafkaTestUtils.setupEmbeddedKafkaServer(KafkaTestUtils.scala:267)
+	at org.apache.spark.sql.kafka010.KafkaTestUtils.setup(KafkaTestUtils.scala:290)
+	at org.apache.spark.sql.kafka010.KafkaDelegationTokenSuite.beforeAll(KafkaDelegationTokenSuite.scala:49)
+	at org.scalatest.BeforeAndAfterAll.liftedTree1$1(BeforeAndAfterAll.scala:212)
+	at org.scalatest.BeforeAndAfterAll.run(BeforeAndAfterAll.scala:210)
+	at org.scalatest.BeforeAndAfterAll.run$(BeforeAndAfterAll.scala:208)
+	at org.apache.spark.SparkFunSuite.run(SparkFunSuite.scala:58)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:317)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:510)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:296)
+	at sbt.ForkMain$Run$2.call(ForkMain.java:286)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: sbt.ForkMain$ForkError: org.apache.kafka.common.KafkaException: javax.security.auth.login.LoginException: Client not found in Kerberos database (6) - Client not found in Kerberos database
+	at org.apache.kafka.common.network.SaslChannelBuilder.configure(SaslChannelBuilder.java:158)
+	at org.apache.kafka.common.network.ChannelBuilders.create(ChannelBuilders.java:146)
+	at org.apache.kafka.common.network.ChannelBuilders.clientChannelBuilder(ChannelBuilders.java:67)
+	at org.apache.kafka.clients.ClientUtils.createChannelBuilder(ClientUtils.java:99)
+	at org.apache.kafka.clients.admin.KafkaAdminClient.createInternal(KafkaAdminClient.java:426)
+	... 17 more
+Caused by: sbt.ForkMain$ForkError: javax.security.auth.login.LoginException: Client not found in Kerberos database (6) - Client not found in Kerberos database
+	at com.sun.security.auth.module.Krb5LoginModule.attemptAuthentication(Krb5LoginModule.java:804)
+	at com.sun.security.auth.module.Krb5LoginModule.login(Krb5LoginModule.java:617)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javax.security.auth.login.LoginContext.invoke(LoginContext.java:755)
+	at javax.security.auth.login.LoginContext.access$000(LoginContext.java:195)
+	at javax.security.auth.login.LoginContext$4.run(LoginContext.java:682)
+	at javax.security.auth.login.LoginContext$4.run(LoginContext.java:680)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.login.LoginContext.invokePriv(LoginContext.java:680)
+	at javax.security.auth.login.LoginContext.login(LoginContext.java:587)
+	at org.apache.kafka.common.security.authenticator.AbstractLogin.login(AbstractLogin.java:60)
+	at org.apache.kafka.common.security.kerberos.KerberosLogin.login(KerberosLogin.java:103)
+	at org.apache.kafka.common.security.authenticator.LoginManager.(LoginManager.java:62)
+	at org.apache.kafka.common.security.authenticator.LoginManager.acquireLoginManager(LoginManager.java:105)
+	at org.apache.kafka.common.network.SaslChannelBuilder.configure(SaslChannelBuilder.java:147)
+	... 21 more
+Caused by: sbt.ForkMain$ForkError: sun.security.krb5.KrbException: Client not found in Kerberos database (6) - Client not found in Kerberos database
+	at sun.security.krb5.KrbAsRep.(KrbAsRep.java:82)
+	at sun.security.krb5.KrbAsReqBuilder.send(KrbAsReqBuilder.java:316)
+	at sun.security.krb5.KrbAsReqBuilder.action(KrbAsReqBuilder.java:361)
+	at com.sun.security.auth.module.Krb5LoginModule.attemptAuthentication(Krb5LoginModule.java:776)
+	... 38 more
+Caused by: sbt.ForkMain$ForkError: sun.security.krb5.Asn1Exception: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.ASRep.init(ASRep.java:64)
+	at sun.security.krb5.internal.ASRep.(ASRep.java:59)
+	at sun.security.krb5.KrbAsRep.(KrbAsRep.java:60)
+	... 41 more
+{code}",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,2020-03-25 13:44:35.0,,,,,,,"0|z0cw4g:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Add test suite for ContextBarrierState,SPARK-25017,13176760,Test,In Progress,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,jiangxb1987,jiangxb1987,03/Aug/18 17:02,10/Jan/20 03:50,18/Feb/21 10:01,,2.4.0,,,Spark Core,,,1,,We shall be able to add unit test to ContextBarrierState with a mocked RpcCallContext. Currently it's only covered by end-to-end test in `BarrierTaskContextSuite`,,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2018-08-21 05:28:05.658,,,false,SPARK-24374,,,,,,,,,,,,,,,,,9223372036854775807,,,Tue Aug 21 05:28:05 UTC 2018,,,,,,,"0|i3wo7b:",9223372036854775807,,,,,,,,,,,,,,,,"21/Aug/18 05:28;apachespark;User 'xuanyuanking' has created a pull request for this issue:
+https://github.com/apache/spark/pull/22165",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Add integration test for Kerberos ,SPARK-25294,13182288,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Major,,,yumwang,yumwang,31/Aug/18 06:02,31/Aug/18 16:31,18/Feb/21 10:01,,2.4.0,,,Tests,,,0,,"Some changes may cause Kerberos issues, such as {{Yarn}}, {{Hive}}, {{HDFS}}. we should add tests.
+
+https://issues.apache.org/jira/browse/SPARK-23789
+https://github.com/apache/spark/pull/21987#issuecomment-417560077",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2018-08-31 07:32:56.844,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Fri Aug 31 16:31:56 UTC 2018,,,,,,,"0|i3xm8v:",9223372036854775807,,,,,,,,,,,,,,,,"31/Aug/18 06:04;yumwang;cc [~srowen] What do you think?","31/Aug/18 07:32;Steven Rand;+1 – another example of how easy it is to break the krb integration w/o noticing is https://issues.apache.org/jira/browse/SPARK-22319","31/Aug/18 13:46;srowen;Sure, another test is good. What test? I don't have any knowledge of this area.
+
+Regarding the Hadoop 2.7.7 issue, ideally that's worked-around as I don't expect Hadoop behavior will change back.","31/Aug/18 16:31;vanzin;It might be hard to cover all cases since kerberos is, well, complicated. But there's a lot of ground we can cover by using Hadoop's {{MiniKdc}} in our tests. This has been on my ""things to take a look at sometime"" list for a few years...",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+add a java implementation for the simple writable data source,SPARK-34432,13358489,Test,In Progress,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Minor,,,KevinPis,KevinPis,13/Feb/21 16:23,14/Feb/21 15:30,18/Feb/21 10:01,,3.0.1,,,SQL,Tests,,0,,"This is a followup of https://github.com/apache/spark/pull/19269
+
+In #19269 , there is only a scala implementation of simple writable data source in `DataSourceV2Suite`.
+
+This PR adds a java implementation of it.",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2021-02-13 17:19:51.978,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Sun Feb 14 15:30:13 UTC 2021,,,,,,,"0|z0nnl4:",9223372036854775807,,,,,cloud_fan,,,,,,,,,,,"13/Feb/21 17:19;apachespark;User 'kevincmchen' has created a pull request for this issue:
+https://github.com/apache/spark/pull/31558","14/Feb/21 02:58;apachespark;User 'kevincmchen' has created a pull request for this issue:
+https://github.com/apache/spark/pull/31560","14/Feb/21 15:30;KevinPis;Hi [~cloud_fan]!   Sorry to bother you, but Could you help me to review the following pr :
+
+[https://github.com/apache/spark/pull/31560]",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+function runCliWithin of CliSuite can not cover some test cases,SPARK-34040,13350808,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Minor,,,hzfeiwang,hzfeiwang,07/Jan/21 06:34,07/Jan/21 06:35,18/Feb/21 10:01,,3.0.1,,,SQL,,,0,,"Here is a  test case(query contains two statements splitted by '\n') which can not be covered by runCliWithin:
+
+{code:java}
+    runCliWithin(1.minute)(""select 'test1';\n select 'test2';"" -> ""test2"")
+
+{code}
+
+
+
+{code:java}
+11:35:00.383 pool-1-thread-1-ScalaTest-running-CliSuite INFO CliSuite: Cli driver is booted. Waiting for expected answers.
+11:35:01.104 Thread-6 INFO CliSuite: 2021-01-06 19:35:01.104 - stdout> spark-sql> select 'test1';
+11:35:01.104 Thread-6 INFO CliSuite: stdout> found expected output line 0: 'spark-sql> select 'test1';'
+11:35:10.120 Thread-6 INFO CliSuite: 2021-01-06 19:35:10.12 - stdout> test1
+11:35:10.121 Thread-7 INFO CliSuite: 2021-01-06 19:35:10.121 - stderr> Time taken: 8.987 seconds, Fetched 1 row(s)
+11:35:10.151 Thread-6 INFO CliSuite: 2021-01-06 19:35:10.151 - stdout> spark-sql>  select 'test2';
+11:35:10.220 Thread-6 INFO CliSuite: 2021-01-06 19:35:10.22 - stdout> test2
+11:35:10.220 Thread-7 INFO CliSuite: 2021-01-06 19:35:10.22 - stderr> Time taken: 0.068 seconds, Fetched 1 row(s)
+11:35:10.443 Thread-6 INFO CliSuite: 2021-01-06 19:35:10.443 - stdout> spark-sql> 
+11:36:00.390 pool-1-thread-1-ScalaTest-running-CliSuite ERROR CliSuite: 
+=======================
+CliSuite failure output
+=======================
+Spark SQL CLI command line: ../../bin/spark-sql --master local --driver-java-options -Dderby.system.durability=test --conf spark.ui.enabled=false --hiveconf javax.jdo.option.ConnectionURL=jdbc:derby:;databaseName=/Users/fwang12/ebay/apache-spark/target/tmp/spark-7c275c0c-fc8e-49c7-b643-18f20fe8ba51;create=true --hiveconf hive.exec.scratchdir=/Users/fwang12/ebay/apache-spark/target/tmp/spark-bb0fded2-1a25-45d2-9f78-16898f32aefc --hiveconf conf1=conftest --hiveconf conf2=1 --hiveconf hive.metastore.warehouse.dir=/Users/fwang12/ebay/apache-spark/target/tmp/spark-4901396f-9a7a-4299-b7fc-9cb3b24c46f4
+Exception: java.util.concurrent.TimeoutException: Futures timed out after [1 minute]
+Failed to capture next expected output ""         >  select 'test2';"" within 1 minute.
+{code}
+
+It seems that it is not recommended to transfer multiple queries one time, but there is some UT like this:
+https://github.com/apache/spark/blob/f9daf035f473fea12a2ee67428db8d78f29973d5/sql/hive-thriftserver/src/test/scala/org/apache/spark/sql/hive/thriftserver/CliSuite.scala#L542-L544",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,2021-01-07 06:34:03.0,,,,,,,"0|z0mc80:",9223372036854775807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Add jenkins arm test for spark,SPARK-29106,13257005,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Minor,,shaneknapp,huangtianhua,huangtianhua,17/Sep/19 01:49,01/Sep/20 07:28,18/Feb/21 10:01,,3.0.0,,,Tests,,,1,,"Add arm test jobs to amplab jenkins for spark.
+
+Till now we made two arm test periodic jobs for spark in OpenLab, one is based on master with hadoop 2.7(similar with QA test of amplab jenkins), other one is based on a new branch which we made on date 09-09, see  [http://status.openlabtesting.org/builds/job/spark-master-unit-test-hadoop-2.7-arm64]  and [http://status.openlabtesting.org/builds/job/spark-unchanged-branch-unit-test-hadoop-2.7-arm64.|http://status.openlabtesting.org/builds/job/spark-unchanged-branch-unit-test-hadoop-2.7-arm64] We only have to care about the first one when integrate arm test with amplab jenkins.
+
+About the k8s test on arm, we have took test it, see [https://github.com/theopenlab/spark/pull/17], maybe we can integrate it later. 
+
+And we plan test on other stable branches too, and we can integrate them to amplab when they are ready.
+
+We have offered an arm instance and sent the infos to shane knapp, thanks shane to add the first arm job to amplab jenkins :) 
+
+The other important thing is about the leveldbjni [https://github.com/fusesource/leveldbjni,|https://github.com/fusesource/leveldbjni/issues/80] spark depends on leveldbjni-all-1.8 [https://mvnrepository.com/artifact/org.fusesource.leveldbjni/leveldbjni-all/1.8], we can see there is no arm64 supporting. So we build an arm64 supporting release of leveldbjni see [https://mvnrepository.com/artifact/org.openlabtesting.leveldbjni/leveldbjni-all/1.8], but we can't modified the spark pom.xml directly with something like 'property'/'profile' to choose correct jar package on arm or x86 platform, because spark depends on some hadoop packages like hadoop-hdfs, the packages depend on leveldbjni-all-1.8 too, unless hadoop release with new arm supporting leveldbjni jar. Now we download the leveldbjni-al-1.8 of openlabtesting and 'mvn install' to use it when arm testing for spark.
+
+PS: The issues found and fixed:
+ SPARK-28770
+ [https://github.com/apache/spark/pull/25673]
+  
+ SPARK-28519
+ [https://github.com/apache/spark/pull/25279]
+  
+ SPARK-28433
+ [https://github.com/apache/spark/pull/25186]
+
+ 
+
+SPARK-28467
+
+[https://github.com/apache/spark/pull/25864]
+
+ 
+
+SPARK-29286
+
+[https://github.com/apache/spark/pull/26021]
+
+ 
+
+ ",,,,,,,,,,SPARK-30057,SPARK-29286,SPARK-27721,SPARK-28770,SPARK-28519,SPARK-28433,SPARK-28467,,,,"23/Oct/19 17:28;shaneknapp;R-ansible.yml;https://issues.apache.org/jira/secure/attachment/12983856/R-ansible.yml","23/Oct/19 17:28;shaneknapp;R-libs.txt;https://issues.apache.org/jira/secure/attachment/12983857/R-libs.txt","21/Nov/19 09:10;bzhaoopenstack;SparkR-and-pyspark36-testing.txt;https://issues.apache.org/jira/secure/attachment/12986396/SparkR-and-pyspark36-testing.txt","07/Nov/19 22:37;shaneknapp;arm-python36.txt;https://issues.apache.org/jira/secure/attachment/12985282/arm-python36.txt",,4.0,,,,,,,,,,,,,,,,,,,,2019-09-18 16:46:13.809,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Tue Sep 01 07:26:40 UTC 2020,,,,,,,"0|z06p5s:",9223372036854775807,,,,,,,,,,,,,,,,"18/Sep/19 16:46;dongjoon;I changed the affected version to 3.0.0 because this is a new feature at testing and it seems that there is only `master` branch testing.
+- http://status.openlabtesting.org/builds?project=apache/spark","19/Sep/19 02:30;huangtianhua;[~dongjoon], thanks :)
+
+Till now we made two arm test periodic jobs for spark in OpenLab, one is based on master with hadoop 2.7(similar with QA test of amplab jenkins), other one is based on a new branch which we made on date 09-09, see  [http://status.openlabtesting.org/builds/job/spark-master-unit-test-hadoop-2.7-arm64]  and [http://status.openlabtesting.org/builds/job/spark-unchanged-branch-unit-test-hadoop-2.7-arm64,|http://status.openlabtesting.org/builds/job/spark-unchanged-branch-unit-test-hadoop-2.7-arm64] I think we only have to care about the first one when integrate arm test with amplab jenkins. In fact we have took test for k8s on arm, see [https://github.com/theopenlab/spark/pull/17], maybe we can integrate it later.  And we plan test on other stable branches too, and we can integrate them to amplab when they are ready.
+
+We have offered an arm instance and sent the infos to shane knapp, thanks shane to add the first arm job to amplab jenkins :) 
+
+The other important thing is about the leveldbjni [https://github.com/fusesource/leveldbjni,|https://github.com/fusesource/leveldbjni/issues/80] spark depends on leveldbjni-all-1.8 [https://mvnrepository.com/artifact/org.fusesource.leveldbjni/leveldbjni-all/1.8], we can see there is no arm64 supporting. So we build an arm64 supporting release of leveldbjni see [https://mvnrepository.com/artifact/org.openlabtesting.leveldbjni/leveldbjni-all/1.8], but we can't modified the spark pom.xml directly with something like 'property'/'profile' to choose correct jar package on arm or x86 platform, because spark depends on some hadoop packages like hadoop-hdfs, the packages depend on leveldbjni-all-1.8 too, unless hadoop release with new arm supporting leveldbjni jar. Now we download the leveldbjni-al-1.8 of openlabtesting and 'mvn install' to use it when arm testing for spark.
+
+PS: The issues found and fixed:
+ SPARK-28770
+ [https://github.com/apache/spark/pull/25673]
+  
+ SPARK-28519
+ [https://github.com/apache/spark/pull/25279]
+  
+ SPARK-28433
+ [https://github.com/apache/spark/pull/25186]
+  
+  ","19/Sep/19 02:56;huangtianhua;The other important thing is about the leveldbjni [https://github.com/fusesource/leveldbjni,|https://github.com/fusesource/leveldbjni/issues/80] spark depends on leveldbjni-all-1.8 [https://mvnrepository.com/artifact/org.fusesource.leveldbjni/leveldbjni-all/1.8], we can see there is no arm64 supporting. So we build an arm64 supporting release of leveldbjni see [https://mvnrepository.com/artifact/org.openlabtesting.leveldbjni/leveldbjni-all/1.8], but we can't modified the spark pom.xml directly with something like 'property'/'profile' to choose correct jar package on arm or x86 platform, because spark depends on some hadoop packages like hadoop-hdfs, the packages depend on leveldbjni-all-1.8 too, unless hadoop release with new arm supporting leveldbjni jar. Now we download the leveldbjni-al-1.8 of openlabtesting and 'mvn install' to use it when arm testing for spark.","19/Sep/19 05:50;dongjoon;Ur, [~huangtianhua]. You should update the `Description`. Comments are hidden easily. Could you organize the information into `Description?","17/Oct/19 15:41;shaneknapp;worker is up and sshable from the jenkins master:
+https://amplab.cs.berkeley.edu/jenkins/computer/spark-arm-vm/
+
+waiting on VM config to be sorted by [~huangtianhua] and then i will ensure i can launch the worker process and run the build.
+
+steps for the VM:
+* java is not installed, please install the following:
+  - java8 min version 1.8.0_191
+  - java11 min version 11.0.1
+
+* it appears from the ansible playbook that there are other deps that need to be installed.
+  - please install all deps
+  - manually run the tests until they pass
+
+* the jenkins user should NEVER have sudo or any root-level access!
+
+* once the arm tests pass when manually run, take a snapshot of this image so we can recreate it w/o needing to reinstall everything
+","17/Oct/19 15:41;bzhaoopenstack;Hi [~shaneknapp] Shane,
+ As the whole test take some times, so I can not send out this summarize yesterday.
+
+First Notes: The ARM VM just test with java8, as the java11 didn't get test before,
+                   so we plan to add it in the future, and we test the java8 first.
+ * You mentioned the dependencies of ansible had been installed.
+ * Also the dependencies which would use sudo priority have be installed by user 'root'.  The 'jenkins' user doesn't have sudo or any root-level access.
+ * Source code location: /home/jenkins/spark – 2019/10/16 master branch
+ * The all ansible test scripts are stored in /home/jenkins/ansible_test_scripts  You can run the test with the ansible CMD.
+ * When we finish the whole test on the target ARM VM, we make a whole VM snapshot for it.
+
+Now I have finished the following tests on the ARM VM:
+ 1. maven test - Spark Build and UT
+ =======================
+ env: java8
+
+       javac 1.8.0_222
+ spark: master branch
+ TEST STEPS: 
+ - ./build/mvn -B -e clean install -DskipTests -Phadoop-2.7 -Pyarn -Phive -Phive-thriftserver -Pkinesis-asl -Pmesos 
+ - ./build/mvn -B -e test -Phadoop-2.7 -Pyarn -Phive -Phive-thriftserver -Pkinesis-asl -Pmesos
+ TEST ANSIBLE CMD:  
+ - ansible-playbook -i /home/jenkins/ansible_test_scripts/inventory /home/jenkins/ansible_test_scripts/maven_unittest.yml
+ TEST LOG(including the full log, but success at the last time):  
+ - /home/jenkins/ansible_test_scripts/test_logs/spark_build.log
+   - /home/jenkins/ansible_test_scripts/test_logs/spark_test_original.log
+   - /home/jenkins/ansible_test_scripts/test_logs/spark_test.log
+     - For the spark_test.log, as I operate mistake, there is an error in the middle of the maven UT test, and stop the test(It seems I did other thing to locate the RAM to raise ""not enough RAM"" during test).   So I split the log into 2 file, One is test_logs/spark_test.log_before_test_fail,   the other is test_logs/spark_test_including_fail_and_following.log(This is rerun the fail test and the following tests which not run in the first log file) .The main reason is the maven test take so much time, and the whole tests are pass in the end. So I think it's better to not waste too much time here, then we could move the integration process forward quickly.
+
+2. Pyspark and SparkR test
+ =======================
+ env: python2.7  python3.6  for PySpark test
+      R 3.6.1 for SparkR test
+ TEST STEPS:
+   - python/run-tests --python-executables=python2.7,python3.6
+   - ./R/run-tests.shTEST 
+ ANSIBLE CMD: 
+   - ansible-playbook -i /home/jenkins/ansible_test_scripts/inventory /home/jenkins/ansible_test_scripts/pyspark_sparkr_test.yml
+ TEST LOG(including the full log, but success at the last time):
+    - /home/jenkins/ansible_test_scripts/test_logs/pyspark_test.log
+   - /home/jenkins/ansible_test_scripts/test_logs/sparkr_test.log
+
+In the end, through the real test on the ARM vm, to be honest, we want to show you the time cost when test on ARM.
+ Test cost summarize:
+ The whole test may take very long time.
+ * Spark build by maven  – First build take 1h42m, after that, this would take 1h29m(This may be affected by the VM host performance during the time, the cost time may be shorter than we test.)
+ * Spark UT test by maven  – This may take 8h-9h to finish the whole test
+ * PySpark test  – 20 - 23 mins
+ * SparkR test  – 15 - 20 mins
+
+As the above time cost for different test jobs, we can choose multiple ways to test them as Periodic test jobs.
+ * Split them and test one by one.
+   - such as, if we just want to test PySpark, then we just add the periodic test  which including Spark Build and Pyspark test. That would just cost 2h per test. But if we want to test SparkR, we still need to test Spark Build. That means each test type, we must test it after Spark Build testing.
+ * Test all of them each time.
+
+we test all of them in one periodic test job, and just run Spark Build testing 1 time. But it would cost nearly 11h.
+ Each way is OK for us, you could choose the way to add the periodic testing for ARM.If you want to discuss and know more, please feel free to contact us.  ","17/Oct/19 16:07;bzhaoopenstack;Hi [~shaneknapp] ,
+
+We had updated the VM configuration like above, and exec tests including maven build, maven UT test, pyspark test and sparkR test manually. All  of them are success. Also the spark integrate test with K8S is on the way recently. 
+
+If you are free today, could you please test your jenkins script on the VM? Thank you very much. ;) .
+
+Here is 0:05 am, if you are free, please go ahead to test and tell us the issue if you hit. We will be back after 8 hours.
+
+ ","17/Oct/19 16:07;shaneknapp;this is great.  i will think about test strategies today and how we can split these up and have them run in parallel.  11h is insane.  :)
+
+some questions:  
+
+* do we want to have a pull request builder job for ARM?  this can be triggered by putting an {{[arm]}} tag in the subject, much like we have for K8s.
+* how do we want the general tests to be triggered?  if they're taking 11h then i would suggest nightly builds vs being triggered by SCM changes.","17/Oct/19 16:29;bzhaoopenstack;Thanks [~shaneknapp], yeah the time cost may be too long for the PULL Request right now.
+
+For the questions, I will answer them one by one:
+ # Yeah, we want to do the same thing like X86 ARCH. So PullRequestTrigger build is also a work for us. But right now, the VM performance can not fully match our requirement. For solving this, we are looking for ways to coordinate the higher performance VMs and maybe there are some increasing the performance solutions to be done for us.
+ # what we want to do is like a periodic test job, which runs only several times per day(maybe 1 or 2 times). That would match the 11h the test cost. And we need to consider the 24/11 = 2.... If you think ""nightly builds vs being triggered by SCM changes"" is good, that's great, let's do it. Sorry about we still not very familiar with jenkins test jobs definition. ;)
+
+For now, we are very clear that doing the same test on arm with X86 must be a hard work to be done. Including  the cost time ,performance and the scale size. But we think that must be done through our hard work and good cooperation. And we are happy that we will get the first step once the first arm VM test is ready for our community. Thanks shane for your kind help.","17/Oct/19 16:32;shaneknapp;build running:
+https://amplab.cs.berkeley.edu/jenkins/job/spark-master-test-maven-arm/2/","18/Oct/19 01:26;bzhaoopenstack;Thanks [~shaneknapp] , I see it.
+
+I see the log show that , the jenkins script just call ansible-playbook to run the test. The demo ansible playbook yamls are just the demo test scripts to show you the test process. Is that possible just call the CLI CMD directly? Such as, EXEC ./build/mvn test/build XXXX, in the spark home dir and don't redirect the log info to the file, just show the log info in the stdout.
+
+Thank you very much","18/Oct/19 02:07;huangtianhua;[~shaneknapp], thanks for working on this :)
+
+Yes, I agree with [~bzhaoopenstack], maybe we can provide a shell script that do things as following:
+ # update spark repo with master? Or there is an other way you could do this?
+ # call mvn build or mvn test like './build/mvn clean package -DskipTests -Phadoop-2.7 -Pyarn -Phive -Phive-thriftserver -Pkinesis-asl -Pmesos' and './build/mvn test -Phadoop-2.7 -Pyarn -Phive -Phive-thriftserver -Pkinesis-asl -Pmesos'
+
+And there is important thing that we installed our leveldbjni-all 1.8 locally, which I mentioned before, we released a new jar to support aarch64 platform.
+
+Now the demo ansible script has three steps to run the tests:
+ # build spark
+ # run tests without install our leveldbjni jar package, an error will raised like "" [no leveldbjni64-1.8 in java.library.path, no leveldbjni-1.8 in java.library.path, no leveldbjni in java.library.path, /usr/local/src/spark/common/kvstore/target/tmp/libleveldbjni-64-1-610267671268036503.8: /usr/local/src/spark/common/kvstore/target/tmp/libleveldbjni-64-1-610267671268036503.8: cannot open shared object file: No such file or directory (Possible cause: can't load AMD 64-bit .so on a AARCH64-bit platform)]"" 
+ # run tests with our leveldbjni jar which supports aarch64 platform, and then the tests will be past.
+
+I think we don't have to run the step2 anymore on community jenkins, right? We will remove the step in script.","18/Oct/19 02:44;shaneknapp;[~bzhaoopenstack] [~huangtianhua] yeah i was wondering about the ansible stuff...  i can take care of the script that launches things.  jenkins will pull master from github and we can go from there.
+
+today was a bit crazy as we're hosting a large event for our lab (risecamp.cs.berkeley.edu), so i didn't have a chance to really start unravelling things.  i should have a little time tomorrow, and definitely next week.","18/Oct/19 06:54;huangtianhua;[~shaneknapp], the build [https://amplab.cs.berkeley.edu/jenkins/job/spark-master-test-maven-arm/2/] was aborted due to timeout, seems [~bzhaoopenstack] and I made a mistake, we run unit tests twice because we install our leveldbjni jar locally already (the step2 expected to fail in one or two minutes, but it ran more than 3 hours), we have modified the scripts, let's run again when you have time and see the result. Note: The tests will fail sometimes because of the vm performance. ","18/Oct/19 09:41;bzhaoopenstack;Hi, 
+
+I create a pretty simple shell script in /home/jenkins/ansible_test_scripts/, it's named ""sample_shell_test.sh"" .
+
+You can run the script directly after setting a ""SPARK_HOME"" env. [~shaneknapp], how about we try this script with jenkins?
+
+ ","18/Oct/19 09:44;bzhaoopenstack;The reason to introducing the shell script is that I found if we call ansible script, it won't log the real-time log information.;)","18/Oct/19 15:48;shaneknapp;re: real time logging -- yeah i noticed that.  :)
+
+i'll look at that script and play around w/it today.","18/Oct/19 16:58;shaneknapp;we're definitely going to have an issue w/the both R and python tests as it looks like none of the testing deps have been installed.
+
+we use anaconda python to manage our bare metal, so i'll have to see if i can make things work w/virtualenv.
+
+R, well, that's always a can of worms best left untouched.","18/Oct/19 17:26;bzhaoopenstack;Thanks @shane. Correct, the test dependency of pyspark and spark R are installed when we test the demo on the VM after your email.  For now, we can focus on the maven test, the pyspark and spark R test are just show both of them can success on VM. If we find there would be some improvements about all thing, just feel free to point out and we try the best to do that. And that would be great if the first periodic job join in our jenkins env recently. ","18/Oct/19 18:06;bzhaoopenstack;And if possible and you are free, could you please help us to make the test script better and make it more like a good test process? Such as, you mentioned installing test debs before test some modules..  Thanks very much, @shane","18/Oct/19 18:45;shaneknapp;i'm actually not going to use the script – the testing code will be in the jenkins job config:
+
+[https://amplab.cs.berkeley.edu/jenkins/job/spark-master-test-maven-arm/]
+
+ 
+
+once i get the build config sorted and working as expected i'll be sure to give you all a copy.  :)","18/Oct/19 19:07;shaneknapp;also, i will be exploring the purchase of an ARM server for our cluster.  the VM is just not going to be enough for our purposes.  this won't happen immediately, so we'll use the VM until then.","19/Oct/19 03:25;bzhaoopenstack;Thanks [~shaneknapp].
+
+That's great that you will copy a full jenkins configuration test code to us. ;) We are very happy that the test result for the fist periodic arm test job. For us, building  a powerful ARM testing architecture is still a very hard work to be done, and from our team, we are plan to integrate more and higher performance ARM VMs into community for supporting the PullRequest Trigger type testing jobs, also more works to improve exec testing for matching the PullRequest Trigger requirement are waiting for us..
+
+Now let's see the test result.","21/Oct/19 11:48;huangtianhua;[~shaneknapp]，I am happy that there are two builds success :). I find the arm job now is triggered by 'SCM' change, it's good. I wonder the periodic time. Thanks.","21/Oct/19 17:13;shaneknapp;> I find the arm job now is triggered by 'SCM' change, it's good. I wonder the periodic time. Thanks.
+
+i had it poll once per day at ~midnight...  however, i just updated that to poll twice each day (noon and midnight).
+
+> we are plan to integrate more and higher performance ARM VMs into community for supporting the PullRequest Trigger type testing jobs, also more works to improve exec testing for matching the PullRequest Trigger requirement are waiting for us..
+
+this would be great!","22/Oct/19 07:47;huangtianhua;[~shaneknapp], thank you for clarification. And thanks for your work (y)","22/Oct/19 23:26;bzhaoopenstack;Shane, thanks for recheck the #9 build fail, let's see whether the issue could be reproduced in #10. If it still happen, we should fix it.  Thank you:) ","23/Oct/19 02:57;huangtianhua;[~shaneknapp]，there are two small suggestions:
+ # we don't have to download and install leveldbjni-all-1.8 in our arm test instance, we have installed it and it was there.
+ # maybe we can try to use 'mvn clean package ....' instead of 'mvn clean install ....'?","23/Oct/19 06:49;bzhaoopenstack;Hi [~shaneknapp],
+
+Sorry for disturb. I have some questions about the following work want to discuss with you. I list them in the following.
+ # For pyspark test, you mentioned we didn't install any python debs for testing. Is there any ""requirements.txt"" or ""test-requirements.txt"" in the spark repo? I'm failed to find them. When we test the pyspark before, we just realize that we need to install numpy package with pip, because when we exec the pyspark test scripts, the fail message noticed us. So you mentioned ""pyspark testing debs"" before, you mean that we should figure all out manually? Is there any kind suggest from your side?
+ # For sparkR test, we compile a higher R version 3.6.1 by fix many lib dependency, and make it work. And exec the R test script, till to all of them return pass. So we wonder the difficult about the test when we truelly in amplab, could you please share more to us?
+ # For current periodic jobs, you said it will be triggered 2 times per day. Each build will cost most 11 hours. I have a thought about the next job deployment, wish to know your thought about it. My thought is we can setup 2 jobs per day, one is the current maven UT test triggered by SCM changes(11h), the other will run the pyspark and sparkR tests also triggered by SCM changes(including spark build and tests, may cost 5-6 hours). How about this? We can talk and discuss if we don't realize how difficult to do these now.
+
+Thanks very much, shane. And hope you could reply if you are free. ;)","23/Oct/19 16:43;shaneknapp;[~huangtianhua]:
+
+> we don't have to download and install leveldbjni-all-1.8 in our arm test instance, we have installed it and it was there.
+
+it's a very inexpensive step to execute and i'd rather have builds be atomic.  if for some reason the dependency get wiped/corrupted/etc, the download will ensure we're properly building.
+
+> maybe we can try to use 'mvn clean package ....' instead of 'mvn clean install ....'?
+
+sure, i'll give that a shot now.","23/Oct/19 17:26;shaneknapp;> For pyspark test, you mentioned we didn't install any python debs for testing. Is there any ""requirements.txt"" or ""test-requirements.txt"" in the spark repo? I'm failed to find them. When we test the pyspark before, we just realize that we need to install numpy package with pip, because when we exec the pyspark test scripts, the fail message noticed us. So you mentioned ""pyspark testing debs"" before, you mean that we should figure all out manually? Is there any kind suggest from your side?
+
+i manage the jenkins configs via ansible, and python specifically through anaconda.  anaconda was my initial choice for package management because we need to support multiple python versions (2.7, 3.x, pypy) and specific package versions for each python version itself.
+
+sadly there is no official ARM anaconda python distribution, which is a BIG hurdle for this project.
+
+i also don't use requirements.txt and pip to do the initial python env setup as pip is flakier than i like, and the conda envs just work a LOT better.
+
+see:  https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments
+
+i could check in the specific python package configs in to the spark repo, but they're specific to our worker configsn and even though the worker deployment process is automated (via ansible) there is ALWAYS some stupid dependency loop that pops up and requires manual intervention.
+
+another issue is that i do NOT want any builds installing/updating/creating either python environments OR packages.  builds should NEVER EVER modify the bare-metal (or VM) system-level configs.
+
+so, to summarize what needs to happen to get the python tests up and running:
+1) there is no conda distribution for the ARM architecture, meaning...
+2) i need to use venv to install everything...
+3) which means i need to use pip/requirements.txt, which is known to be flaky...
+4) and the python packages for ARM are named differently than x86...
+5) or don't exist...
+6) or are the wrong version...
+7) meaning that setting up and testing three different python versions with differing package names and versions makes this a lot of trial and error.
+
+i would like to get this done asap, but i will need to carve some serious time to get my brain wrapped around the 
+
+> For sparkR test, we compile a higher R version 3.6.1 by fix many lib dependency, and make it work. And exec the R test script, till to all of them return pass. So we wonder the difficult about the test when we truelly in amplab, could you please share more to us?
+
+i have a deep and comprehensive hatred of installing and setting up R.  i've attached a couple of files showing the packages installed, their versions, and some of the ansible snippets i use to do the initial install.
+
+https://issues.apache.org/jira/secure/attachment/12983856/R-ansible.yml
+https://issues.apache.org/jira/secure/attachment/12983857/R-libs.txt
+
+just like you, i need to go back and manually fix lib dependency and version errors once the initial setup is complete.
+
+this is why i have a deep and comprehensive hatred of installing and setting up R.
+
+> For current periodic jobs, you said it will be triggered 2 times per day. Each build will cost most 11 hours. I have a thought about the next job deployment, wish to know your thought about it. My thought is we can setup 2 jobs per day, one is the current maven UT test triggered by SCM changes(11h), the other will run the pyspark and sparkR tests also triggered by SCM changes(including spark build and tests, may cost 5-6 hours). How about this? We can talk and discuss if we don't realize how difficult to do these now.
+
+yeah, i am amenable to having a second ARM build.  i'd be curious as to the impact on the VM's performance when we have two builds running simultaneously.  if i have some time today i'll experiment.
+
+shane","24/Oct/19 08:25;bzhaoopenstack;Hi [~shaneknapp],
+
+Thanks very much for sharing so much things to us.
+
+> For pyspark conversation:
+
+First I want to share the details what we have done in Openlab test env.
+
+[https://github.com/theopenlab/spark/pull/32/files#diff-ff133db31a4c2f724e9edfb0f70d243dR33]
+
+Anaconda python package management is very good for python and R ecosystem, but I think it is for the most popular ARCH ecosystem(X86 or other famous ARCH), because it just claimed ""Cross platform"". We hit the same issue, such as, we have to compile, install and test the dependeny libraries on ARM, that's why we want to improve the ARM ecosystem. 
+
+1) If we can not use Anaconda, how about manage the packages via ansible too? Just for ARM now?  Such as for py27, we need to install what packages from pip/somewhere and need to install manually(For manually installed packages, if possible, we can do something like leveldbjni on maven, provider a public/official way to fit the ARM package downloading/installation). For now, I personally think it's very difficult to use Anaconda, as there aren't so much package management platform for ARM, eventhrough we start up Anaconda on ARM. If we do that, we need to fix the all gaps, that's a very huge project.
+
+2) For multiple python version, py27 py34 py36 and pypy, the venv is the right choice now. But how about support part of them for the first step? Such as only 1 or 2 python version support now, as we already passed on py27 and py36 testing. Let's see that ARM eco is very limited now. ;)
+
+3) As the following integration work is in your sight, we can not know so much details about what problem you hit. So please feel free to tell us how can we help you, we are looking forward to work with you. ;)
+
+ 
+
+> For sparkR conversation:
+
+I also share the details what we did in Openlab test env.
+
+[https://github.com/theopenlab/spark/pull/28/files#diff-ff133db31a4c2f724e9edfb0f70d243dR4]
+
+For more quick to test SparkR, I install manually in the ARM jenkins worker, because the R installation also need so much time, including deb librarise install and R itself. So I found amplab jenkins job also manage the R installation before the real spark test execution? Is that happened in each build?
+
+ 
+
+> For more jenkins jobs conversation:
+
+I think the current maven UT test could be run 1 time per day, and pyspark/sparkR runs 1 time per day. Eventhough they are running simultaneously, but we can make the 2 jobs trigger in different time period, such as maven UT test(From 0:00 am to 12:00 am), pyspark/sparkR(From 1:00pm to 10:00pm).","24/Oct/19 18:14;shaneknapp;> First I want to share the details what we have done in Openlab test env.
+
+this is an extremely basic python installation, and doesn't include important things that pyspark needs to test against, like pandas and pyarrow.
+
+> 1) If we can not use Anaconda, how about manage the packages via ansible too? Just for ARM now?  Such as for py27, we need to install what packages from pip/somewhere and need to install manually(For manually installed packages, if possible, we can do something like leveldbjni on maven, provider a public/official way to fit the ARM package downloading/installation). For now, I personally think it's very difficult to use Anaconda, as there aren't so much package management platform for ARM, eventhrough we start up Anaconda on ARM. If we do that, we need to fix the all gaps, that's a very huge project.
+
+a few things here:
+
+* i am already using ansible to set up and deploy python via anaconda (and pip) on the x86 workers
+* we can't use anaconda for ARM, period.  we have to use python virtual envs
+* i still haven't had the cycles to dive in to trying to recreate the 3 python envs on ARM yet
+
+> 2) For multiple python version, py27 py34 py36 and pypy, the venv is the right choice now. But how about support part of them for the first step? Such as only 1 or 2 python version support now, as we already passed on py27 and py36 testing. Let's see that ARM eco is very limited now. 
+
+yeah, i was planning on doing one at a time.
+
+> 3) As the following integration work is in your sight, we can not know so much details about what problem you hit. So please feel free to tell us how can we help you, we are looking forward to work with you.
+
+that's the plan!  :)
+
+> For more quick to test SparkR, I install manually in the ARM jenkins worker, because the R installation also need so much time, including deb librarise install and R itself. So I found amplab jenkins job also manage the R installation before the real spark test execution? Is that happened in each build?
+
+no, R is set up via ansible and not modified by the build.
+
+> I think the current maven UT test could be run 1 time per day, and pyspark/sparkR runs 1 time per day. Eventhough they are running simultaneously, but we can make the 2 jobs trigger in different time period, such as maven UT test(From 0:00 am to 12:00 am), pyspark/sparkR(From 1:00pm to 10:00pm).
+
+sure, sounds like a plan once we/i get those two parts set up on the worker in an atomic and reproducible way.","24/Oct/19 18:56;shaneknapp;btw the VM is currently experiencing a lot of network latency and relatively high ping times to github.com, and the job is having trouble cloning the git repo.  i rebooted the VM, but it doesn't seem to be helping much.
+
+my lead sysadmin will be out for the next week and a half, but when he returns we'll look in to getting a basic ARM server for our build system.  i'm pretty unhappy w/the VM option and think we'll have a lot more luck w/bare metal.  the VM will definitely help us get the ansible configs built but i'd like to get off of it ASAP.","24/Oct/19 20:39;shaneknapp;i bumped the git timeout to 30mins, which is a much more obfuscated set of tasks than i ever would have imagined lol...
+
+relaunched the job and let's see if it fetches/clones in time.","25/Oct/19 01:41;huangtianhua;Notes: Hadoop has supported leveldbjni of aarch64 platform, see https://issues.apache.org/jira/browse/HADOOP-16614","25/Oct/19 02:24;kevinzs2048;Hi all, I'm Kevin Zhao from Linaro Developer Cloud, we've offered the resources for Aarch64 CI. Thanks for using our resources.
+
+I'm sorry that yesterday night we have a network upgrade in Linaro Developer Cloud, and it lead to the network problems for the vm instances you use. Now the problem has been fixed. Pls try again if possible.
+
+In the future if there is an upgrading, I will notify OpenLab first, in case of the convenient conditions. Thanks very much!
+
+ ","29/Oct/19 07:32;huangtianhua;[~shaneknapp], hi, the arm job has built for some days, althought there are some failures due to poor performance of arm instance or the network upgrade, but the good news is that we got several successes, at least it means that spark supports on arm platform :) 
+
+According the discussion 'Deprecate Python < 3.6 in Spark 3.0' I think now we can do the python test only for python3.6, it will be more simple for us? So how about to add a new arm job for python3.6 tests? ","30/Oct/19 23:06;shaneknapp;first pass @ the python tests:
+https://amplab.cs.berkeley.edu/jenkins/job/spark-master-test-python-arm/3
+
+i'll fix the scheduling later, as well as whack-a-mole any python modules that i might have missed.
+
+i wasn't able to get pyarrow to install, but it looks like ARM support for arrow is limited at best.
+
+note to self:  holy crap this was a serious PITA getting this stuff installed.","05/Nov/19 16:49;bzhaoopenstack;Hi [~shaneknapp],
+
+Sorry for late. We are trying the best to coordinate the new ARM VMs in these days, and we worked out a remedy plan via getting the new ARM VMs from our existing resource pool. So We are testing the build and testing on our new ARM VMs recently. The reason to do this is we want to pre-solve the possible issues on new ARM VMs. The new ARM VMs are using ubuntu 1804. So we are afraid that there are some lib deps issues from ubuntu 1604 to 1804, and we are trying the fix the gaps between them. Once that's OK, We think that's the time to change the jenkins worker location for getting good performance.
+
+ 
+
+Thank you very much","07/Nov/19 22:38;shaneknapp;just uploaded the pip requirements.txt file that i used to get the majority of the python tests to run with.
+
+sadly, we will not be able to test against arrow/pyarrow for the foreseeable as they're moving to a full conda-forge package solution rather than pip.","12/Nov/19 01:33;bzhaoopenstack;Thanks very much, [~shaneknapp] . 
+
+So apologize that the VM is down last night, but it's back now.
+
+Yeah, I also post an issue [1] to get the status of arm support in apache/arrow community. There are very little resource to support it, even from community and us. So I think pyarrow is difficult to support arm/finish for now.
+
+Also notes: We got some powerful ARM resources which could replace the current test VM, and we had test it good to go now. How do you think it? ;)
+
+ 
+
+[1] https://issues.apache.org/jira/browse/ARROW-7042","12/Nov/19 01:38;bzhaoopenstack;Er,, linaro seems in trouble. The VM can not online now. We will try to contact the maintainer asap.
+
+Sorry for that.","12/Nov/19 03:10;bzhaoopenstack;The arm worker is back. Sorry for late.","12/Nov/19 08:38;bzhaoopenstack;And for the above several comments I left, we hope [~shaneknapp], you could give us some kind advices, we plan to on board it recently, but need some test, so we think to keep the existing worker for a period, and we integrate the new VM at the same time.
+
+Here I can share current VM summary to you:
+
+cpu: 8u
+
+Memory: 16G
+
+location: BeiJing, China (This could affect the network performance as the VM is in China, but we had improved the network performance via configuring internal source)
+
+As we tested, the same maven test will last 5h33min， and build will last 43min。So I think it's good to be a test worker in jenkins. ;)
+
+ 
+
+Thanks
+
+ ","12/Nov/19 18:57;shaneknapp;i would definitely be happy to have a faster VM available for testing...  5h33m is a major improvement over 10h.  :)
+
+at the same time, i'm working w/my lead sysadmin and we will most likely be purchasing an actual aarch64/ARM server for our build system.  the ETA for this will be most likely in early 2020, so we can start testing on the new VM as soon as you're ready.","14/Nov/19 10:53;huangtianhua;[~shaneknapp], the vm is ready, I have build/test in /home/jenkins/spark, and because the image of old arm testing instance is too large, so we can't create the new instance with the image, we copy the contents of /home/jenkins/ into new instance.
+
+And because of the network performance, we cache the local source some about ""hive-ivy""  into /home/jenkins/hive-ivy-cache, please export the environment {color:#de350b}SPARK_VERSIONS_SUITE_IVY_PATH=/home/jenkins/hive-ivy-cache/{color} before maven test.  
+
+I will send the details info of the vm to your email later.
+
+Please add it as worker of amplab jenkins, and try to build the two jobs as we did before, don't hesitate to contact us if you have any questions, thanks very much.","21/Nov/19 07:51;bzhaoopenstack;Hi [~shaneknapp],
+
+I had success to build apache/arrow in the new ARM test worker(high performance). And SparkR and pyspark(python3.6 exec) testings are pass(including arrow and pandas tests). But for SparkR CRAN testing, there is a issue can not avoid, the testing will access wiki and return 443(as this VM is in China, it returns Connection time out), others are all pass. 
+
+In the new ARM test worker, I install apache/arrow and other deps in a specific directory which not in /usr/lib, and uses another venv to test. So how do you think to add sparkR test as SCM periodic test, and ingoring the network accesstion error? Just want to know your advice.
+
+Also I will create the script on the new ARM test worker for sparkR and pyspark test, and you can have a brief about the configuration of the testing.
+
+ 
+
+please see the new attachment, I describe what I had done in the new test VM, and please have a look the ENV in the script, I install the deps with some specific dirs.
+
+ 
+
+Thanks very much.
+
+ ","21/Nov/19 09:12;bzhaoopenstack;Hi [~shaneknapp],
+
+If you feel sparkR testing is good with a new job and can ignoring the 443 network error, could you please add sparkR periodic task on the new test ARM VM? Thanks very much.","26/Nov/19 02:41;huangtianhua;[~shaneknapp], the arm jobs are failed, I think we should add right profile '-Phive-1.2' instead of '-Phive1.2' when mvn test. ","26/Nov/19 07:58;huangtianhua;[~shaneknapp]，I modified the script /tmp/hudson517681717587319554.sh manually on arm instance. Let's wait the result :)","26/Nov/19 08:19;huangtianhua;[~shaneknapp], and I have a good news about the arm testing instance, now we gona to donate arm instance in Singapore region,  I will test first, if we are ready will contact you to integreate it. 
+
+So the arm instance in beijing region we mentioned above will be deleted (afaik, you havn't add it as jenkins worker, right?) ","03/Dec/19 09:34;huangtianhua;[~shaneknapp], now we don't have to install leveldbjni-all manually, the pr has been merged [https://github.com/apache/spark/pull/26636], please add profile -Paarch64 when running maven commands for arm testing jobs, thanks.","03/Dec/19 18:15;shaneknapp;got it, thanks!","04/Dec/19 01:30;huangtianhua;[~shaneknapp], ok, thanks, sorry and I found the mvn command of arm test still is ""./build/mvn test -Paarch64 -Phadoop-2.7 {color:#de350b}-Phive1.2{color} -Pyarn -Phive -Phive-thriftserver -Pkinesis-asl -Pmesos"" , it should be {color:#de350b}-Phive-1.2{color}?","04/Dec/19 02:20;shaneknapp;nice catch...  fixed and relaunched.","04/Dec/19 02:37;huangtianhua;[~shaneknapp]，：）
+
+So seems you're back:)  Could you please to add the new arm instance into amplab, it has high performance, maven test costs about 5 hours, the instance info I have sent to your email few days ago. And if you have any problem please contact me, thank you very much! ","12/Dec/19 19:22;shaneknapp;ok, i have time today to get working on this.
+
+i logged in to the  instance and found the py36 env is broken...  i'll work on that, and move the regular maven build over to the new VM.","12/Dec/19 19:45;shaneknapp;ok, maven build running on the new VM:
+
+[https://amplab.cs.berkeley.edu/jenkins/job/spark-master-test-maven-arm/77/]","12/Dec/19 20:06;shaneknapp;also, is there an account w/sudo privs that i can get access to?  i'm currently unable to pip install virtualenv and friends....  thanks!","13/Dec/19 01:59;bzhaoopenstack;Thank you very much, [~shaneknapp]. Sorry for our mistake. Just sent out an email to you about the new sudo user, you can configure the ARM VM as you wish. ;)","13/Dec/19 02:04;huangtianhua;[~shaneknapp], thanks, [https://amplab.cs.berkeley.edu/jenkins/job/spark-master-test-maven-arm/77/] has finished, it cost about 6 hours:), and please to modify the instance info, the OS is Ubuntu 18.04.1 LTS","16/Dec/19 21:06;shaneknapp;huh...  i created a new python 3.6 env, ran the python test and saw some strange failures (skipping pandas tests, etc)...  while everything seemed to install properly, when i went in to the interpreter and tried to import stuff it failed:
+
+ 
+{noformat}
+(py36) jenkins@spark-jenkins-arm-worker:~/python-envs$ python3
+Python 3.6.9 (default, Nov  7 2019, 10:44:02)
+[GCC 8.3.0] on linux
+Type ""help"", ""copyright"", ""credits"" or ""license"" for more information.
+>>> import pandas
+Traceback (most recent call last):
+  File ""<stdin>"", line 1, in <module>
+  File ""/home/jenkins/python-envs/py36/lib/python3.6/site-packages/pandas/__init__.py"", line 19, in <module>
+    ""Missing required dependencies {0}"".format(missing_dependencies))
+ImportError: Missing required dependencies ['numpy']
+>>> import numpy
+Traceback (most recent call last):
+  File ""<stdin>"", line 1, in <module>
+  File ""/home/jenkins/python-envs/py36/lib/python3.6/site-packages/numpy/__init__.py"", line 150, in <module>
+    from . import random
+  File ""/home/jenkins/python-envs/py36/lib/python3.6/site-packages/numpy/random/__init__.py"", line 143, in <module>
+    from .mtrand import *
+ImportError: /home/jenkins/python-envs/py36/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-aarch64-linux-gnu.so: undefined symbol: PyFPE_jbuf
+>>>{noformat}
+i'll poke around some more later today.","17/Dec/19 18:37;shaneknapp;alright, i installed gfortran and successfully (i think?) compiled numpy 1.16.2 from source.
+
+running the python build now!","17/Dec/19 20:54;shaneknapp;also got scipy compiled from source!
+
+pyarrow need to be 1.15.1, so i might try that next.","14/Feb/20 08:33;huangtianhua;The arm maven job failed for these days again, and the reason is same as last time, the memory is high even if there is no job running, and there are many processes still running after maven jobs executed for some days, see [http://paste.openstack.org/show/789561] I killed them and let's see test result.
+
+ 
+
+ ","23/Apr/20 17:14;blakegw;Hi all,
+
+Regarding the leveldbjni dependency, why is the openlabtesting version of leveldbjni-1.8-all.jar not active for all builds of Spark going forward?  To get spark most will likely download from the Apache mirrors and those tarballs are built on an x86 system, so the aarch64 supported version of leveldbjni is hidden from all except those brave enough to try building from source.
+
+Thanks,
+
+Geoff Blake","01/Sep/20 07:17;huangtianhua;[~blakegw] Sorry to reply you so late, yes, now we can't download tgz from spark.apache.org which built with leveldbjni, like spark-3.0.0-bin-hadoop2.7.tgz miss leveldbjni arm64 supporting jar in it. ","01/Sep/20 07:26;huangtianhua;[~shaneknapp] and [~srowen], sorry to disturb you. There is an issue for spark arm64 jenkins, the test 'org.apache.spark.DistributedSuite' failed for several days, and I don't know the reason and can't fix it, see https://amplab.cs.berkeley.edu/jenkins/job/spark-master-test-maven-arm, and I have filed a jira SPARK-32691, could you have a look for it, I can provide arm64 instance if needed, thanks very much. 
+
+ps: seems the issue happended after the commit b421bf0196897fa66d6d15ba6461a24b23ac6dd3"
+Flaky test: pyspark.mllib.tests.test_streaming_algorithms.StreamingLinearRegressionWithTests.test_parameter_convergence,SPARK-29222,13258423,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Minor,,,kabhwan,kabhwan,24/Sep/19 00:41,15/Apr/20 06:58,18/Feb/21 10:01,,3.0.0,,,MLlib,Tests,,0,,"[https://amplab.cs.berkeley.edu/jenkins/job/SparkPullRequestBuilder/111237/testReport/]
+{code:java}
+Error Message
+
+7 != 10
+
+StacktraceTraceback (most recent call last):
+  File ""/home/jenkins/workspace/SparkPullRequestBuilder@2/python/pyspark/mllib/tests/test_streaming_algorithms.py"", line 429, in test_parameter_convergence
+    self._eventually(condition, catch_assertions=True)
+  File ""/home/jenkins/workspace/SparkPullRequestBuilder@2/python/pyspark/mllib/tests/test_streaming_algorithms.py"", line 74, in _eventually
+    raise lastValue
+  File ""/home/jenkins/workspace/SparkPullRequestBuilder@2/python/pyspark/mllib/tests/test_streaming_algorithms.py"", line 65, in _eventually
+    lastValue = condition()
+  File ""/home/jenkins/workspace/SparkPullRequestBuilder@2/python/pyspark/mllib/tests/test_streaming_algorithms.py"", line 425, in condition
+    self.assertEqual(len(model_weights), len(batches))
+AssertionError: 7 != 10
+	 {code}
+ ",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2019-09-24 13:03:11.104,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Wed Apr 15 06:58:38 UTC 2020,,,,,,,"0|z06xvs:",9223372036854775807,,,,,,,,,,,,,,,,"24/Sep/19 13:03;hyukjin.kwon;cc [~bryanc]","29/Sep/19 07:52;huangtianhua;About the issues happened in arm instance SPARK-29205, finally, we increase the timeout and the batch time, see [https://github.com/theopenlab/spark/pull/27/files#diff-f7e50078760ce2d40f35e4c3b9112227]  and then the tests pass.","29/Sep/19 14:06;kabhwan;Did you see test failures consistently and the commit fixed the test consistently? Or did you run the test 100 times or so? Increasing timeout and batch time sounds me as still relying on timing, so we may need to run bunch of times to ensure it is no longer flaky.","08/Oct/19 08:20;huangtianhua;The tests specified in -SPARK-29205- failed every time when testing in arm instance, and after increasing the timeout and batch time they success, but we didn't test 100 times, just several times.  I have no idea about the batchDuration of StreamingContext setting, is there a principle? ","11/Oct/19 03:05;hyukjin.kwon;Shall we increase the time a bit more if it was verified that it helps the flakiness?","12/Oct/19 02:15;huangtianhua;[~hyukjin.kwon], we took test to increase default timeout to 120s and batchDuration to 3s, I will check if we need to increase the time a bit more.","17/Oct/19 08:36;huangtianhua;[~hyukjin.kwon]，we took test and seems these failed tests depends on the performance of the instance, the tests maybe pass once for several times test. But it seems everything is ok if we increase default timeout to 120s and batchDuration to 3s.","29/Oct/19 03:28;hyukjin.kwon;Can you make a PR to increase the timeout?","29/Oct/19 07:42;huangtianhua;[~hyukjin.kwon], the failure is releated with the performance of arm instance, now we donate an arm instance to AMPLab and we havn't build the python job yet, and we plan to donate some higher performance arm instances to AMPLab next month, if the issues happen again then I will create a pr to fix this. Thanks a lot.","15/Apr/20 06:58;kabhwan;Still happening on master (3.1.0-SNAPSHOT)
+
+https://amplab.cs.berkeley.edu/jenkins/job/SparkPullRequestBuilder/121232",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Remove SQL configs deprecated before v2.4,SPARK-30485,13278682,Test,Open,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Minor,,,maxgekk,maxgekk,10/Jan/20 10:18,13/Jan/20 11:31,18/Feb/21 10:01,,3.0.0,,,SQL,,,0,,"Remove the following SQL configs:
+ * spark.sql.variable.substitute.depth
+ * spark.sql.execution.pandas.respectSessionTimeZone
+ * spark.sql.parquet.int64AsTimestampMillis
+
+Recently all deprecated SQL configs were gathered to the deprecatedSQLConfigs map:
+ [https://github.com/apache/spark/blob/1ffa627ffb93dc1027cb4b72f36ec9b7319f48e4/sql/catalyst/src/main/scala/org/apache/spark/sql/internal/SQLConf.scala#L2160-L2189]",,,,,,,,,,,,,,,,,,,,,,,,,0.0,,,,,,,,,,,,,,,,,,,,2020-01-10 13:39:45.168,,,false,,,,,,,,,,,,,,,,,,9223372036854775807,,,Mon Jan 13 08:31:27 UTC 2020,,,,,,,"0|z0adpc:",9223372036854775807,,,,,,,,,,,,,,,,"10/Jan/20 10:20;maxgekk;[~dongjoon] [~srowen] [~cloud_fan] [~hyukjin.kwon] WDYT of the removing?","10/Jan/20 13:39;srowen;We had previously removed methods and APIs that were deprecated in 2.3 or earlier, so I think this would be consistent.","13/Jan/20 08:31;cloud_fan;+1",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Observed greater deviation on big endian platform for SingletonReplSuite test case,SPARK-26940,13216858,Test,Reopened,SPARK,Spark,software,matei,"<div>
+
+<b><i>Apache Spark</i></b> is a fast and general cluster computing system.
+It provides high-level APIs in 
+Scala, Java, Python and R, and an optimized engine that supports general computation graphs.
+It also supports a rich set of higher-level tools including 
+<a href=""http://spark.apache.org/docs/latest/sql-programming-guide.html"">Spark SQL</a> for SQL and structured data processing, 
+<a href=""http://spark.apache.org/docs/latest/mllib-guide.html"">MLLib</a> for machine learning, 
+<a href=""http://spark.apache.org/docs/latest/graphx-programming-guide.html"">GraphX</a> for graph processing, and 
+<a href=""http://spark.apache.org/docs/latest/streaming-programming-guide.html"">Spark Streaming</a>.
+
+
+<table style=""border: 0px; width: 100%;"">
+<tr>
+<td>
+For more information, see:
+<br><a href=""http://spark.apache.org/"">The Spark Homepage</a>
+<br>
+<a href=""https://cwiki.apache.org/confluence/display/SPARK/Wiki+Homepage"">The Spark Wiki</a> and <a href=""https://cwiki.apache.org/confluence/display/SPARK/Contributing+to+Spark"">How to Contribute to Spark</a>
+<br>
+<a href=""https://github.com/apache/spark"">Spark's Github Repository</a>
+</td>
+<td style=""text-align: center;"">
+<a href=""http://spark.apache.org/""><img src=""http://spark.apache.org/images/spark-logo.png"" width=""180px""></a>
+</td>
+
+</tr>
+</table>
+
+</div>",http://spark.apache.org,Minor,,,Anuja,Anuja,20/Feb/19 09:48,11/Mar/19 10:51,18/Feb/21 10:01,,2.3.2,,,Tests,,,0,BigEndian,"I have built Apache Spark v2.3.2 on Big Endian platform with AdoptJDK OpenJ9 1.8.0_202.
+
+My build is successful. However while running the scala tests of ""*Spark Project REPL*"" module, I am facing failures at SingletonReplSuite with error log as attached.
+
+The deviation observed on big endian is greater than the acceptable deviation 0.2.
+
+How efficient is it to increase the deviation defined in SingletonReplSuite.scala
+
+Can this be fixed? 
+
+ ","Ubuntu 16.04 LTS
+
+openjdk version ""1.8.0_202""
+OpenJDK Runtime Environment (build 1.8.0_202-b08)
+Eclipse OpenJ9 VM (build openj9-0.12.1, JRE 1.8.0 Linux (JIT enabled, AOT enabled)
+OpenJ9 - 90dd8cb40
+OMR - d2f4534b
+JCL - d002501a90 based on jdk8u202-b08)",,,,,,,,,,,,,,,,,,,"20/Feb/19 09:52;Anuja;failure_log.txt;https://issues.apache.org/jira/secure/attachment/12959413/failure_log.txt",,,,,1.0,,,,,,,,,,,,,,,,,,,,2019-02-28 03:04:14.421,,,false,,,,,,,,,,Important,,,,,,,,9223372036854775807,,,Mon Mar 11 10:51:47 UTC 2019,,,,,,,"0|yi1688:",9223372036854775807,,,,,,,,,,,,,,,,"28/Feb/19 03:04;srowen;I haven't observed this test fail and don't see it would have anything to do with big-endian-ness. It may have to do with your JDK, which isn't supported. If you can reproduce on OpenJDK or Oracle, reopen.","11/Mar/19 10:51;Anuja;I did tried with OpenJDK. However same behavior is observed. 
+
+The test fails with the same error. ","11/Mar/19 10:51;Anuja;I did tried with OpenJDK. However same behavior is observed. 
+
+The test fails with the same error. ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

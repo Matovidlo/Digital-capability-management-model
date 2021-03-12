@@ -1,0 +1,85 @@
+version: '3.1'
+
+services:
+  jira:
+    container_name: jira
+    depends_on:
+      - postgresql
+    image: atlassian/jira-software:8.5.4
+    networks:
+      - jiranet
+    volumes:
+      - jiradata:/var/atlassian/jira
+    ports:
+      - '8001:8080'
+    environment:
+      - 'ATL_JDBC_URL=postgresql:5432'
+      - 'ATL_JDBC_USER=jiradbuser'
+      - 'ATL_JDBC_PASSWORD=admin'
+      - 'SETENV_JVM_MINIMUM_MEMORY=2048m'
+      - 'SETENV_JVM_MAXIMUM_MEMORY=4096m'
+      - 'JIRA_PROXY_NAME='
+      - 'JIRA_PROXY_PORT='
+      - 'JIRA_PROXY_SCHEME='
+
+  postgresql:
+    container_name: postgres
+    image: postgres:9.6
+    expose:
+      - '5432'
+    networks:
+      - jiranet
+    volumes:
+      - postgresqldata:/var/lib/postgresql/data
+    environment:
+      - 'POSTGRES_USER=jiradbuser'
+      # CHANGE THE PASSWORD!
+      - 'POSTGRES_PASSWORD=admin'
+      - 'POSTGRES_DB=jiradb'
+      - 'POSTGRES_ENCODING=UNICODE'
+      - 'POSTGRES_COLLATE=C'
+      - 'POSTGRES_COLLATE_TYPE=C'
+
+# Application composition with dockerfile
+#  app:
+#    depends_on:
+#      - mongo
+#      - jira
+#    build: ./src
+#    command: sh -c "/wait && /classification_scheduler.py"
+#    environment:
+#      - WAIT_HOSTS=mongodb:27017
+#      - WAIT_HOSTS_TIMEOUT=300
+#      - WAIT_SLEEP_INTERVAL=30
+#      - WAIT_HOST_CONNECT_TIMEOUT=30
+
+  mongo:
+    image: mongo
+    networks:
+      - jiranet
+    expose:
+      - 27017
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+    - mongodata:/var/lib/mongodb
+    logging:
+      options:
+        max-size: 1m
+        max-file: "10"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: extrastrongpasswd
+
+volumes:
+  jiradata:
+    external: false
+  postgresqldata:
+    external: false
+  mongodata:
+    external: false
+
+networks:
+  jiranet:
+    driver: bridge

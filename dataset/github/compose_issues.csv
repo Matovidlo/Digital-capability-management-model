@@ -1,0 +1,401 @@
+8144,OPEN,[proposal] support s2i build strategy,kind/feature,2021-02-20 18:46:42 +0000 UTC
+8143,OPEN,Command option -p don't set variable COMPOSE_PROJECT_NAME,kind/bug,2021-02-20 15:30:54 +0000 UTC
+8140,OPEN,`docker-compose config` always outputs (sometimes invalid) long form of `ports` and `depends_on` regardless of `version`,kind/bug,2021-02-21 03:32:47 +0000 UTC
+8139,OPEN,--profile attribute not respected during 'down',kind/bug,2021-02-19 17:47:32 +0000 UTC
+8137,OPEN,Segmentation fault while shutting down containers,kind/bug,2021-02-19 06:19:03 +0000 UTC
+8136,OPEN,"docker-compose logs" should not fail if not specifying directly the service with non-readable logging driver,kind/bug,2021-02-19 02:41:24 +0000 UTC
+8127,OPEN,IPC - Cannot create IPC shared memory containers,kind/bug,2021-02-17 18:43:44 +0000 UTC
+8126,OPEN,Remote ssh URL with user and port is not parsed correctly,kind/bug,2021-02-17 02:42:11 +0000 UTC
+8125,OPEN,The -p flag don't set the environment variable COMPOSE_PROJECT_NAME,kind/bug,2021-02-17 11:47:10 +0000 UTC
+8121,OPEN,compose 1.28.2 Bug "No such file or directory: '/tmp/tmpoxytjd_f' ",kind/bug,2021-02-20 10:25:14 +0000 UTC
+8119,OPEN,Insufficient error message while using `docker-compose`,kind/bug,2021-02-16 05:51:36 +0000 UTC
+8116,OPEN,Use Transparent Network (or other) on Docker for Windows by default instead of NAT,kind/bug,2021-02-11 19:00:43 +0000 UTC
+8114,OPEN,I need help ,I want use alias network on docker compose with `bridge`,kind/question,2021-02-11 01:08:39 +0000 UTC
+8110,OPEN,running containers lose the routing tables if node leaves the Swarm,kind/bug,2021-02-10 13:19:36 +0000 UTC
+8108,OPEN,Docker-compose bug observed regarding --env-file cli arg, and env-file section in composer.,kind/bug,2021-02-19 07:18:17 +0000 UTC
+8107,OPEN,Documentation enhncement: GPU stanza,kind/feature,2021-02-09 14:14:19 +0000 UTC
+8106,OPEN,Cannot start service service-name: driver failed programming external connectivity on endpoint container-name: Error starting userland proxy: listen tcp <ip>:port: bind: cannot assign requested address,kind/bug,2021-02-08 11:09:01 +0000 UTC
+8100,OPEN,OSError from python when running `docker-compose build`,kind/bug,2021-02-15 20:22:24 +0000 UTC
+8098,OPEN,Separate STDERR and STDOUT in docker compose output,kind/feature,2021-02-11 14:41:51 +0000 UTC
+8097,OPEN,'yes' is not boolean in YAML 1.2 spec,kind/bug,2021-02-03 04:55:15 +0000 UTC
+8095,OPEN,I need help for mount volumes,kind/question,2021-02-09 10:34:43 +0000 UTC
+8086,OPEN,More intuitive error message when Docker service is not running,kind/feature,2021-01-30 21:38:48 +0000 UTC
+8085,OPEN,ResourceWarning: unclosed socket reported whenever I use `docker-compose stop`,kind/bug,2021-01-29 23:31:37 +0000 UTC
+8084,OPEN,Bug about typo,kind/bug,2021-01-28 17:44:37 +0000 UTC
+8083,OPEN,UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 17: character maps to <undefined>,kind/bug,2021-02-05 15:26:29 +0000 UTC
+8079,OPEN,Accept --cpuset-cpus flag in `docker-compose build` command,kind/feature,2021-01-28 08:28:47 +0000 UTC
+8077,OPEN,specify docker files inline (ie Inline dockerfile:),kind/feature,2021-01-27 16:41:13 +0000 UTC
+8072,OPEN,Variable interpolation uses temporary directory for SSL_CERT_FILE variables,kind/bug,2021-01-25 20:17:20 +0000 UTC
+8069,OPEN,Shared volume is not quite merged,kind/bug,2021-01-26 09:59:49 +0000 UTC
+8068,OPEN,/tmp/ directory not working for --env-file reference,kind/bug,2021-01-27 17:02:34 +0000 UTC
+8066,OPEN,Golang override docker-compose, name k1s,kind/question,2021-01-24 06:36:58 +0000 UTC
+8062,OPEN,More verbose error in project.py,kind/feature,2021-01-22 14:05:55 +0000 UTC
+8059,OPEN,Version 1.28.0 for windows instantly gets deleted by Windows Defender,kind/bug,2021-01-22 12:50:54 +0000 UTC
+8056,OPEN,Name resolution bug,kind/bug,2021-01-22 06:02:45 +0000 UTC
+8055,OPEN,Any chance of making this decent software?,kind/feature,2021-02-08 21:48:42 +0000 UTC
+8052,OPEN,"docker-compose up" crashes when using device_cgroup_rules,kind/bug,2021-01-22 19:00:45 +0000 UTC
+8051,OPEN,docker-compose up converts linux path to windows for volumes,kind/bug,2021-01-21 14:05:14 +0000 UTC
+8050,OPEN,Inconsitent error logging in 1.28.0 (in docker-compose exec),kind/bug,2021-01-21 13:35:21 +0000 UTC
+8049,OPEN,docker-compose up -d fails on centos7,kind/bug,2021-01-24 12:09:54 +0000 UTC
+8046,OPEN,error build image when context is URL from git repository and dockerfile path is not default,kind/bug,2021-02-04 13:36:21 +0000 UTC
+8044,OPEN,test_custom_timeout_error test_docker_client_no_home test_docker_client_with_custom_timeout test_user_agent fail while building the package,kind/bug,2021-01-19 22:38:36 +0000 UTC
+8041,OPEN,/tmp directory requires "exec" mode for docker-compose execution,kind/bug,2021-01-19 18:49:56 +0000 UTC
+8040,OPEN,docker compose ecs deploy aws tutorial: celery incompatible attribute,kind/bug,2021-01-19 05:24:10 +0000 UTC
+8039,OPEN,docker-compose randomly drops SSH connection from remote host raising paramiko.ssh_exception.NoValidConnectionsError,kind/bug,2021-01-31 06:13:37 +0000 UTC
+8036,OPEN,Docker Compose Network Not Working as Intended,kind/bug,2021-01-17 19:19:25 +0000 UTC
+8033,OPEN,Potential usability issue with "docker-compose down -v",kind/bug,2021-01-14 14:27:28 +0000 UTC
+8027,OPEN,Error while creating mount source path, file exists error when using WSL 2,kind/bug,2021-01-09 15:00:44 +0000 UTC
+8026,OPEN,Better message when Docker for Windows isn't running,kind/feature,2021-01-08 18:35:52 +0000 UTC
+8024,OPEN,docker-compose "up" works but "run" fails,kind/bug,2021-01-24 20:43:21 +0000 UTC
+8021,OPEN,Background container output freezes in docker-compose,,2021-01-04 17:45:21 +0000 UTC
+8019,OPEN,dns_search with an empty string used to work, now fails,kind/bug,2021-01-03 18:54:08 +0000 UTC
+8018,OPEN,Problem with requirements.txt caching when git repos are referenced,kind/bug,2021-01-03 02:45:13 +0000 UTC
+8017,OPEN,mount volume error on Windows 10,kind/bug,2021-01-02 21:18:22 +0000 UTC
+8020,OPEN,[3188] Failed to execute script docker-compose,,2021-01-04 12:23:57 +0000 UTC
+8015,OPEN,Add build:cli_args to spec to remove strict coupling with CLI builds,kind/feature,2021-01-19 20:41:53 +0000 UTC
+8012,OPEN,docker-compose up --build , The connection was reset (firefox), curl: (52) Empty reply from server (curl)?,kind/bug,2020-12-27 02:09:20 +0000 UTC
+8011,OPEN,Integrate compose into docker repositories,kind/feature,2020-12-24 17:41:19 +0000 UTC
+8010,OPEN,10 seconds to apply restart policy not working,kind/bug,2020-12-23 21:55:47 +0000 UTC
+8006,OPEN,Python module dependencies break future docker compose,kind/bug,2020-12-21 19:19:00 +0000 UTC
+8004,OPEN,ERROR: Invalid interpolation format for "environment",,2020-12-20 00:02:17 +0000 UTC
+8003,OPEN,--await for healthcheck,kind/feature,2020-12-18 23:08:42 +0000 UTC
+8002,OPEN,Volume ownership on creation inconsistent between docker and docker-compose,kind/bug,2020-12-26 09:28:15 +0000 UTC
+7998,OPEN,Problem with "--name" in docker-compose run,,2020-12-16 10:31:23 +0000 UTC
+7993,OPEN,Adding support for docker-compose.<context name>.override.yml and <context name>.override.env,kind/feature,2020-12-12 11:38:07 +0000 UTC
+7992,OPEN,DNS may not work if network_mode is not set in the config,kind/bug,2021-02-08 10:29:36 +0000 UTC
+7991,OPEN,Sticky session in docker swarm,kind/feature,2020-12-11 06:02:32 +0000 UTC
+7976,OPEN,Extends not working properly for multiple compose files,kind/bug,2020-12-04 20:08:49 +0000 UTC
+7973,OPEN,Invalid missing a healthcheck configuration error,kind/bug,2020-12-04 12:47:39 +0000 UTC
+7972,OPEN,The deployment of this job to staging did not succeed.,kind/question,2020-12-04 11:55:15 +0000 UTC
+7967,OPEN,While following logs, allow for a keystroke to stop following without needing a Ctrl-C,kind/feature,2020-12-03 03:30:32 +0000 UTC
+7966,OPEN,Document passing project from stdin,kind/feature,2020-12-02 20:31:12 +0000 UTC
+7964,OPEN,Compose config with --no-interpolate fails as it tries to validate environment variables as ports,kind/bug,2020-12-02 11:50:02 +0000 UTC
+7963,OPEN,commands within docker-compose block don't work with docker machine,kind/bug,2020-12-10 01:59:56 +0000 UTC
+7958,OPEN,About networks on compose' ipam config,kind/question,2020-11-30 07:32:45 +0000 UTC
+7957,OPEN,Node logs says can't find Password and keeps retrying every 15 sec.,kind/bug,2020-11-29 20:52:55 +0000 UTC
+7955,OPEN,Environment variables with blank values are omitted,kind/bug,2021-01-05 00:13:02 +0000 UTC
+7954,OPEN,the docker-compose arm based releases are missing,kind/feature,2020-11-27 08:06:26 +0000 UTC
+7948,OPEN,String interpolation with `-e X=Y`,kind/bug,2020-12-02 09:42:25 +0000 UTC
+7942,OPEN,How to run some commands/scripts when stopping docker-compose,kind/feature,2020-11-26 16:50:36 +0000 UTC
+7941,OPEN,QinQ support,kind/feature,2020-11-30 16:05:21 +0000 UTC
+7936,OPEN,Scope limit secrets. Allow some secrets to be available on build time,kind/feature,2020-12-18 17:56:22 +0000 UTC
+7934,OPEN,Intermittent compose command failures with compose cli 1.0.2,kind/bug,2020-11-19 17:41:29 +0000 UTC
+7933,OPEN,"The image for the service you're trying to recreate has been removed",,2020-11-17 18:02:01 +0000 UTC
+7932,OPEN,Docker-compose log streaming crash when containers stops or restarts,kind/bug,2020-11-27 01:22:24 +0000 UTC
+7925,OPEN,Ports Published Dynamically via Range or {{.Task.Slot}},kind/feature,2020-11-12 15:47:15 +0000 UTC
+7924,OPEN,docker login fails on different containers,kind/bug,2020-11-12 11:47:34 +0000 UTC
+7923,OPEN,Cross-container file truncation when using nested bind mounts,kind/bug,2020-11-11 22:53:58 +0000 UTC
+7922,OPEN,docker-compose build fails in rootless environment,kind/bug,2021-01-11 02:04:59 +0000 UTC
+7920,OPEN,Wrong image name breaks docker-compose build,kind/bug,2020-12-12 11:29:36 +0000 UTC
+7918,OPEN,docker-compose config breaks when not interpolating environment variables,kind/bug,2020-11-10 14:28:07 +0000 UTC
+7916,OPEN,Extend service with `depends_on` should work,kind/feature,2020-11-09 12:56:31 +0000 UTC
+7915,OPEN,compose raises exception when it can't connect to docker socket,kind/bug,2020-11-17 02:31:46 +0000 UTC
+7914,OPEN,Composition as an operating hub,kind/feature,2020-11-06 16:14:07 +0000 UTC
+7913,OPEN,Failed to run a self-build docker container using docker-compose?,kind/question,2020-11-06 00:32:06 +0000 UTC
+7912,OPEN,docker-compose running inside a container on Fedora CoreOS cannot access filesystem or docker socket,kind/bug,2020-11-11 19:44:24 +0000 UTC
+7911,OPEN,Networking During Build Time?,kind/question,2020-11-06 16:21:26 +0000 UTC
+7910,OPEN,Fails to build at network location,kind/bug,2020-11-05 14:06:26 +0000 UTC
+7909,OPEN,Docker-compose crash if service mount device with colon in path,kind/bug,2020-11-04 22:00:41 +0000 UTC
+7908,OPEN,Cannot override the specified file on volumes,kind/question,2020-11-24 02:48:07 +0000 UTC
+7905,OPEN,docker-compose build and docker build lead to different IDs,kind/bug,2020-11-25 09:11:38 +0000 UTC
+7904,OPEN,Cannot start service redis: OCI runtime create failed: container_linux.go:349: starting container process caused "process_linux.go:449: container init caused \"sethostname: invalid argument\,kind/question,2020-12-17 17:50:57 +0000 UTC
+7900,OPEN,Windows Client, Linux Server, relative volume path regression,kind/bug,2021-01-15 18:32:15 +0000 UTC
+7899,OPEN,docker-compose is unstable using Docker Desktop and WSL2,kind/bug,2021-02-15 12:47:32 +0000 UTC
+7898,OPEN,The differents among the requirements the requirements*.txt.,kind/question,2020-10-29 01:19:42 +0000 UTC
+7896,OPEN,Errors running up,kind/bug,2021-02-02 19:56:27 +0000 UTC
+7894,OPEN,/etc/hosts not updated on restart,kind/bug,2020-10-27 21:34:07 +0000 UTC
+7893,OPEN,Docker compose version 1.27.3 changed docker-compose config behavior,kind/bug,2021-01-08 14:33:16 +0000 UTC
+7892,OPEN,Document/implement support for cache-to and cache-from parameters for docker buildx build,kind/feature,2020-10-27 12:35:32 +0000 UTC
+7901,OPEN,Unnecessary warning that flag '--parallel' is ignored when building with COMPOSE_DOCKER_CLI_BUILD=1",,2020-11-02 17:59:36 +0000 UTC
+7891,OPEN,Docs on docker/compose at Docker Hub is not up-to-date,kind/feature,2020-10-27 01:49:10 +0000 UTC
+7886,OPEN,What happened with docker-compose bundle cli command ?!,kind/bug,2020-10-26 14:40:34 +0000 UTC
+7885,OPEN,docker-compose down don't remove volumes,kind/bug,2020-10-28 12:39:03 +0000 UTC
+7884,OPEN,Nested env var expansion doesn't work,kind/bug,2020-10-25 13:20:31 +0000 UTC
+7883,OPEN,Cannot start service web: error while creating mount source path,kind/bug,2020-10-23 21:36:40 +0000 UTC
+7881,OPEN,run command could converge dependencies,kind/feature,2020-10-21 18:44:10 +0000 UTC
+7880,OPEN,EHOSTUNREACH in production when I can ping host and it works on dev machine,kind/bug,2020-10-21 16:39:50 +0000 UTC
+7878,OPEN,Forward mount options,,2020-10-21 15:27:29 +0000 UTC
+7873,OPEN,The context path of build section is required although building isn't needed,kind/bug,2021-01-12 14:17:40 +0000 UTC
+7870,OPEN,docker-compose up with multiple file does not include all container as service,,2020-10-19 15:26:27 +0000 UTC
+7867,OPEN,Local volumes fail on up.,kind/bug,2020-10-15 18:19:44 +0000 UTC
+7861,OPEN,Environment variable VIRTUAL_ENV not passed to container,kind/bug,2020-10-10 07:49:45 +0000 UTC
+7860,OPEN,build context bug: folder name conflicts,kind/bug,2020-10-09 13:19:02 +0000 UTC
+7859,OPEN,Add an option to config: entries to name the config by content hash,kind/feature,2020-10-09 11:19:41 +0000 UTC
+7858,OPEN,node_module's content is hidden on Ubuntu,kind/bug,2020-10-09 10:47:21 +0000 UTC
+7857,OPEN,existence of secret files are checked locally instead of remotely when using remote docker daemon with DOCKER_HOST,kind/bug,2020-10-09 09:00:23 +0000 UTC
+7856,OPEN,Between 1.27.0 and 1.27.4 the handling of volume config option "device" has changed,kind/bug,2021-01-08 14:53:05 +0000 UTC
+7854,OPEN,Bind mount never find host files or directories in Ubuntu 20.04 LTS,kind/bug,2021-01-08 14:54:34 +0000 UTC
+7853,OPEN,Please expose current user and group ID as new variables for use inside docker-compose.yml,kind/feature,2021-01-04 15:02:53 +0000 UTC
+7848,OPEN,Inconsistent value of $PWD variable,kind/bug,2020-10-06 08:21:09 +0000 UTC
+7847,OPEN,Multiple --env-file?,kind/feature,2020-11-25 12:33:03 +0000 UTC
+7849,OPEN,docker.errors.DockerException: Credentials store error: StoreError('Unexpected OS error "Access is denied", errno=13'),,2020-10-05 16:10:28 +0000 UTC
+7842,OPEN,stacktrace using buildkit,kind/bug,2020-10-02 15:55:47 +0000 UTC
+7841,OPEN,try pull first,kind/feature,2020-09-30 19:36:01 +0000 UTC
+7839,OPEN,Breaking Changes: Internal/External Secrets and Name/Label Problems with External Secrets,kind/bug,2020-10-08 16:12:03 +0000 UTC
+7838,OPEN,Compose treats file as directory when using a remote docker daemon,kind/bug,2021-01-15 18:29:42 +0000 UTC
+7834,OPEN,docker-compose cannot mount secrets,,2020-09-30 13:32:24 +0000 UTC
+7832,OPEN,Environment variable validation not handling ambiguous duplicate entries (array style),kind/bug,2020-09-28 13:38:10 +0000 UTC
+7831,OPEN,Cannot set empty file attribute on external secret in 1.27.x,kind/bug,2020-09-25 17:29:37 +0000 UTC
+7794,OPEN,Support nested parameter expansion,kind/feature,2020-09-25 02:30:52 +0000 UTC
+7793,OPEN,Apparent errors in docker-compose JSON Schema,kind/bug,2020-09-24 15:23:59 +0000 UTC
+7791,OPEN,Mounting is failing with wsl2,kind/question,2021-01-14 19:39:18 +0000 UTC
+7789,OPEN,ANSI support for when no-tty option is used (-t),kind/feature,2020-09-23 11:09:18 +0000 UTC
+7788,OPEN,logs of docker-compose up not real time,kind/bug,2020-09-28 03:31:08 +0000 UTC
+7785,OPEN,s390x support for docker-compose,kind/feature,2020-09-22 12:45:35 +0000 UTC
+7780,OPEN,JSON Schema draft 2019-09 requires `$id` to be an absolute URI,,2020-09-20 20:07:55 +0000 UTC
+7777,OPEN,`docker-compose` unexpectly ran docker-credential-glcoud,kind/question,2020-11-10 06:07:00 +0000 UTC
+7776,OPEN,Add command line option to disable connection to stdin,kind/bug,2020-09-23 09:35:28 +0000 UTC
+7775,OPEN,Multiple docker-compose file with different context path,kind/bug,2020-09-18 12:31:57 +0000 UTC
+7774,OPEN,cpus value type in output of config command is not consistent in version 1.27.3,kind/bug,2020-09-18 10:35:19 +0000 UTC
+7771,OPEN,`config` output strips quote marks and loses version number,kind/bug,2021-01-22 08:49:35 +0000 UTC
+7770,OPEN,'deploy: replicas:' behaving differently after update to 2.3.0.5,,2020-12-14 08:57:06 +0000 UTC
+7763,OPEN,Passed through environment variables have newlines stripped,kind/bug,2020-10-06 10:59:19 +0000 UTC
+7760,OPEN,docker-compose on raspberry blocks vnc,kind/bug,2020-09-14 08:14:34 +0000 UTC
+7759,OPEN,`docker-compose stop` doesn't stop things,kind/bug,2020-09-16 14:01:19 +0000 UTC
+7757,OPEN,Remove detached containers with `run --rm -d`,kind/feature,2020-10-08 12:20:45 +0000 UTC
+7750,OPEN,compose up via SSH fails with ERROR: Secsh channel 21 open FAILED: open failed: Connect failed,kind/bug,2021-02-07 02:31:39 +0000 UTC
+7743,OPEN,Adding the service name to build --parallel,kind/feature,2020-09-10 05:29:51 +0000 UTC
+7723,OPEN,docker-compose up -d --force-recreate should also create brand new containers,kind/feature,2020-09-02 20:42:12 +0000 UTC
+7719,OPEN,Docker-compose created container cannot access Internet,kind/question,2020-09-10 15:25:50 +0000 UTC
+7709,OPEN,Reopen Issue 6336,kind/bug,2021-01-26 16:46:41 +0000 UTC
+7707,OPEN,Windows-build stuck on OpenSSL 1.1.1c (28.May 2019),kind/bug,2020-08-26 09:04:11 +0000 UTC
+7702,OPEN,Error when using a remote ssh context running under Ubuntu,kind/bug, stale,2021-02-21 22:55:09 +0000 UTC
+7701,OPEN,Suppress or hide Docker “Steps” and other default outputs in the console,kind/feature,2020-08-23 04:21:49 +0000 UTC
+7697,OPEN,Docker-compose + Qnap storage,kind/question, stale,2021-02-18 04:11:36 +0000 UTC
+7693,OPEN,Fix path resolution between multiple projects in docker-compose,stale,2021-02-18 04:11:37 +0000 UTC
+7691,OPEN,`docker-compose --compatibility config` should not force output to version 2.3,kind/bug, stale,2021-02-18 04:11:38 +0000 UTC
+7690,OPEN,Docker Compose vs Kaspersky,kind/bug,2020-08-26 15:23:35 +0000 UTC
+7688,OPEN,docker-compose -f docker-compose.yml.dev -H ssh://user@ip uses wrong file / gets cached,kind/bug,2020-11-04 12:38:59 +0000 UTC
+7687,OPEN,Not able to install docker-compose on redhat 7 of ppc64le arch type.,kind/bug,2020-09-01 17:29:24 +0000 UTC
+7686,OPEN,OpenSSL version mismatch. Built against 1010106f, you have 101000cf,kind/bug,2021-02-21 23:22:51 +0000 UTC
+7685,OPEN,docker-compose exec fails with No such container when using contexts,kind/bug,2020-11-23 20:32:24 +0000 UTC
+7675,OPEN,[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate when using docker compose with DOCKER_HOST,kind/bug,2021-02-17 20:33:03 +0000 UTC
+7674,OPEN,`docker-compose up --no-build` should not require the existence of the build context directories,kind/feature,2021-01-22 21:23:56 +0000 UTC
+7672,OPEN,Logging docker commands generated from compose files,kind/feature,2020-08-17 05:59:15 +0000 UTC
+7669,OPEN,Add docker-compose tag <service> <tag> and allow to push a specific tag by using push command,kind/feature,2020-08-14 14:42:57 +0000 UTC
+7667,OPEN,docker-compose never runs on Mac Catalina,kind/bug,2020-10-02 09:34:38 +0000 UTC
+7652,OPEN,unable to trap signal when containers are shut down with --abort-on-container-exit,kind/bug,2021-02-06 15:43:06 +0000 UTC
+7649,OPEN,using multiple compose files in different directories leads to undefined behavior,kind/bug,2020-09-05 07:07:11 +0000 UTC
+7648,OPEN,disable env variable substitution in docker compose env files,kind/feature,2021-01-11 17:10:55 +0000 UTC
+7645,OPEN,[BUG] Overriding of the 'ports' directive doesn't working when original port already in use,kind/bug,2021-02-02 15:14:38 +0000 UTC
+7642,OPEN,Check engine API and warn user for feature that can't be implemented,kind/feature,2020-08-03 12:06:46 +0000 UTC
+7636,OPEN,Embed config in docker-compose.yaml file,kind/feature,2020-07-28 04:29:26 +0000 UTC
+7630,OPEN,Connection broken: IncompleteRead,kind/bug,2020-11-09 10:35:56 +0000 UTC
+7627,OPEN,Docker-Compose Ignores Exposed TCP/UDP on same Port,kind/bug,2020-10-21 09:20:38 +0000 UTC
+7624,OPEN,Env files require strict whitespace,kind/bug,2020-11-21 01:54:06 +0000 UTC
+7622,OPEN,docker-compose stopped responding to SIGINT and SIGTSTP,kind/bug,2021-02-14 00:26:34 +0000 UTC
+7618,OPEN,Allow overwriting the service names in the compose file,kind/feature,2020-07-25 14:28:40 +0000 UTC
+7616,OPEN,Wait or retry starting a container waiting for NFS volume to be mounted,kind/feature,2020-09-01 21:35:52 +0000 UTC
+7613,OPEN,[Feature] Add flag to stop all dependent containers when using `run`,kind/feature,2020-07-17 23:00:19 +0000 UTC
+7610,OPEN,[Feature] Reference external file URL for docker config creation,kind/feature,2020-07-16 19:27:11 +0000 UTC
+7608,OPEN,docker-compose down is too slow if a service uses a custom logging driver,kind/bug,2021-01-14 12:51:51 +0000 UTC
+7605,OPEN,docker-compose up --scale rescales not specified service,kind/bug,2020-09-05 07:14:24 +0000 UTC
+7596,OPEN,How to change default IP range on windows ?,kind/question,2020-07-10 08:29:57 +0000 UTC
+7595,OPEN,Fish completion,kind/feature,2020-07-09 15:30:17 +0000 UTC
+7594,OPEN,Add memory-swap and memory-swappiness support to v3 since it was available in v2,kind/feature,2020-07-08 15:04:08 +0000 UTC
+7591,OPEN,Disable interactivity of up command,kind/feature,2020-07-07 07:10:34 +0000 UTC
+7585,OPEN,Attach to an already running container via service.,kind/feature,2020-07-05 22:32:15 +0000 UTC
+7577,OPEN,Docker Compose with volume stuck on "compose.parallel.feed_queue: Pending: set()",kind/bug,2021-02-10 09:13:28 +0000 UTC
+7566,OPEN,config and secret variable expansion,kind/feature,2020-06-29 19:09:23 +0000 UTC
+7562,OPEN,Your kernel or machine may not be supported,kind/feature,2021-01-05 11:55:28 +0000 UTC
+7558,OPEN,the use of docker in different os,kind/question,2020-12-21 07:49:27 +0000 UTC
+7544,OPEN,RUN sudo passwd alice without key any word,kind/question,2020-12-18 06:28:13 +0000 UTC
+7542,OPEN,docker-compose over SSH returns ChannelException(2, 'Connect failed'),kind/bug,2020-12-11 11:25:16 +0000 UTC
+7517,OPEN,Please add "docker-compose config --images" to list the images in the docker-compose.yml file.,kind/feature,2020-06-08 14:23:08 +0000 UTC
+7500,OPEN,docker-compose down only partially brings down stack and then stalls,,2020-06-28 19:06:21 +0000 UTC
+7495,OPEN,`docker-compose up` fails in WSL 2 environment,kind/bug,2021-02-09 03:47:16 +0000 UTC
+7494,OPEN,Add plugin system,kind/feature,2020-06-02 15:01:41 +0000 UTC
+7493,OPEN,Allow using wildcards in Docker-Compose network > aliases,kind/feature,2021-02-11 14:59:22 +0000 UTC
+7489,OPEN,[compose-in-a-container] Setup volume mounts based on -f, --file argument for compose in a container.,kind/feature,2020-07-16 07:04:24 +0000 UTC
+7482,OPEN,up -d command halts / freezes for long running applications,kind/bug,2020-11-23 20:52:06 +0000 UTC
+7481,OPEN,docker-run + --use-aliases behaviour,kind/feature,2020-05-26 13:31:04 +0000 UTC
+7474,OPEN,append additional hostname alias to existing container,kind/feature,2020-05-20 19:51:31 +0000 UTC
+7472,OPEN,Please support ARM64 binary downloads,kind/bug,2021-02-17 03:25:00 +0000 UTC
+7463,OPEN,Completion in a separate repo,kind/feature,2020-05-17 08:54:53 +0000 UTC
+7460,OPEN,DOCKER_CONTEXT on `.env` file,kind/feature,2020-07-24 22:49:25 +0000 UTC
+7454,OPEN,"Conflict. The container name is already in use by container" - running on host vs inside container,kind/bug,2020-10-26 12:37:09 +0000 UTC
+7450,OPEN,At case command set "/bin/bash -c" in docker-compose.yml, container stops instantaneously in spite of tty: true.,kind/bug,2020-11-08 09:24:53 +0000 UTC
+7444,OPEN,`up` does not re-use anonymous volume even without `--renew-anon-volumes` given,kind/bug,2020-11-18 23:11:24 +0000 UTC
+7443,OPEN,Support of Kompose to be able to deploy to virtually any orchestration engine,kind/feature,2020-05-11 09:19:55 +0000 UTC
+7439,OPEN,Add --compress option to docker-compose up,kind/feature,2020-05-10 17:09:06 +0000 UTC
+7437,OPEN,Option on `docker-compose up` to do a pull even if it already exists,kind/feature,2020-08-20 02:54:23 +0000 UTC
+7436,OPEN,Source secret file needs world readable permission,kind/bug,2021-01-15 15:01:14 +0000 UTC
+7434,OPEN,Context not found when given on docker-compose CLI,kind/bug,2020-09-25 16:23:17 +0000 UTC
+7431,OPEN,[RFC] deprecate push --ignore-push-failures and implement --skip-missing or --ignore-missing,kind/feature,2020-05-06 10:37:54 +0000 UTC
+7429,OPEN,Docker-compose push skips second service if first has same image but no build section,kind/bug,2020-12-03 14:57:28 +0000 UTC
+7423,OPEN,docker-compose does not set environment variables,kind/bug,2021-02-21 11:55:55 +0000 UTC
+7408,OPEN,docker-compose logs no output if using log-driver,kind/bug,2020-08-26 18:12:57 +0000 UTC
+7405,OPEN,Ubuntu 20.04 I can not connect ports after VMware suspend,kind/bug,2020-11-04 12:55:50 +0000 UTC
+7402,OPEN,Hierarchical resolution of environment files,kind/feature,2020-04-27 15:27:13 +0000 UTC
+7400,OPEN,May I translate this project into Korean?,kind/feature,2020-04-27 07:31:38 +0000 UTC
+7398,OPEN,Generating package-lock.json for production branch with mounted volumes during build,kind/feature,2020-04-24 11:59:02 +0000 UTC
+7397,OPEN,docker-compose up fails with symlinked Dockerfile,kind/bug,2020-11-21 18:16:09 +0000 UTC
+7394,OPEN,Run docker-compose pull on specific yml files,kind/feature,2020-04-21 22:06:48 +0000 UTC
+7392,OPEN,Support `runtime` parameter in 3.x schema,kind/feature,2020-04-21 15:46:26 +0000 UTC
+7391,OPEN,Add --quiet-pull to docker-compose run,kind/feature,2020-04-21 12:45:48 +0000 UTC
+7373,OPEN,docker-compose just hangs, no response,,2020-10-05 06:09:10 +0000 UTC
+7370,OPEN,Pre-built binary for aarch64?,kind/feature,2020-08-11 03:18:59 +0000 UTC
+7368,OPEN,docker-compose run on the openwrt routing system,kind/feature,2020-04-19 22:21:53 +0000 UTC
+7355,OPEN,Backport ports long syntax to file format 2,kind/feature,2020-04-11 05:22:07 +0000 UTC
+7352,OPEN,Request: handle quotation marks in .env files similar to other .env parsers,kind/feature,2020-07-28 07:39:24 +0000 UTC
+7348,OPEN,docker-compose 1.26.0-rc3 from Docker Desktop for macOS doesn't use TLS ("Client sent an HTTP request to an HTTPS server."),kind/bug,2020-09-24 12:52:59 +0000 UTC
+7347,OPEN,docker-compose 1.26.0rc3 installed from pip fails with "No module named 'dotenv'",kind/bug,2020-11-18 00:18:16 +0000 UTC
+7346,OPEN,Why does docker-compose log to STDERR for `Building ....` instead of STDOUT when executing docker-compose build,kind/bug,2020-11-29 16:03:16 +0000 UTC
+7343,OPEN,Build same images only once, even they are used in multiple services,kind/feature,2020-04-03 10:28:46 +0000 UTC
+7341,OPEN,docker-compose up should support --tail option,kind/feature,2020-04-20 15:34:45 +0000 UTC
+7339,OPEN,Should not log a warning when environment variable value is specified in override file,kind/bug,2020-11-08 21:57:44 +0000 UTC
+7337,OPEN,Error message on exec-ing a container that doesn't exist should honor container_name,kind/feature,2020-04-02 15:45:45 +0000 UTC
+7326,OPEN,Support multiple .evn files,kind/feature,2020-09-15 05:21:56 +0000 UTC
+7323,OPEN,Support `extra_hosts` in `_CLIBuilder`,kind/feature,2020-08-27 11:19:03 +0000 UTC
+7320,OPEN,--renew-named-volumes option on `up` to reinitialize data,kind/feature,2020-03-26 06:31:49 +0000 UTC
+7319,OPEN,Failed to execute script docker-compose when doing docker-compose up on SSH context,kind/bug,2021-01-30 17:14:36 +0000 UTC
+7314,OPEN,The Dockerfile could not find the docker-compose volume file,kind/bug,2021-02-03 16:02:45 +0000 UTC
+7307,OPEN,Enable resource limits in non-swarm environments,kind/feature,2020-03-21 16:18:42 +0000 UTC
+7306,OPEN,docker-compose exec: the input device is not a TTY,kind/bug,2020-11-18 17:30:08 +0000 UTC
+7304,OPEN,Environment Setting Unicode + become \u002,kind/bug,2020-03-19 08:15:14 +0000 UTC
+7302,OPEN,Using .env behaves differently than env_file in compose file?,kind/bug,2020-09-15 05:20:07 +0000 UTC
+7297,OPEN,Add DOCKER_COMPOSE_LOG_LEVEL env,kind/feature,2020-03-16 12:58:16 +0000 UTC
+7292,OPEN,Support podman as a backend,kind/feature,2020-04-08 00:24:14 +0000 UTC
+7289,OPEN,Allow specifying the name of the docker-compose environment file other than `.env`,,2020-12-07 00:47:46 +0000 UTC
+7277,OPEN,no matching entries in group file,kind/bug,2020-09-06 19:31:58 +0000 UTC
+7273,OPEN,Windows docker fails to use build function of docker-compose,kind/bug,2021-02-17 14:42:14 +0000 UTC
+7262,OPEN,docker-compose ups a bad build target with multiple compose files,kind/bug,2020-12-16 23:23:28 +0000 UTC
+7258,OPEN,`docker-compose pull` NOT failing if a service image is not found (and includes both image and build),kind/bug,2020-12-22 19:13:26 +0000 UTC
+7256,OPEN,Environment variable expansion: environment variable in default fails,kind/bug,2021-01-30 16:03:41 +0000 UTC
+7253,OPEN,have a permanent link for the latest version such as: https://github.com/docker/compose/releases/download/latest/,kind/feature,2020-02-27 13:31:39 +0000 UTC
+7252,OPEN,Dockerfile parsing error when using mount flag,kind/bug,2021-01-31 16:17:17 +0000 UTC
+7248,OPEN,Save running containers as a compose file,kind/feature,2020-02-25 06:01:02 +0000 UTC
+7239,OPEN,Accept Circular dependency between containers,kind/feature,2020-02-19 11:14:18 +0000 UTC
+7230,OPEN,Abort on non-zero exit code,kind/feature,2020-03-06 18:57:50 +0000 UTC
+7227,OPEN,Error: for web-dev UnixHTTPConnectionPool(Host='localhost', Port=None): Read timed out.,kind/bug,2020-12-29 10:21:16 +0000 UTC
+7215,OPEN,Volumes for other service fail service to start,kind/enhancement,2021-02-07 19:03:19 +0000 UTC
+7203,OPEN,Allow turning off error checking in the config command,kind/feature,2020-07-02 15:43:18 +0000 UTC
+7201,OPEN,Validate compose file on supported API, not version,area/config, format/v2, format/v3, kind/feature,2020-06-22 07:55:17 +0000 UTC
+7200,OPEN,[RfC] generalize support for custom extensions,kind/feature,2020-01-31 11:10:23 +0000 UTC
+7193,OPEN,Allow Docker "label"s to be modeled as yaml objects,kind/feature,2020-04-27 17:52:04 +0000 UTC
+7188,OPEN,Port conflict with multiple "host:<port range>:port" services,kind/bug,2021-01-22 10:22:52 +0000 UTC
+7184,OPEN,docker-compose 1.25.1 buildkit support and --ssh option,kind/question,2020-10-28 14:28:32 +0000 UTC
+7158,OPEN,Add backup/restore commands,kind/feature,2020-01-18 11:26:27 +0000 UTC
+7157,OPEN,Ephemeral deployments,kind/feature,2020-01-18 11:18:15 +0000 UTC
+7147,OPEN,docker-compose up brings up extra containers which docker-compose down doesn't remove,kind/bug, status/0-triage,2020-01-17 03:08:35 +0000 UTC
+7146,OPEN,Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found,kind/question, status/0-triage,2020-06-10 22:55:29 +0000 UTC
+7137,OPEN,map docker engine API to actual needs, not compose file version,kind/feature,2020-01-13 11:41:23 +0000 UTC
+7130,OPEN,CPU pinning not possible with v3 compose,kind/enhancement, kind/feature,2020-01-09 09:01:26 +0000 UTC
+7127,OPEN,Problem using ignore-pull-failures,kind/bug,2020-06-09 16:12:16 +0000 UTC
+7112,OPEN,Dockerfile become truncated in certain circumstances,kind/bug,2020-01-06 10:55:18 +0000 UTC
+7102,OPEN,Support ${parameter:+word} style variable substitution,kind/feature,2020-02-25 00:06:22 +0000 UTC
+7095,OPEN,[Question|Feature Request] Dockerfile inside docker-compose.yml,kind/feature,2020-02-26 08:54:35 +0000 UTC
+7083,OPEN,Make `--env-file` a repeatable option,kind/feature,2020-05-11 18:02:59 +0000 UTC
+7082,OPEN,Proposal: use docker CLI dial-stdio to access docker engine,kind/feature,2019-12-05 12:58:37 +0000 UTC
+7078,OPEN,Proposal: rely on docker CLI,kind/epic,2020-06-11 23:43:41 +0000 UTC
+7051,OPEN,Raspberry crashes on docker-compose up,kind/bug,2021-02-02 09:52:40 +0000 UTC
+7036,OPEN,Compose build hangs instead of giving error message in case of uppercase image name.,kind/bug, status/0-triage,2020-05-04 05:24:43 +0000 UTC
+7025,OPEN,Enable ssh option as build parameter for buildkit,kind/feature, status/0-triage,2021-02-08 13:29:34 +0000 UTC
+7011,OPEN,Avoid use of __file__,kind/cleanup, status/0-triage,2020-11-22 08:19:39 +0000 UTC
+7004,OPEN,Ending slash in container path volume handling is buggy,kind/bug, status/0-triage,2020-11-15 17:54:53 +0000 UTC
+7001,OPEN,Support bracket notation for IPv6 port mappings,kind/feature, status/0-triage,2019-11-06 08:53:09 +0000 UTC
+6997,OPEN,Ability to exlude certain files and subfolders from being mounted/synced.,kind/feature, status/0-triage,2020-07-01 20:14:14 +0000 UTC
+6995,OPEN,Do not autostart specific services,kind/feature, status/0-triage,2020-01-15 12:52:45 +0000 UTC
+6977,OPEN,Why is the last one to create a folder when creating a volume?,kind/feature,2019-10-22 03:29:09 +0000 UTC
+6975,OPEN,Volume mounted inside another sometimes disappears after file change,kind/bug, status/0-triage,2020-11-11 00:23:58 +0000 UTC
+6968,OPEN,docker-compose rm -v says 'No stopped containers' when that isn't true,kind/bug, status/0-triage,2021-01-28 00:47:35 +0000 UTC
+6958,OPEN,Using `${foo:?Error}` construct is expanded at too early.,kind/bug, status/0-triage,2021-01-04 10:57:00 +0000 UTC
+6951,OPEN,.env file whit variable with whitespace,kind/question, status/0-triage,2021-01-21 15:56:23 +0000 UTC
+6939,OPEN,docker-compose-up fails to fetch remote images,status/0-triage,2020-12-11 14:36:48 +0000 UTC
+6935,OPEN,compose breaks network on arm only,area/networking, kind/bug, status/0-triage,2021-01-23 13:46:16 +0000 UTC
+6931,OPEN,[Feature Request] Better handling of entropy on VPS,,2020-12-12 19:26:42 +0000 UTC
+6910,OPEN,docker-compose ps should show port ranges as docker ps does,,2020-09-17 21:02:11 +0000 UTC
+6904,OPEN,[Bug/Security] Wrong volume mounted if only a dash differs in project name.,,2020-09-15 08:08:54 +0000 UTC
+6902,OPEN,docker-compose config throws traceback if interval is a string without a suitable suffix.,,2020-10-20 16:35:13 +0000 UTC
+6879,OPEN,Unable to build for arm32 and arm64 (1.24.1),,2021-01-06 07:59:11 +0000 UTC
+6867,OPEN,docker-compose ps should show uptime,kind/enhancement,2020-12-03 05:49:14 +0000 UTC
+6855,OPEN,Feature Request: Init Containers for Docker Compose,,2020-12-09 08:46:33 +0000 UTC
+6851,OPEN,Ability to show only container logs without container name with `docker-compose logs`,kind/feature,2021-02-08 09:28:21 +0000 UTC
+6831,OPEN,Release docker/compose image for armv7 / arm64v8,kind/feature,2021-02-06 21:09:23 +0000 UTC
+6829,OPEN,An iterator available in docker-compose?,kind/feature,2020-04-09 18:24:20 +0000 UTC
+6822,OPEN,Network priority ignored for external networks,kind/bug,2021-01-22 01:09:14 +0000 UTC
+6817,OPEN,docker-compose overshoots requested scale,kind/bug,2019-07-25 09:40:11 +0000 UTC
+6782,OPEN,docker-compose up -d with a volume causes compose.parallel.feed_queue: Pending: set() endless loop,stale,2021-02-21 22:55:08 +0000 UTC
+6762,OPEN,Feature: Detach after blocking for minimum delay until assumed stable,kind/feature,2020-08-17 19:44:26 +0000 UTC
+6757,OPEN,Add new label com.docker.compose.projectfolder,kind/feature,2019-06-27 11:23:08 +0000 UTC
+6753,OPEN,want ports long syntax support species IP address like short syntax,kind/feature,2019-12-19 08:17:17 +0000 UTC
+6749,OPEN,Building containers in parallel to speed up performance?,kind/feature,2020-05-28 17:03:13 +0000 UTC
+6748,OPEN,Is it possible to let env_file config supports load from url ?,kind/feature,2019-06-28 03:41:22 +0000 UTC
+6743,OPEN,Add support for non-service container,kind/feature,2020-10-20 16:08:25 +0000 UTC
+6741,OPEN,Feature Request: option to disable reading from .env,kind/feature,2020-11-29 17:26:41 +0000 UTC
+6736,OPEN,Hooks to run scripts on host before starting any containers,kind/feature, status/0-triage,2021-02-01 16:28:00 +0000 UTC
+6735,OPEN,Expose use_network_aliases flag through compose config file,,2020-11-22 22:46:00 +0000 UTC
+6684,OPEN,Feature Request: present environment variable COMPOSER_OPTS,kind/feature,2019-08-20 14:48:04 +0000 UTC
+6658,OPEN,[Feature Request] Use variables within env file,,2020-09-30 13:58:55 +0000 UTC
+6611,OPEN,Proposal: add Docker save and load commands,area/cli, kind/feature,2019-09-17 14:08:58 +0000 UTC
+6569,OPEN,Support IPAM gateway in version 3.x,kind/enhancement, status/0-triage,2020-10-31 10:58:15 +0000 UTC
+6554,OPEN,up to create a subset of services,kind/feature,2019-03-11 15:58:50 +0000 UTC
+6533,OPEN,Compose treats empty labels different than stack deploy,format/v3, kind/bug,2020-09-16 13:51:54 +0000 UTC
+6527,OPEN,`logs` encoding is incorrect,,2020-12-01 12:13:32 +0000 UTC
+6522,OPEN,Implement condition or wait command to start service when other stop,format/v3, kind/feature, status/0-triage,2020-06-08 04:28:43 +0000 UTC
+6510,OPEN,Add support for docker --squash,kind/feature,2020-10-31 12:23:21 +0000 UTC
+6470,OPEN,Add bind mount exclusion to prevent overwriting generated files with local files,kind/feature,2019-01-21 17:50:57 +0000 UTC
+6443,OPEN,Allow running up without binding on ports.,,2019-01-16 14:53:22 +0000 UTC
+6438,OPEN,Tag based filtering,kind/feature,2019-01-22 09:38:43 +0000 UTC
+6414,OPEN,Add --net to docker-compose run,area/run, kind/feature,2019-02-25 09:59:50 +0000 UTC
+6408,OPEN,Add `verify` command,area/events, kind/feature, kind/question,2018-12-13 19:53:11 +0000 UTC
+6358,OPEN,Support for docker build --secret for build-time docker secrets.,area/build, kind/feature, status/0-triage,2020-05-22 08:24:26 +0000 UTC
+6264,OPEN,Top-level/standalone image build specification,area/build, area/config, kind/feature, kind/question,2018-10-13 18:20:35 +0000 UTC
+6180,OPEN,bridge DNS does not work when referencing a service alias as dns,area/networking, kind/question,2020-09-26 14:51:12 +0000 UTC
+6159,OPEN,Add labels in docker-compose up,area/up, kind/feature,2020-09-14 13:59:39 +0000 UTC
+6026,OPEN,Feature Request: Provide --quiet option to 'up' command,area/up, kind/feature,2021-02-11 15:33:59 +0000 UTC
+5842,OPEN,docker-compose fails with invalid volume specification,,2020-12-10 20:40:56 +0000 UTC
+5730,OPEN,add --timestamps option for "up" command,area/cli, area/up, kind/feature,2020-12-18 03:06:30 +0000 UTC
+5613,OPEN,Docker Compose does not support defining port ranges in long form.,area/config, format/v3, kind/question,2020-12-16 18:01:30 +0000 UTC
+5523,OPEN,docker-compose copy file or directory to container,kind/feature, status/0-triage,2021-02-06 03:49:35 +0000 UTC
+5477,OPEN,add env_blueprint_file feature,area/config, kind/feature,2019-05-22 14:58:08 +0000 UTC
+5388,OPEN,Support the "consistency" option in long syntax format for volumes,area/volumes, kind/feature, kind/parity,2019-04-17 15:45:18 +0000 UTC
+5288,OPEN,Feature Request: list all local images with docker-compose, even without containers,,2021-01-31 00:59:39 +0000 UTC
+5124,OPEN,Sequential restart when using `docker-compose up` with scale,area/scale, kind/feature,2019-11-16 08:43:10 +0000 UTC
+5102,OPEN,Configure merge behavior for configuration keys,area/config, kind/epic, kind/feature,2017-08-12 01:05:42 +0000 UTC
+4980,OPEN,Add --json option and send progress for non-TTY,area/logs, kind/feature,2019-05-22 14:35:59 +0000 UTC
+4787,OPEN,Docker Compose not using trusted conent during pull,kind/feature,2021-01-11 09:26:31 +0000 UTC
+4579,OPEN,Using scale number to adjust mounted volumes?,kind/feature,2020-02-22 10:43:40 +0000 UTC
+4577,OPEN,docker-compose ps show configuration update status,kind/feature,2019-05-22 13:50:46 +0000 UTC
+4548,OPEN,docker-compose run fails for running network_mode=host services,,2021-01-14 07:27:12 +0000 UTC
+4249,OPEN,Allow an environment variable to be used for an array field (e.g. devices:),area/config, kind/feature,2020-11-20 23:56:49 +0000 UTC
+4246,OPEN,Outgoing network firewall configuration,kind/feature,2016-12-14 22:14:34 +0000 UTC
+4241,OPEN,Feature request: add support for starting container from checkpoint,kind/enhancement, status/0-triage,2020-10-06 14:11:00 +0000 UTC
+4176,OPEN,Filter services by labels (Feature),area/cli, kind/feature,2016-11-23 02:22:51 +0000 UTC
+4133,OPEN,Add --exclude to docker-compose up,kind/feature,2020-10-20 09:18:08 +0000 UTC
+4096,OPEN,Proposal: exec shortcuts,area/run, kind/feature,2019-05-22 09:26:38 +0000 UTC
+4047,OPEN,docker-compose terminates if build directory is missing,,2020-11-10 07:27:20 +0000 UTC
+3927,OPEN,UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60),,2021-02-18 00:17:15 +0000 UTC
+3909,OPEN,abort-on-container-exit not working if a service is given,kind/question,2021-01-22 00:46:52 +0000 UTC
+3896,OPEN,Docker-compose up exiting with code 0,,2020-08-30 11:05:23 +0000 UTC
+3874,OPEN,When using multiple docker-compose.yml files from different directories, local paths are not followed correctly.,kind/enhancement, status/0-triage,2020-08-21 11:54:28 +0000 UTC
+3849,OPEN,docker-compose .env file not support dynamic values,kind/feature,2020-08-03 01:25:38 +0000 UTC
+3729,OPEN,allow removing something in docker-compose.override.yml,,2021-02-10 19:59:03 +0000 UTC
+3715,OPEN,driver_opts should support the same commands as docker volume create --opt,,2020-10-05 08:52:29 +0000 UTC
+3660,OPEN,Docker compose pull doesn't respect local images,kind/question,2020-09-22 09:21:49 +0000 UTC
+3608,OPEN,Undefined default build arg is sent as empty string to docker build, instead of not sent,area/config, kind/enhancement,2020-09-30 15:05:20 +0000 UTC
+3593,OPEN,Support `cp' sub command,area/cli, kind/feature, status/0-triage,2020-09-30 00:34:04 +0000 UTC
+3541,OPEN,compose control network domain name,kind/feature, status/0-triage,2019-10-22 05:50:26 +0000 UTC
+3513,OPEN,pull requires valid build path,area/build, area/config, kind/question,2020-09-21 07:58:29 +0000 UTC
+3480,OPEN,Releases, code should be digitally signed,area/packaging, kind/enhancement, status/0-triage,2021-02-10 17:13:38 +0000 UTC
+3476,OPEN,Allow mixing of the default bridge with other networks,area/networking,2021-02-14 16:22:53 +0000 UTC
+2999,OPEN,docker-compose host-ip value should defaults to the --ip value of docker daemon,area/config, kind/bug,2021-02-10 09:30:26 +0000 UTC
+2957,OPEN,Define host volumes in the `volumes` section of the Compose file,area/config, kind/enhancement, stale,2021-02-18 04:11:35 +0000 UTC
+2945,OPEN,compose checks that the build context folders exist even when not needed,status/0-triage,2020-10-05 08:53:22 +0000 UTC
+2925,OPEN,Service can't be reached by defined hostname,area/networking, kind/enhancement,2021-01-22 22:11:30 +0000 UTC
+2545,OPEN,Proposal: support for args_file,area/config, kind/feature, status/0-triage,2019-10-17 09:54:22 +0000 UTC
+2369,OPEN,docker-compose ps enhancements,area/cli, kind/feature,2019-09-03 14:11:13 +0000 UTC
+2294,OPEN,1.5 - Make COMPOSE_PROJECT_NAME accessible to environment,area/networking, kind/enhancement,2020-12-16 13:01:59 +0000 UTC
+2235,OPEN,Provide RPM and DEB packages for compose,area/packaging, status/0-triage,2020-08-27 21:06:53 +0000 UTC
+2057,OPEN,Add command to list project status,kind/feature,2018-10-24 15:18:28 +0000 UTC
+1910,OPEN,Stable Compose / Swarm integration,kind/epic, swarm,2015-11-23 18:55:11 +0000 UTC
+1516,OPEN,Proposal: Stop using sequential container numbers,area/scale, kind/feature,2018-11-15 01:57:40 +0000 UTC
+1234,OPEN,Proposal: Support for affinity filter in Docker Swarm,area/up, kind/feature, swarm,2015-11-23 18:48:10 +0000 UTC
+1209,OPEN,Add support for pointing to tarball contexts in the 'build' parameter.,area/build, kind/enhancement,2020-09-14 13:58:01 +0000 UTC
+1203,OPEN,docker-compose dry run,kind/enhancement,2020-12-18 14:07:07 +0000 UTC
+1197,OPEN,Feature Request: docker-compose stats,kind/feature,2019-10-20 15:19:04 +0000 UTC
+963,OPEN,Don't build the same thing twice,area/build, kind/feature,2020-04-14 12:17:41 +0000 UTC
+745,OPEN,Proposal: make project-name persistent.,kind/feature, status/0-triage,2021-02-18 07:25:18 +0000 UTC
+318,OPEN,feature: including external docker-compose.yml,kind/enhancement, status/0-triage,2020-10-19 11:18:52 +0000 UTC
+229,OPEN,Switch to using hyphens as a separator in hostnames,,2021-02-10 18:35:06 +0000 UTC
+184,OPEN,Watch code and automatically rebuild when something changes,kind/enhancement, status/0-triage,2021-01-31 17:20:39 +0000 UTC

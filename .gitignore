@@ -1,0 +1,11 @@
+try.sh
+bin/*
+lib/*
+share/*
+lib64/*
+lib64
+**__pycache__
+**logs/
+*.log
+# Ignore external repository
+dataset/github/compose/*
