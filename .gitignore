@@ -1,4 +1,7 @@
 try.sh
+token.pickle
+pyvenv.cfg
+
 bin/*
 lib/*
 share/*
