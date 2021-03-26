@@ -12,6 +12,7 @@ from sklearn import metrics
 from sklearn.linear_model import SGDClassifier
 from sklearn.naive_bayes import MultinomialNB
 # This is used for graphical representation of gathered data
+import pickle
 import nltk
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
@@ -78,6 +79,11 @@ def description_converter(value):
     return value
 
 
+common_issue_types = {'New Feature': ['FEATURE', 'NEW-FEATURE', 'NEW_FEATURE', 'NEW FEATURE'],
+                      'Improvement': ['ENHANCEMENT', 'IMPROVEMENT'],
+                      'Bug': ['BUG'],
+                      'Test': ['TEST']}
+
 def issue_converter(value):
     """
     Convert issue type field (github) in csv to issue type without whitespaces,
@@ -88,15 +94,13 @@ def issue_converter(value):
     """
     splitted = value.split(';')
     for split in splitted:
-        if 'kind' in split or 'Kind' in split:
-            value = split.strip()[5:]
-            # Rename feature into new feature
-            if 'feature' in value:
-                value = 'New feature'
-            if 'enhancement' in value:
-                value = 'Improvement'
-    return value.capitalize()
-
+        for issue_type_key, issue_type_values in common_issue_types.items():
+            if any(issue_type in split.upper() for issue_type in issue_type_values):
+                return issue_type_key
+            else:
+                # No kind is specified, so it is custom label
+                value = numpy.nan
+    return value
 
 def read_csv_file(filepath, mandatory_fields, optional_fields):
     """
@@ -148,7 +152,6 @@ filepath_dict = {'kafka-newfeatures': 'dataset/kafka_newfeatures.csv',
                  'solr-tests': 'dataset/apache_solr_tests.csv',
                  'apache-spark-tests': 'dataset/apache_spark_tests.csv',
 
-
                  #'bug-jfrog-artifactory': 'dataset/jfrog_artifactory_bin_repo_bugs.csv',
                  'bug-hadoop': 'dataset/hadoop_bugs1000.csv',
                  'bug-kafka': 'dataset/kafka_bugs1000.csv',
@@ -156,172 +159,204 @@ filepath_dict = {'kafka-newfeatures': 'dataset/kafka_newfeatures.csv',
                  #'bug-netbeans': 'dataset/netbeans_bug1000.csv',
                  'github-docker-compose': 'dataset/github/compose.csv'
                  }
-
-df_list = []
-# Setup mandatory and optional fields.
-mandatory_fields = ['Created', 'Creator', 'Description', 'Resolution', 'Status',
-                    'Summary', 'Issue Type']
-optional_fields = ['Assignee', 'Labels', 'Resolved',
-                   'Outward issue link (Blocker)']
-# Iterate over all of the filepaths with sources. Parse csv in the path
-for source, filepath in filepath_dict.items():
-    # todo: use multiple inputs in machine learning
-    df = read_csv_file(filepath, mandatory_fields, optional_fields)
-    df.dropna(subset=['Description'], inplace=True)
-    df['source'] = source  # Add another column filled with the source name
-    # Filter data frame based on the Issue Type values
-    df = df.loc[df['Issue Type'].isin(['Bug', 'New feature', 'Improvement',
-                                       'Test', 'Question'])]
-    df_list.append(df)
-# Concatenate all the dataframes to single pandas Dataframe.
-df = pd.concat(df_list)
-# Create categories based on the Issue Type using factorization (transformation
-# of unique fields into numbers 0 to n). This is used in machine learning process.
-df['category_id'], uniques = df['Issue Type'].factorize()
-
-# Do not split dataset
-# df_kafka_newcapabilities = df[df['source'] == 'kafka']
-
-sentences = df['Description'].values
-labels = df['category_id'].values
-# Change test size that is used to check the accuracy of the built model
-# If it is too trained on dataset it is problem.
-# todo: Test it on real repository to check possible collisions with built model
-sentences_train, sentences_test, y_train, y_test = \
-    train_test_split(sentences, labels, test_size=0.20, random_state=800)
-
-# Scikit learn vectorizer
-vectorizer = CountVectorizer()
-vectorizer.fit(sentences_train)
-x_train_counts = vectorizer.fit_transform(sentences)
-print(x_train_counts.shape)
-
-# Count frequencies instead of occurences
-tf_transformer = TfidfTransformer()
-x_train_tf = tf_transformer.fit_transform(x_train_counts)
-print(x_train_tf.shape)
-
-# clf = MultinomialNB().fit(x_train_tf, labels)
-clf = SGDClassifier(loss='hinge', penalty='l2', alpha=0.0001, random_state=48,
-                    max_iter=500, tol=None).fit(x_train_tf, labels)
-x_samples = vectorizer.transform(sentences_test)
-x_samples_tf = tf_transformer.transform(x_samples)
-
-prediction = clf.predict(x_samples_tf)
-for desc, category in zip(sentences_test, prediction):
-    print('{} => {}'.format(desc, uniques[category]))
-mean_value = numpy.mean(prediction == y_test)
-print("Accuracy: {}".format(mean_value))
-print(metrics.classification_report(y_test, prediction,
-                                    target_names=['New feature', 'Improvement',
-                                                  'Test', 'Bug', 'Question']))
+test_sentences = {'puppeteer': 'dataset/github/puppeteer.csv',
+                  'nodejs': 'dataset/github/node.csv'}
 
 
-"""
-Show dataset using matplotlib
-"""
+if __name__ == '__main__':
+    df_list = []
+    # Setup mandatory and optional fields.
+    mandatory_fields = ['Created', 'Creator', 'Description', 'Resolution', 'Status',
+                        'Summary', 'Issue Type']
+    optional_fields = ['Assignee', 'Labels', 'Resolved',
+                       'Outward issue link (Blocker)']
+    # Iterate over all of the filepaths with sources. Parse csv in the path
+    for source, filepath in filepath_dict.items():
+        # todo: use multiple inputs in machine learning
+        df = read_csv_file(filepath, mandatory_fields, optional_fields)
+        df.dropna(subset=['Description'], inplace=True)
+        df['source'] = source  # Add another column filled with the source name
+        # Filter data frame based on the Issue Type values
+        df = df.loc[df['Issue Type'].isin(['Bug', 'New feature', 'Improvement',
+                                           'Test', 'Question'])]
+        df_list.append(df)
+    # Concatenate all the dataframes to single pandas Dataframe.
+    df = pd.concat(df_list)
+    # Create categories based on the Issue Type using factorization (transformation
+    # of unique fields into numbers 0 to n). This is used in machine learning process.
+    df['category_id'], uniques = df['Issue Type'].factorize()
+
+    # Do not split dataset
+    # df_kafka_newcapabilities = df[df['source'] == 'kafka']
+
+    sentences = df['Description'].values
+    labels = df['category_id'].values
+    # Change test size that is used to check the accuracy of the built model
+    # If it is too trained on dataset it is problem.
+    sentences_train, sentences_test, y_train, y_test = \
+        train_test_split(sentences, labels, test_size=0.10, random_state=650)
+
+    # Real repository examples
+    # Add test senteces of puppeteer github
+    sentences_test = pd.read_csv(test_sentences['nodejs'],
+                                 usecols=['Description', 'Issue Type'],
+                                 encoding='utf-8',
+                                 converters={'Description':
+                                             description_converter,
+                                             'Issue Type':
+                                             issue_converter})
+    # Remove all test sentences that does not contain issue type
+    sentences_test.dropna(subset=['Issue Type'], inplace=True)
+    # Remove from the rest of sentences that ones that are missing description.
+    sentences_test.dropna(subset=['Description'], inplace=True)
+    y_test = []
+    for item in sentences_test['Issue Type']:
+        for index, issue_key in enumerate(common_issue_types.keys()):
+            if item == issue_key:
+                y_test = numpy.append(y_test, int(index))
+    sentences_test = numpy.array(sentences_test['Description'])
 
 
-nltk.download('stopwords')
-nltk.download('punkt')
-plt.style.use("seaborn-notebook")
+    # Scikit learn vectorizer
+    vectorizer = CountVectorizer()
+    vectorizer.fit(sentences_train)
+    x_train_counts = vectorizer.fit_transform(sentences)
+    print(x_train_counts.shape)
 
-SMALL_SIZE = 12
-MEDIUM_SIZE = 15
-BIGGER_SIZE = 18
+    # Count frequencies instead of occurences
+    tf_transformer = TfidfTransformer()
+    x_train_tf = tf_transformer.fit_transform(x_train_counts)
+    print(x_train_tf.shape)
 
-plt.rc("font", size=SMALL_SIZE)
-plt.rc("axes", titlesize=BIGGER_SIZE)
-plt.rc("axes", labelsize=MEDIUM_SIZE)
-plt.rc("xtick", labelsize=SMALL_SIZE)
-plt.rc("ytick", labelsize=SMALL_SIZE)
-plt.rc("legend", fontsize=SMALL_SIZE)
-plt.rc("figure", titlesize=BIGGER_SIZE)
+    # clf = MultinomialNB().fit(x_train_tf, labels)
+    clf = SGDClassifier(loss='hinge', penalty='l2', alpha=0.001, random_state=48,
+                        max_iter=400, tol=None).fit(x_train_tf, labels)
+    x_samples = vectorizer.transform(sentences_test)
+    x_samples_tf = tf_transformer.transform(x_samples)
 
-r = matplotlib.patches.Rectangle(
-    (0, 0), 1, 1, fill=False, edgecolor="none", visible=False
-)
+    prediction = clf.predict(x_samples_tf)
+    for desc, category in zip(sentences_test, prediction):
+        print('{} => {}'.format(desc, uniques[category]))
+    mean_value = numpy.mean(prediction == y_test)
+    print("Accuracy: {}".format(mean_value))
+    # save the model, vectorizer and transformer to disk
+    filename = 'finalized_model.sav'
+    pickle.dump(clf, open(filename, 'wb'))
+    filename = 'vectorizer.sav'
+    pickle.dump(vectorizer, open(filename, 'wb'))
+    filename = 'tfidftransformer.sav'
+    pickle.dump(tf_transformer, open(filename, 'wb'))
+    # Do report
+    print(metrics.classification_report(y_test, prediction,
+                                        target_names=['New feature', 'Improvement',
+                                                      'Bug', 'Test', 'Question']))
 
-stop_words = set(stopwords.words("english"))
-stemmer = SnowballStemmer("english")
-# table = str.maketrans("", "", str.punctuation + "——")
+
+    """
+    Show dataset using matplotlib
+    """
 
 
-def remove_stop_words_and_tokenize(text: str) -> str:
-    tokens = word_tokenize(text)
-    tokens = [w.lower() for w in tokens]
-    # stripped = [w.translate(table) for w in tokens]
-    words = [word for word in tokens if word.isalpha()]
-    words = [w for w in words if w not in stop_words]
-    words = [stemmer.stem(w) for w in words]
-    return " ".join(words)
+    nltk.download('stopwords')
+    nltk.download('punkt')
+    plt.style.use("seaborn-notebook")
 
-X_prep = []
-X_prep.append(
-    [remove_stop_words_and_tokenize(x) for x in df['Description'].values]
-)
+    SMALL_SIZE = 12
+    MEDIUM_SIZE = 15
+    BIGGER_SIZE = 18
 
-tfidfs = []
-X_tfidf = []
+    plt.rc("font", size=SMALL_SIZE)
+    plt.rc("axes", titlesize=BIGGER_SIZE)
+    plt.rc("axes", labelsize=MEDIUM_SIZE)
+    plt.rc("xtick", labelsize=SMALL_SIZE)
+    plt.rc("ytick", labelsize=SMALL_SIZE)
+    plt.rc("legend", fontsize=SMALL_SIZE)
+    plt.rc("figure", titlesize=BIGGER_SIZE)
 
-for X in X_prep:
-    tfidf = TfidfVectorizer(max_features=20_000)
-    X_tfidf.append(tfidf.fit_transform(X))
-    tfidfs.append(tfidf)
+    r = matplotlib.patches.Rectangle(
+        (0, 0), 1, 1, fill=False, edgecolor="none", visible=False
+    )
 
-for X in X_tfidf:
-    print(X.shape)
+    stop_words = set(stopwords.words("english"))
+    stemmer = SnowballStemmer("english")
+    # table = str.maketrans("", "", str.punctuation + "——")
 
-embeddings = ["tfidf"]#, "average_fasttext"]#, "avg_glove", "distiluse",
-              #"roberta"]
-X_emb_umap = []
-All_umaps = []
 
-for embedding in embeddings:
-    X_umap = []
-    umaps = []
+    def remove_stop_words_and_tokenize(text: str) -> str:
+        tokens = word_tokenize(text)
+        tokens = [w.lower() for w in tokens]
+        # stripped = [w.translate(table) for w in tokens]
+        words = [word for word in tokens if word.isalpha()]
+        words = [w for w in words if w not in stop_words]
+        words = [stemmer.stem(w) for w in words]
+        return " ".join(words)
 
-    if embedding == "tfidf":
-        for X in X_tfidf:
-            umap = UMAP(random_state=42, min_dist=0.1, metric="hellinger")
-            X_umap.append(umap.fit_transform(X))
-            umaps.append(umap)
-    # else:
-    #     for x_desc in zip(df['category_id'].values):#, y_datasets):
-    #         umap = UMAP(random_state=42, min_dist=0.1, metric="cosine")
-    #         X_umap.append(
-    #             umap.fit_transform(
-    #                 x_desc
-    #             )
-    #         )
-    #         umaps.append(umap)
+    X_prep = []
+    X_prep.append(
+        [remove_stop_words_and_tokenize(x) for x in df['Description'].values]
+    )
 
-    All_umaps.append(umaps)
-    X_emb_umap.append(X_umap)
+    tfidfs = []
+    X_tfidf = []
 
-from itertools import chain
-for embedding, X_umap in zip(embeddings, X_emb_umap):
-    # fig, axs = plt.subplots(2, 2, figsize=(20, 20))
-    fig = plt.figure()
-    plt.tight_layout()
-    ax = fig.add_subplot(111)
-    name = df['source']
-    for X in X_umap:
-        for color, label in zip(tab10.colors, numpy.unique(df['Issue Type'])):
-            ax.scatter(*X[df['Issue Type'] == label].T, color=color,
-                       alpha=0.6, label=label)
-            plt.tight_layout()
-        ax.set_title(f"{name} ({embedding})")
-        # ax.set_xticks([])
-        # ax.set_yticks([])
-        ax.legend()
-    # for X, ax in zip(X_umap, chain(*axs)):
-    #     name = df['Issue Type']
-    #     ax.set_title(f"{name} ({embedding})")
-    #     for color, label in zip(tab10.colors, numpy.unique(df['source'])):
-     #         ax.scatter(*X[df['source'] == label].T, color=color, alpha=0.6, label=label)
-    #     ax.set_xticks([])
-    #     ax.set_yticks([])
-    #     ax.legend()
-    plt.savefig(f"imgs/{embedding}-full.png", transparent=False)
-    plt.show()
+    for X in X_prep:
+        tfidf = TfidfVectorizer(max_features=20_000)
+        X_tfidf.append(tfidf.fit_transform(X))
+        tfidfs.append(tfidf)
+
+    for X in X_tfidf:
+        print(X.shape)
+
+    embeddings = ["tfidf"]#, "average_fasttext"]#, "avg_glove", "distiluse",
+                  #"roberta"]
+    X_emb_umap = []
+    All_umaps = []
+
+    for embedding in embeddings:
+        X_umap = []
+        umaps = []
+
+        if embedding == "tfidf":
+            for X in X_tfidf:
+                umap = UMAP(random_state=42, min_dist=0.1, metric="hellinger")
+                X_umap.append(umap.fit_transform(X))
+                umaps.append(umap)
+        # else:
+        #     for x_desc in zip(df['category_id'].values):#, y_datasets):
+        #         umap = UMAP(random_state=42, min_dist=0.1, metric="cosine")
+        #         X_umap.append(
+        #             umap.fit_transform(
+        #                 x_desc
+        #             )
+        #         )
+        #         umaps.append(umap)
+
+        All_umaps.append(umaps)
+        X_emb_umap.append(X_umap)
+
+    from itertools import chain
+    for embedding, X_umap in zip(embeddings, X_emb_umap):
+        # fig, axs = plt.subplots(2, 2, figsize=(20, 20))
+        fig = plt.figure()
+        plt.tight_layout()
+        ax = fig.add_subplot(111)
+        name = df['source']
+        for X in X_umap:
+            for color, label in zip(tab10.colors, numpy.unique(df['Issue Type'])):
+                ax.scatter(*X[df['Issue Type'] == label].T, color=color,
+                           alpha=0.6, label=label)
+                plt.tight_layout()
+            ax.set_title(f"{name} ({embedding})")
+            # ax.set_xticks([])
+            # ax.set_yticks([])
+            ax.legend()
+        # for X, ax in zip(X_umap, chain(*axs)):
+        #     name = df['Issue Type']
+        #     ax.set_title(f"{name} ({embedding})")
+        #     for color, label in zip(tab10.colors, numpy.unique(df['source'])):
+         #         ax.scatter(*X[df['source'] == label].T, color=color, alpha=0.6, label=label)
+        #     ax.set_xticks([])
+        #     ax.set_yticks([])
+        #     ax.legend()
+        plt.savefig(f"imgs/{embedding}-full.png", transparent=False)
+        plt.show()

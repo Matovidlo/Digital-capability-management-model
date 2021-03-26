@@ -1,14 +1,15 @@
 import itertools
 from jira import JIRA, JIRAError
 from constants import TOKEN_AUTH, USER_AUTH
+from gatherer import Gatherer
 
 # By default, the client will connect to a Jira instance started from the Atlassian Plugin SDK
 # (see https://developer.atlassian.com/display/DOCS/Installing+the+Atlassian+Plugin+SDK for details).
 # Override this with the options parameter.
 # Licenses https://my.atlassian.com/products/index?sen=16469943&evalId=16469943&eval=true#license_16469943
 
-# todo: remove = user: test pw: ccccc
-class JiraGatherer:
+
+class JiraGatherer(Gatherer):
     def __init__(self, url, credentials):
         options = {"server": url}
         if USER_AUTH in credentials:
@@ -16,7 +17,10 @@ class JiraGatherer:
                                       credentials[USER_AUTH][1])
             self.jira = JIRA(options, auth=credentials[USER_AUTH])
 
-    def request(self):
+    def parse_response(self, request_type, response):
+        return response
+
+    def send_request(self):
         # Get all projects viewable by anonymous users.
         projects = self.jira.projects()
         # Sort available project keys, then return the second, third, and fourth keys.

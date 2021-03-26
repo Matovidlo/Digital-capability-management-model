@@ -1,7 +1,13 @@
-version: '3.1'
+version: '3.4'
+
+configs:
+  ml_model:
+    file: finalized_model.sav
 
 services:
   jira:
+    env_file:
+      - .env
     container_name: jira
     depends_on:
       - postgresql
@@ -13,16 +19,14 @@ services:
     ports:
       - '8001:8080'
     environment:
-      - 'ATL_JDBC_URL=postgresql:5432'
-      - 'ATL_JDBC_USER=jiradbuser'
-      - 'ATL_JDBC_PASSWORD=admin'
-      - 'SETENV_JVM_MINIMUM_MEMORY=2048m'
-      - 'SETENV_JVM_MAXIMUM_MEMORY=4096m'
-      - 'JIRA_PROXY_NAME='
-      - 'JIRA_PROXY_PORT='
-      - 'JIRA_PROXY_SCHEME='
+      ATL_JDBC_USER: "${jira_user_env}"
+      ATL_JDBC_PASSWORD: "${jira_pass_env}"
+      ATL_JDBC_URL: "postgresql:5432"
+      SETENV_JVM_MINIMUM_MEMORY: "2048m"
 
   postgresql:
+    env_file:
+      - .env
     container_name: postgres
     image: postgres:9.6
     expose:
@@ -32,13 +36,12 @@ services:
     volumes:
       - postgresqldata:/var/lib/postgresql/data
     environment:
-      - 'POSTGRES_USER=jiradbuser'
-      # CHANGE THE PASSWORD!
-      - 'POSTGRES_PASSWORD=admin'
-      - 'POSTGRES_DB=jiradb'
-      - 'POSTGRES_ENCODING=UNICODE'
-      - 'POSTGRES_COLLATE=C'
-      - 'POSTGRES_COLLATE_TYPE=C'
+      POSTGRES_USER: "${postgres_user_env}"
+      POSTGRES_PASSWORD: "${postgres_pass_env}"
+      POSTGRES_DB: "${postgres_database_env}"
+      POSTGRES_ENCODING: "UNICODE"
+      POSTGRES_COLLATE: "C"
+      POSTGRES_COLLATE_TYPE: "C"
 
 # Application composition with dockerfile
 #  app:
@@ -54,7 +57,11 @@ services:
 #      - WAIT_HOST_CONNECT_TIMEOUT=30
 
   mongo:
-    image: mongo
+    env_file:
+      - .env
+    build:
+      context: ./mongo
+      dockerfile: Dockerfile_mongo
     networks:
       - jiranet
     expose:
@@ -62,15 +69,33 @@ services:
     ports:
       - "27017:27017"
     restart: always
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
     volumes:
-    - mongodata:/var/lib/mongodb
+      - type: volume
+        source: mongodata
+        target: /var/lib/mongodb
+      - type: bind
+        source: ./finalized_model.sav
+        target: /tmp/model/model.sav
+      - type: bind
+        source: ./vectorizer.sav
+        target: /tmp/model/vectorizer.sav
+      - type: bind
+        source: ./tfidftransformer.sav
+        target: /tmp/model/tf_transformer.sav
+      # Add python inserter which inserst to mongodb
+      - type: bind
+        source: ./insert_model.py
+        target: /home/insert_model.py
     logging:
       options:
         max-size: 1m
         max-file: "10"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: extrastrongpasswd
+      MONGO_INITDB_ROOT_USERNAME: "${db_mongo_user_env}"
+      MONGO_INITDB_ROOT_PASSWORD: "${db_mongo_pass_env}"
+      DATABASE: "${db_mongo_database_env}"
 
 volumes:
   jiradata:
@@ -78,6 +103,8 @@ volumes:
   postgresqldata:
     external: false
   mongodata:
+    external: false
+  model:
     external: false
 
 networks:

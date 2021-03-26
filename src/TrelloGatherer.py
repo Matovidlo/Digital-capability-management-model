@@ -1,12 +1,15 @@
 import json
+from gatherer import Gatherer
 from GithubGatherer import open_url_element
 
 
-class TrelloGatherer:
+class TrelloGatherer(Gatherer):
     def __init__(self, url, credentials):
         self.url_request = url
 
-    def request(self):
+    def send_request(self):
+        # Trello: ["data"]["card"]["name"] ["data"]["list"]["name"] ["data"]["board"]["name"]
+        #         type, date, memberCreator["username"]
         dumped = open_url_element(self.url_request, None)
         dumped = json.loads(dumped)
         # for dump in dumped:
@@ -15,3 +18,6 @@ class TrelloGatherer:
         #     else:
         #         print(dump["data"]["board"])
         return {"trello_events": dumped}
+
+    def parse_response(self, request_type, response):
+        return response

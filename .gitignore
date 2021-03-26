@@ -7,5 +7,12 @@ lib64
 **__pycache__
 **logs/
 *.log
+.idea/*
 # Ignore external repository
 dataset/github/compose/*
+dataset/github/puppeteer/
+dataset/github/node/
+# Ignore model, vectorier and tfidftransformer files
+finalized_model.sav
+vectorizer.sav
+tfidftransformer.sav

@@ -1,3 +1,4 @@
+import copy
 import itertools
 import json
 import re
@@ -10,6 +11,8 @@ from constants import API_LIMIT_EXCEEDED
 class GithubGatherer(Gatherer):
     URL = "url"
     TAGS_URL = "tags_url"
+    MILESTONES_URL = "milestones_url"
+    ISSUES_URL = "issues_url"
     CONTRIBUTORS_URL = "contributors_url"
     REPOS_URL = "repos_url"
     COMMITS_URL = "commits_url"
@@ -23,13 +26,32 @@ class GithubGatherer(Gatherer):
         return open_url_element(request, resource, strip,
                                 self.authorization_header)
 
-    def gather(self, request, resource, strip=False):
-        dumped_data = open_url_element(request, resource, strip,
-                                       self.authorization_header)
-        array_dict = json.loads(dumped_data)
+    def gather(self, request, resource, strip=False, options={},
+               multipage=False):
+        if multipage:
+            old_data = None
+            array_dict = None
+            options['page'] = 1
+            while True:
+                dumped_data = open_url_element(request, resource, strip,
+                                               self.authorization_header,
+                                               options)
+                if old_data is dumped_data:
+                    break
+                old_data = copy.deepcopy(dumped_data)
+                options['page'] += 1
+                if isinstance(array_dict, list):
+                    array_dict += json.loads(dumped_data)
+                else:
+                    array_dict = json.loads(dumped_data)
+        else:
+            dumped_data = open_url_element(request, resource, strip,
+                                           self.authorization_header,
+                                           options)
+            array_dict = json.loads(dumped_data)
         return array_dict
 
-    def parse_request(self, request_type, request):
+    def parse_response(self, request_type, response):
         # Github repository tags URL: ["name"], ["commit"]["url"]
         # Github repository contributors URL: ["name"], ["login"],
         #                                     ["avatar_url"], ["company"], ["email"]
@@ -48,10 +70,10 @@ class GithubGatherer(Gatherer):
         #  avatars could be merged for the same author name or author login.
         parser = {}
         if request_type is self.TAGS_URL:
-            parser['tags'] = {'name': request['name'],
-                              'url': request["commit"]["url"]}
+            parser['tags'] = {'name': response['name'],
+                              'url': response["commit"]["url"]}
         elif request_type is self.CONTRIBUTORS_URL:
-            contributors = itertools.chain.from_iterable(request.values())
+            contributors = itertools.chain.from_iterable(response.values())
             contributor_name = None
             for contributor in contributors:
                 # Parse single contributor repositories
@@ -77,7 +99,24 @@ class GithubGatherer(Gatherer):
                          'email': contributor['email']}
         elif request_type is self.COMMITS_URL:
             parser = {'commits': ''}
-            pass
+        elif request_type is self.ISSUES_URL:
+            parser = \
+                {'comments_url': response['comments_url'],
+                 'labels': response['labels'],
+                 'number': response['number'],
+                 'title': response['title'],
+                 'id': response['id'],
+                 'user': response['user'],
+                 'state': response['state'],
+                 'assignee': response['assignee'],
+                 'assignees': response['assignees'],
+                 'milestone': response['milestone'],
+                 'comments': response['comments'],
+                 'created_at': response['created_at'],
+                 'updated_at': response['updated_at'],
+                 'closed_at': response['closed_at'],
+                 'description': response['body']
+                 }
         return parser
 
     def get_contributors_info(self, contributors):
@@ -94,18 +133,20 @@ class GithubGatherer(Gatherer):
             break
         return output
 
-    def request(self):
+    def send_request(self):
         # Setup concrete url or opener based on the authentication process
-        tags = self.gather(self.url_request, self.TAGS_URL)
+        options = {"per_page": 100}
+        issues = self.gather(self.url_request, self.ISSUES_URL,
+                             True, options=options, multipage=True)
         contributors = self.gather(self.url_request, self.CONTRIBUTORS_URL)
         contributors = self.get_contributors_info(contributors)
         commits = self.gather(self.url_request, self.COMMITS_URL, True)
-        return {self.TAGS_URL: tags,
+        return {self.ISSUES_URL: issues,
                 self.CONTRIBUTORS_URL: contributors,
                 self.COMMITS_URL: commits}
 
 
-def open_url_element(url, element, strip=False, header={}):
+def open_url_element(url, element, strip=False, header={}, options={}):
     https = urllib3.PoolManager()
     try:
         response = https.request('GET', url, headers=header)
@@ -120,7 +161,7 @@ def open_url_element(url, element, strip=False, header={}):
         if strip:
             new_url = re.search('.*(?<=\{)', new_url).group(0)[:-1]
         # Create request from new url containing authorization header
-        response_element = https.request('GET', new_url, headers=header)
+        response_element = https.request('GET', new_url, headers=header, fields=options)
         element_output = json.loads(response_element.data.decode('utf-8'))
         return json.dumps(element_output, indent=2)
     return json.dumps(dict_output, indent=2)

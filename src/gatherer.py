@@ -19,5 +19,5 @@ class Gatherer(ABC):
         pass
 
     @abstractmethod
-    def request(self):
+    def send_request(self):
         pass

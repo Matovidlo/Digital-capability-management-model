@@ -18,11 +18,12 @@ HTTP_CREDENTIALS = {HTTP_AUTH: '{http_path}'}
 
 # Possible error messages received from APIs
 API_LIMIT_EXCEEDED = "API rate limit exceeded"
-gathering_urls = {#GITHUB: ('https://api.github.com/repos/docker/compose',
-                  #         USER_CREDENTIALS),
-                  GOOGLE_CALENDAR: ('', JSON_CREDENTIALS),
+gathering_urls = {GITHUB: ('https://api.github.com/repos/docker/compose',
+                           USER_CREDENTIALS),
+                  # GOOGLE_CALENDAR: ('', JSON_CREDENTIALS),
                   #JIRA: ('http://localhost:8001',
                   #      USER_CREDENTIALS),
-                  TRELLO: (HTTP_CREDENTIALS, NO_CREDENTIALS)}
+                  # TRELLO: (HTTP_CREDENTIALS, NO_CREDENTIALS)
+                 }
 
 

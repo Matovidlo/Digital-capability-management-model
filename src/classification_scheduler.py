@@ -1,10 +1,12 @@
 import getpass
 import urllib3
+import numpy
 from input_arguments import DCMMArguments
 from API_communicator import APICommunicator
 from constants import TOKEN_AUTH, USER_AUTH, JSON_AUTH, gathering_urls,\
     GITHUB, JIRA, GOOGLE_CALENDAR, TRELLO
 from database_manipulator import DatabaseManipulator
+from ml_model import MLModel
 
 
 if __name__ == '__main__':
@@ -16,6 +18,9 @@ if __name__ == '__main__':
     # Jira credentials
     jira_username = cmdline_arguments.jira_username
     jira_password = None
+    # Nosql credentials
+    nosql_username = None
+    nosql_password = None
     if cmdline_arguments.token_authentication_github:
         github_token = getpass.getpass(prompt="Please provide github "
                                               "authorization token "
@@ -23,6 +28,10 @@ if __name__ == '__main__':
     if cmdline_arguments.password_authentication_jira:
         jira_password = getpass.getpass(prompt="Please provide jira "
                                                "password for accessing API.")
+    if cmdline_arguments.nosql_username:
+        nosql_username = input("Specify username for nosql database:")
+    if cmdline_arguments.nosql_password:
+        nosql_password = getpass.getpass(prompt="Provide password for nosql database:")
     for key, url in gathering_urls.items():
         new_url = url
         if key is JIRA and USER_AUTH in url[1]:
@@ -50,8 +59,18 @@ if __name__ == '__main__':
         gathering_urls[key] = new_url
     api_communicator = APICommunicator(gathering_urls)
     api_communicator.gather_resources()
-    print(api_communicator)
     # Database Manipulator could be inside API communicator
-    db = DatabaseManipulator(gathering_urls)
-    # api_communicator.create_transactions(db)
-    # db.get_data()
+    db = DatabaseManipulator(gathering_urls, nosql_username, nosql_password)
+    api_communicator.create_transactions(db)
+    machine_learning_model = MLModel(db.model_cursor, db.get_data())
+    # Predict DCMM entities from gathered API input
+    prediction = machine_learning_model.predict()
+    for desc, category in zip(machine_learning_model.test_description, prediction):
+        if category == 0:
+            print('{} => New feature'.format(desc))
+        elif category == 1:
+            print('{} => Improvement'.format(desc))
+        elif category == 2:
+            print('{} => Bug'.format(desc))
+    mean_value = numpy.mean(prediction == machine_learning_model.labels)
+    print(mean_value)

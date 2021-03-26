@@ -28,7 +28,9 @@ class DCMMArguments(argparse.ArgumentParser):
                           help='When present, password authentication is required '
                                'by jira and user supplies the password when '
                                'this option is set to true.')
+        self.add_argument('--nosql-username', action='store_true',
+                          help='When using custom username for nosql database.')
+        self.add_argument('--nosql-password', action='store_true',
+                          help='When specified, user is promped to input '
+                               'password for nosql database.')
         self.args = self.parse_args()
-        # if self.args.input is None and self.args.list_filters is False:
-        #     self.error("--input parameter required. No input file "
-        #                "was chosen.")

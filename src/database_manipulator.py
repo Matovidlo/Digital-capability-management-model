@@ -3,8 +3,8 @@ from API_adapter import Request
 
 
 class DatabaseManipulator(Request):
-    def __init__(self, urls):
-        self.client = MongoClient(username="root", password="extrastrongpasswd")
+    def __init__(self, urls, username='root', password="anypass"):
+        self.client = MongoClient(username=username, password=password)
         self._loaded_data = None
         print(self.client.list_database_names())
         # Create new DCMM Database
@@ -13,13 +13,18 @@ class DatabaseManipulator(Request):
         self.collections = []
         for key in urls.keys():
             self.collections.append(db[key])
+        self._cursor = db['model_path'].find()
+
+    @property
+    def model_cursor(self):
+        return self._cursor
 
     def send_requests(self) -> tuple:
         return super(DatabaseManipulator, self).send_requests()
 
     def get_data(self, concrete_data=None, collection_name=None, date=None):
         cursors = []
-        data = None
+        data = []
         if collection_name:
             concrete_collection = [filter_collection
                                    for filter_collection in self.collections
@@ -27,14 +32,12 @@ class DatabaseManipulator(Request):
                                    filter_collection.name == collection_name][0]
             cursors.append(concrete_collection.find())
             for found in cursors[0]:
-                data = found
-                print(found)
+                data.append(found)
         else:
             for collection in self.collections:
                 cursors.append(collection.find())
                 for found in cursors[-1]:
-                    data = found
-                    print(found)
+                    data.append(found)
         return cursors, data
 
     def write_data(self, data, collection_name):

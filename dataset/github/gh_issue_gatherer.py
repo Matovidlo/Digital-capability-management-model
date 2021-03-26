@@ -21,7 +21,11 @@ def get_commentaries(author, comment):
     resolution = 'Opened'
     if comment:
         # Get first author and map it to his commentary
-        comment_author = re.match(r'author:\s(\w+)', comment).group(1)
+        comment_author = re.match(r'author:\s(\w+)', comment)
+        if comment_author:
+            comment_author = comment_author.group(1)
+        else:
+            return commentaries, resolution
         start = re.search(r'status:\s\w+', comment).end()
         # Go trough author and status and strip them off the string
         for found_author, \
@@ -90,7 +94,10 @@ for entry in parsed_csv:
     comment = completed.stdout.decode('utf-8')
     # Process description output
     lines = output.splitlines()
-    author = lines[2][8:]
+    try:
+        author = lines[2][8:]
+    except:
+        continue
     # author
     entry.append(author)
     # Get commentaries

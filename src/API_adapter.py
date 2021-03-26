@@ -34,8 +34,8 @@ class APIAdapter(Request):
         for request_type, request in requests.items():
             for entry in request:
                 # Parse request is implemented
-                if "parse_request" in dir(self._gatherer):
-                    result = self._gatherer.parse_request(request_type, entry)
+                if "parse_response" in dir(self._gatherer):
+                    result = self._gatherer.parse_response(request_type, entry)
                     if result:
                         output.append(result)
                         parsed += result
@@ -45,13 +45,9 @@ class APIAdapter(Request):
                         output.append(entry)
                         parsed += str(entry)
         # fixme: remove printing parsed data when parsing is correct
-        print(parsed)
         return output
 
     def send_requests(self) -> list:
-        # Calendar: kind, summary, creator, organizer, start, end
-        # Trello: ["data"]["card"]["name"] ["data"]["list"]["name"] ["data"]["board"]["name"]
-        #         type, date, memberCreator["username"]
-        requests = self.gatherer.request()
+        requests = self.gatherer.send_request()
         output = self.get_requests_important_items(requests)
         return output
