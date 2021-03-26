@@ -8,6 +8,8 @@ lib64
 **logs/
 *.log
 .idea/*
+# Ignore credential.json
+src/credentials.json
 # Ignore external repository
 dataset/github/compose/*
 dataset/github/puppeteer/
