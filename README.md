@@ -38,4 +38,5 @@ the execution of program takes time.
 
 ## Configuration constants
 The program contains python script of different constants that user can adjust based on the problem that is solving.
-The file can be found in `src/constants.py`
+The file can be found in file:
+`src/constants.py`
