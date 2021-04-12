@@ -11,14 +11,16 @@ HTTP_AUTH = 'http'
 
 # Authorization techniques
 NO_CREDENTIALS = {}
+REPOSITORIES = []
 TOKEN_CREDENTIALS = {TOKEN_AUTH: ['{token}', '{header}']}
 USER_CREDENTIALS = {USER_AUTH: ['{username}', '{password}', '{header}']}
 JSON_CREDENTIALS = {JSON_AUTH: ['{file_path}', '{header}']}
 HTTP_CREDENTIALS = {HTTP_AUTH: '{http_path}'}
 
+GITHUB_API = 'https://api.github.com/repos/'
 # Possible error messages received from APIs
 API_LIMIT_EXCEEDED = "API rate limit exceeded"
-gathering_urls = {GITHUB: ('https://api.github.com/repos/docker/compose',
+gathering_urls = {GITHUB: (REPOSITORIES,
                            USER_CREDENTIALS),
                   # GOOGLE_CALENDAR: ('', JSON_CREDENTIALS),
                   #JIRA: ('http://localhost:8001',

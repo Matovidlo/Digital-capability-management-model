@@ -59,8 +59,8 @@ def description_converter(value):
                    '', value, flags=re.MULTILINE)
     # todo: is it necessary to remove quote segment? They just highlight
     # Remove quote segments
-    # value = re.sub(r'^\{quote((\||\s|:|=|\.|\#)?(\(.*\))?(\w+|\d+)?)+\}[\s\S]*?\{quote\}',
-    #                '', value, flags=re.MULTILINE)
+    value = re.sub(r'^\{quote((\||\s|:|=|\.|\#)?(\(.*\))?(\w+|\d+)?)+\}[\s\S]*?\{quote\}',
+                   '', value, flags=re.MULTILINE)
     # Remove noformat segments
     value = re.sub(
         r'^\{noformat((\||\s|:|=|\.|\#)?(\(.*\))?(\w+|\d+)?)+\}[\s\S]*?\{noformat\}',
@@ -68,21 +68,30 @@ def description_converter(value):
     # Remove xml tags
     # value = re.sub(r'<\w+>.*<\/\w+>\n', '', value, flags=re.S)
     # At reports from scala removed
-    value = re.sub(r'at (\w+\S+)\(.*\.\w+:\d+\)\n', '', value, flags=re.MULTILINE)
+    value = re.sub(r'(\s)?at (\w+\S+)\(.*\.\w+:\d+\)\n', '', value)
     # Filter datetimes from output. It is necessary since date does not influence
     # training in positive but rather negative way.
     value = re.sub(r'((\d{4})-(\d{2})-(\d{2})|'
                    r'(\d{4})\/(\d{2})\/(\d{2}))'
                    r' (\d{2}):(\d{2}):(\d{2})(\.\d+)?', '', value)
-    if not value or len(value.split()) < 10:
+    value = re.sub(r'\{[\s\S]*?\}', '', value)
+    value = re.sub(r'<!--[\s\S]*?-->', '', value)
+    value = re.sub(r'```[\s\S]*?```', '', value)
+    # value = re.sub(r'(?<=(info|error|Exception))(\s+(\(|\[)((\w+|\d+)(-|\.|_|=|\]|\)|,\s|\s))*)*',
+    #                '', value)
+    value = re.sub(r'\((\d+(,)?(\s)?(\)\.\.\.)?)+', '', value)
+    # Remove github markdown issuing steps
+    value = re.sub(r'\*\*(\w+(\s|:|\/|\'|\!))*(\w+)?', '', value)
+    value = ' '.join(value.split())
+    if not value or len(value.split()) < 20:
         return numpy.nan
     return value
 
 
 common_issue_types = {'New Feature': ['FEATURE', 'NEW-FEATURE', 'NEW_FEATURE', 'NEW FEATURE'],
-                      'Improvement': ['ENHANCEMENT', 'IMPROVEMENT'],
-                      'Bug': ['BUG'],
-                      'Test': ['TEST']}
+                      'Improvement': ['ENHANCEMENT', 'IMPROVEMENT', 'DOC', 'DOCUMENTATION'],
+                      'Test': ['TEST'],
+                      'Bug': ['BUG'],}
 
 def issue_converter(value):
     """
@@ -122,7 +131,7 @@ def read_csv_file(filepath, mandatory_fields, optional_fields):
         df = pd.read_csv(filepath, usecols=fields,
                          header=0, sep=',', dtype={'Description': str},
                          encoding='utf-8',
-                         converters={'Description': description_converter,
+                         converters={#'Description': description_converter,
                                      'Issue Type': issue_converter})
     except ValueError as ex:
         for field in optional_fields:
@@ -157,10 +166,20 @@ filepath_dict = {'kafka-newfeatures': 'dataset/kafka_newfeatures.csv',
                  'bug-kafka': 'dataset/kafka_bugs1000.csv',
                  'bug-maven': 'dataset/bug_maven1000.csv',
                  #'bug-netbeans': 'dataset/netbeans_bug1000.csv',
-                 'github-docker-compose': 'dataset/github/compose.csv'
-                 }
+                 'github-docker-compose': 'dataset/github/compose.csv',
+                 'github-velero': 'dataset/github/velero.csv',
+                 'github-nodejs': 'dataset/github/node.csv',
+                 'github-superset': 'dataset/github/superset.csv',
+                 'github-vue': 'dataset/github/vue.csv',
+                 'github-ohmyzsh': 'dataset/github/ohmyzsh.csv',
+                 'github-tensorflow': 'dataset/github/tensorflow.csv',
+                 'github-bootstrap': 'dataset/github/bootstrap.csv',
+                 'github-vscode': 'dataset/github/vscode.csv',
+}
 test_sentences = {'puppeteer': 'dataset/github/puppeteer.csv',
-                  'nodejs': 'dataset/github/node.csv'}
+                  'nodejs': 'dataset/github/node.csv',
+                  'superset': 'dataset/github/superset.csv',
+                  'vue': 'dataset/github/vue.csv'}
 
 
 if __name__ == '__main__':
@@ -177,7 +196,7 @@ if __name__ == '__main__':
         df.dropna(subset=['Description'], inplace=True)
         df['source'] = source  # Add another column filled with the source name
         # Filter data frame based on the Issue Type values
-        df = df.loc[df['Issue Type'].isin(['Bug', 'New feature', 'Improvement',
+        df = df.loc[df['Issue Type'].isin(['Bug', 'New Feature', 'Improvement',
                                            'Test', 'Question'])]
         df_list.append(df)
     # Concatenate all the dataframes to single pandas Dataframe.
@@ -198,25 +217,26 @@ if __name__ == '__main__':
 
     # Real repository examples
     # Add test senteces of puppeteer github
-    sentences_test = pd.read_csv(test_sentences['nodejs'],
-                                 usecols=['Description', 'Issue Type'],
-                                 encoding='utf-8',
-                                 converters={'Description':
-                                             description_converter,
-                                             'Issue Type':
-                                             issue_converter})
-    # Remove all test sentences that does not contain issue type
-    sentences_test.dropna(subset=['Issue Type'], inplace=True)
-    # Remove from the rest of sentences that ones that are missing description.
-    sentences_test.dropna(subset=['Description'], inplace=True)
+    testing_array = []
     y_test = []
-    for item in sentences_test['Issue Type']:
-        for index, issue_key in enumerate(common_issue_types.keys()):
-            if item == issue_key:
-                y_test = numpy.append(y_test, int(index))
-    sentences_test = numpy.array(sentences_test['Description'])
-
-
+    for test_repository in test_sentences.values():
+        sentences_test = pd.read_csv(test_repository,
+                                     usecols=['Description', 'Issue Type'],
+                                     encoding='utf-8',
+                                     converters={'Description':
+                                                 description_converter,
+                                                 'Issue Type':
+                                                 issue_converter})
+        # Remove all test sentences that does not contain issue type
+        sentences_test.dropna(subset=['Issue Type'], inplace=True)
+        # Remove from the rest of sentences that ones that are missing description.
+        sentences_test.dropna(subset=['Description'], inplace=True)
+        for item in sentences_test['Issue Type']:
+            for index, issue_key in enumerate(common_issue_types.keys()):
+                if item == issue_key:
+                    y_test = numpy.append(y_test, int(index))
+        sentences_test = numpy.array(sentences_test['Description'])
+        testing_array = numpy.append(testing_array, sentences_test)
     # Scikit learn vectorizer
     vectorizer = CountVectorizer()
     vectorizer.fit(sentences_train)
@@ -229,13 +249,13 @@ if __name__ == '__main__':
     print(x_train_tf.shape)
 
     # clf = MultinomialNB().fit(x_train_tf, labels)
-    clf = SGDClassifier(loss='hinge', penalty='l2', alpha=0.001, random_state=48,
-                        max_iter=400, tol=None).fit(x_train_tf, labels)
-    x_samples = vectorizer.transform(sentences_test)
+    clf = SGDClassifier(loss='hinge', penalty='l2', alpha=0.0001, random_state=48,
+                        max_iter=1200, tol=None).fit(x_train_tf, labels)
+    x_samples = vectorizer.transform(testing_array)
     x_samples_tf = tf_transformer.transform(x_samples)
 
     prediction = clf.predict(x_samples_tf)
-    for desc, category in zip(sentences_test, prediction):
+    for desc, category in zip(testing_array, prediction):
         print('{} => {}'.format(desc, uniques[category]))
     mean_value = numpy.mean(prediction == y_test)
     print("Accuracy: {}".format(mean_value))
@@ -249,14 +269,16 @@ if __name__ == '__main__':
     # Do report
     print(metrics.classification_report(y_test, prediction,
                                         target_names=['New feature', 'Improvement',
-                                                      'Bug', 'Test', 'Question']))
-
+                                                      'Test', 'Bug']))
+    # Uncomment when visualisations of the data are output of the
+    # dataset preparation. Otherwise output model,
+    # vectorized and tfidf tranformer as output of the dataset_preparation.
+    import sys
+    sys.exit()
 
     """
     Show dataset using matplotlib
     """
-
-
     nltk.download('stopwords')
     nltk.download('punkt')
     plt.style.use("seaborn-notebook")

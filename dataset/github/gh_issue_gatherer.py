@@ -114,6 +114,7 @@ for entry in parsed_csv:
     # Creator and Labels
     entry.append('')
     entry.append('')
+    # Comment when too many issues are inside repository
     for _, comments in zip(range(max_commentary_authors),
                            commentaries.items()):
         # Setup items from zipped for loop

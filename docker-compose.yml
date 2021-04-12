@@ -32,7 +32,7 @@ services:
     expose:
       - '5432'
     networks:
-      - jiranet
+      - postgreenet
     volumes:
       - postgresqldata:/var/lib/postgresql/data
     environment:
@@ -63,7 +63,7 @@ services:
       context: ./mongo
       dockerfile: Dockerfile_mongo
     networks:
-      - jiranet
+      - mongonet
     expose:
       - 27017
     ports:
@@ -109,4 +109,8 @@ volumes:
 
 networks:
   jiranet:
+    driver: bridge
+  mongonet:
+    driver: bridge
+  postgreenet:
     driver: bridge

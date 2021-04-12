@@ -1,4 +1,5 @@
 import argparse
+import sys
 
 
 class DCMMArguments(argparse.ArgumentParser):
@@ -33,4 +34,9 @@ class DCMMArguments(argparse.ArgumentParser):
         self.add_argument('--nosql-password', action='store_true',
                           help='When specified, user is promped to input '
                                'password for nosql database.')
+        self.add_argument('--repositories', required=('--github-username' in sys.argv),
+                          nargs='*',
+                          help='When github username is present, provide '
+                               'repository/repositories that you want to gather '
+                               'information from')
         self.args = self.parse_args()

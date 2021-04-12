@@ -10,10 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
+from django.urls import reverse_lazy
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,7 +39,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.trello',
+    'dcmm'
 ]
+
+# Added due to dash plotly combination
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -49,12 +63,16 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'dcmm.urls'
+
+ROOT_URLCONF = 'django-web.urls'
+LOGIN_REDIRECT_URL = "/"   # Route defined in app/urls.py
+LOGOUT_REDIRECT_URL = "/"  # Route defined in app/urls.py
+TEMPLATE_DIR = os.path.join(CORE_DIR, "django-web/templates")  # ROOT dir for templates
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,7 +85,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'dcmm.wsgi.application'
+WSGI_APPLICATION = 'django-web.wsgi.application'
 
 
 # Database
@@ -75,15 +93,27 @@ WSGI_APPLICATION = 'dcmm.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    },
+    'mongo': {
         'ENGINE': 'djongo',
         'NAME': os.environ.get('MONGO_INITDB_ROOT_DATABASE', 'DCMMDatabase'),
-        'PORT': 27017,
-        'USER': os.environ.get('MONGO_INITDB_ROOT_USERNAME', 'user'),
-        'PASSWORD': os.environ.get('MONGO_INITDB_ROOT_PASSWORD', 'extrastrongpass'),
-    }
+        'CLIENT': {
+            'USERNAME': os.environ.get('MONGO_INITDB_ROOT_USERNAME', 'user'),
+            'PASSWORD': os.environ.get('MONGO_INITDB_ROOT_PASSWORD', 'extrastrongpass'),
+        },
+        'LOGGING': {
+            'version': 1,
+            'loggers': {
+                'djongo': {
+                    'level': 'DEBUG',
+                    'propagate': False,
+                }
+            },
+         },
+    },
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -119,5 +149,44 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+# SRC: https://devcenter.heroku.com/articles/django-assets
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.9/howto/static-files/
+STATIC_ROOT = os.path.join(CORE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(CORE_DIR, 'django-web/static'),
+)
+
+# Django oauth client
+
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+# LOGIN_REDIRECT_URL = reverse_lazy('posts:post-list')
+
+SOCIALACCOUNT_PROVIDERS = {
+    'github': {
+        'SCOPE': [
+            'user',
+            'repo',
+            'read:org',
+        ],
+    },
+    'google': {
+        'SCOPE': [
+            'https://www.googleapis.com/auth/calendar'
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
+
+SITE_ID = 1

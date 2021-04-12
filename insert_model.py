@@ -8,6 +8,11 @@ client = pymongo.MongoClient(username=os.getenv("MONGO_INITDB_ROOT_USERNAME", "a
 db = client[os.getenv("DATABASE", "DCMMDatabase")]
 # Create collections based on the urls
 model = db['model_path']
+# Drop models and Github repositories
+if db['model_path'].count() != 0:
+    db['model_path'].drop()
+if db['Github'].count() != 0:
+    db['Github'].drop()
 # serialization
 unique_id = uuid.uuid4()
 with open("/tmp/model/model.sav", "rb") as f:

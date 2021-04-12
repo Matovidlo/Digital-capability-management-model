@@ -7,6 +7,7 @@ lib/*
 share/*
 lib64/*
 lib64
+venv/*
 **__pycache__
 **logs/
 *.log

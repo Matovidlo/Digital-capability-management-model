@@ -94,22 +94,29 @@ class MLModel:
                 if self.LABEL_FIELD in data and data[self.LABEL_FIELD]:
                     # Convert issue type, if not labeled mean value cannot
                     # be evaluated in predicted
-                    item = self._issue_converter(data[self.LABEL_FIELD][0]['name'])
-                    if not item:
-                        continue
-                    # Check available types
-                    for index, issue_key in enumerate(self.COMMON_ISSUE_TYPES
-                                                      .keys()):
-                        if item == issue_key:
-                            # Append to all temporary fields issues, labels
-                            # and integer labels. Integer labels are used for mean value
-                            self.integer_labels = numpy.append(self.integer_labels,
-                                                               int(index))
-                            self.issue_types.append(item)
-                            self.test_description.append(data[self.DESCRIPTION_FIELD])
+                    for label in data[self.LABEL_FIELD]:
+                        item = self._issue_converter(label['name'])
+                        if not isinstance(item, str) and numpy.isnan(item):
+                            continue
+                        # Check available types
+                        for index, issue_key in enumerate(self.COMMON_ISSUE_TYPES
+                                                          .keys()):
+                            if item == issue_key:
+                                # Append to all temporary fields issues, labels
+                                # and integer labels. Integer labels are used for mean value
+                                self.integer_labels = numpy.append(self.integer_labels,
+                                                                   int(index))
+                                self.issue_types.append(item)
+                                self.test_description.append(data[self.DESCRIPTION_FIELD])
+                        # One item can have only one label,
+                        # break the loop over all of the labels
+                        break
         get_description = numpy.array(self.test_description)
         x_samples = self.vectorizer.transform(get_description)
-        x_samples_tf = self.tfidf_transformer.transform(x_samples)
+        try:
+            x_samples_tf = self.tfidf_transformer.transform(x_samples)
+        except ValueError:
+            x_samples_tf = []
         return x_samples_tf
 
     def score(self, X_test, Y_test):
@@ -121,9 +128,13 @@ class MLModel:
         :return: predicted labels based on the description strings.
         :rtype: list(int)
         """
-        result = None
         if samples:
             result = self.model.predict(samples)
         else:
-            result = self.model.predict(self.input_data)
+            try:
+                result = self.model.predict(self.input_data)
+            except ValueError:
+                print("Input data are missing or in incorrect shape. "
+                      "Check whether you provide correct repository name.")
+                raise
         return result

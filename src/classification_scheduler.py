@@ -4,7 +4,7 @@ import numpy
 from input_arguments import DCMMArguments
 from API_communicator import APICommunicator
 from constants import TOKEN_AUTH, USER_AUTH, JSON_AUTH, gathering_urls,\
-    GITHUB, JIRA, GOOGLE_CALENDAR, TRELLO
+    GITHUB, JIRA, GOOGLE_CALENDAR, TRELLO, GITHUB_API
 from database_manipulator import DatabaseManipulator
 from ml_model import MLModel
 
@@ -48,7 +48,8 @@ if __name__ == '__main__':
                                     .format(file_path=cmdline_arguments
                                             .google_credentials_json), '']}]
         elif key is GITHUB and USER_AUTH in url[1]:
-            new_url = [url[0], {USER_AUTH: ['', '', '']}]
+            new_url = [GITHUB_API + repository for repository in cmdline_arguments.repositories]
+            new_url = [new_url, {USER_AUTH: ['', '', '']}]
             new_url[1][USER_AUTH][2] = \
                 urllib3.make_headers(user_agent="python-urllib3/1.25.11",
                                      basic_auth=github_username + ':' +

@@ -1,5 +1,6 @@
 import copy
 import itertools
+import logging
 import json
 import re
 import urllib3
@@ -28,28 +29,80 @@ class GithubGatherer(Gatherer):
 
     def gather(self, request, resource, strip=False, options={},
                multipage=False):
+        array_dict = None
         if multipage:
             old_data = None
-            array_dict = None
+            dumped_data = []
             options['page'] = 1
             while True:
-                dumped_data = open_url_element(request, resource, strip,
-                                               self.authorization_header,
-                                               options)
                 if old_data is dumped_data:
                     break
-                old_data = copy.deepcopy(dumped_data)
-                options['page'] += 1
+                for repository in request:
+                    dumped_data = open_url_element(repository, resource, strip,
+                                                   self.authorization_header,
+                                                   options)
+                    old_data = copy.deepcopy(dumped_data)
+                    options['page'] += 1
+                    if isinstance(array_dict, list):
+                        array_dict += json.loads(dumped_data)
+                    else:
+                        array_dict = json.loads(dumped_data)
+        else:
+            for repository in request:
+                dumped_data = open_url_element(repository, resource, strip,
+                                               self.authorization_header,
+                                               options)
                 if isinstance(array_dict, list):
-                    array_dict += json.loads(dumped_data)
+                    array_dict += json.load(dumped_data)
                 else:
                     array_dict = json.loads(dumped_data)
-        else:
-            dumped_data = open_url_element(request, resource, strip,
-                                           self.authorization_header,
-                                           options)
-            array_dict = json.loads(dumped_data)
         return array_dict
+
+    def filter_issue_description(self, value):
+        # Remove https links
+        value = re.sub(r'https?:\/\/.*\]', '', value)
+        # Remove https links
+        value = re.sub(r'https?:\/\/.*\n', '', value)
+        # Remove https links
+        value = re.sub(r'https?:\/\/.*', '', value)
+        # Filter debug output of the execution
+        value = re.sub(r'\[?[A-Z]+[- ]\d+\]?', '', value, flags=re.MULTILINE)
+        # Remove html tags
+        # value = re.sub(r'<.*\/>\n', '', value, flags=re.S)
+        # Remove code segments
+        value = re.sub(
+            r'^\{code((\||\s|:|=|\.|\#)?(\(.*\))?(\w+|\d+)?)+\}[\s\S]*?\{code\}',
+            '', value, flags=re.MULTILINE)
+        # todo: is it necessary to remove quote segment? They just highlight
+        # Remove quote segments
+        # value = re.sub(r'^\{quote((\||\s|:|=|\.|\#)?(\(.*\))?(\w+|\d+)?)+\}[\s\S]*?\{quote\}',
+        #                '', value, flags=re.MULTILINE)
+        # Remove noformat segments
+        value = re.sub(
+                r'^\{noformat((\||\s|:|=|\.|\#)?(\(.*\))?(\w+|\d+)?)+\}[\s\S]*?\{noformat\}',
+                '', value, flags=re.MULTILINE)
+        # Remove xml tags
+        # value = re.sub(r'<\w+>.*<\/\w+>\n', '', value, flags=re.S)
+        # At reports from scala removed
+        value = re.sub(r'(\s)?at (\w+\S+)\(.*\.\w+:\d+\)\n', '', value,
+                       flags=re.MULTILINE)
+        # Filter datetimes from output. It is necessary since date does not influence
+        # training in positive but rather negative way.
+        value = re.sub(r'((\d{4})-(\d{2})-(\d{2})|'
+                       r'(\d{4})\/(\d{2})\/(\d{2}))'
+                       r' (\d{2}):(\d{2}):(\d{2})(\.\d+)?', '', value)
+        # Remove HTML comments and github code samples
+        value = re.sub(r'\{[\s\S]*?\}', '', value)
+        value = re.sub(r'<!--[\s\S]*?-->', '', value)
+        value = re.sub(r'```[\s\S]*?```', '', value)
+        # value = re.sub(r'(?<=(info|error|Exception))(\s+(\(|\[)((\w+|\d+)(-|\.|_|=|\]|\)|,\s|\s))*)*',
+        #                '', value)
+        value = re.sub(r'\((\d+(,)?(\s)?(\)\.\.\.)?)+', '', value)
+        # Remove github markdown issuing steps
+        value = re.sub(r'\*\*(\w+(\s|:|\/|\'|\!))*(\w+)?', '', value)
+        if not value or len(value.split()) < 20:
+            return ''
+        return value
 
     def parse_response(self, request_type, response):
         # Github repository tags URL: ["name"], ["commit"]["url"]
@@ -100,6 +153,9 @@ class GithubGatherer(Gatherer):
         elif request_type is self.COMMITS_URL:
             parser = {'commits': ''}
         elif request_type is self.ISSUES_URL:
+            description = self.filter_issue_description(response['body'])
+            # fixme: choose one
+            # description = response['body']
             parser = \
                 {'comments_url': response['comments_url'],
                  'labels': response['labels'],
@@ -115,7 +171,7 @@ class GithubGatherer(Gatherer):
                  'created_at': response['created_at'],
                  'updated_at': response['updated_at'],
                  'closed_at': response['closed_at'],
-                 'description': response['body']
+                 'description': description
                  }
         return parser
 
@@ -123,9 +179,9 @@ class GithubGatherer(Gatherer):
         output = []
         for contributor in contributors:
             contributors_request = contributor[self.URL]
-            contributors_info = self.gather(contributors_request,
+            contributors_info = self.gather([contributors_request],
                                             None)
-            contributors_repos = self.gather(contributors_request,
+            contributors_repos = self.gather([contributors_request],
                                              self.REPOS_URL)
             # Add contributors info to repositories
             contributors_repos.insert(0, contributors_info)
@@ -151,7 +207,7 @@ def open_url_element(url, element, strip=False, header={}, options={}):
     try:
         response = https.request('GET', url, headers=header)
     except HTTPError as error:
-        error_type = error.read().decode('utf-8')
+        error_type = error.args()[0]
         if API_LIMIT_EXCEEDED in error_type:
             pass
         raise
@@ -163,6 +219,8 @@ def open_url_element(url, element, strip=False, header={}, options={}):
         # Create request from new url containing authorization header
         response_element = https.request('GET', new_url, headers=header, fields=options)
         element_output = json.loads(response_element.data.decode('utf-8'))
+        if not element_output:
+            logging.warning('No ' + element[:-4] + ' were found inside repository ,,' + url + '\'\'')
         return json.dumps(element_output, indent=2)
     return json.dumps(dict_output, indent=2)
 
