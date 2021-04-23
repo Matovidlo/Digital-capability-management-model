@@ -1,0 +1,3 @@
+import classification_scheduler
+
+classification_scheduler.main()

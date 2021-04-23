@@ -41,12 +41,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django_plotly_dash.apps.DjangoPlotlyDashConfig',
+    'celery',
+    'celery_progress',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.trello',
+    "bootstrap4",
+    'bootstrap_datepicker_plus',
     'dcmm'
 ]
 
@@ -90,6 +94,7 @@ WSGI_APPLICATION = 'django-web.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+DATABASE_ROUTERS = ('dcmm.dbrouters.MyDBRouter',)
 
 DATABASES = {
     'default': {
@@ -190,3 +195,7 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 SITE_ID = 1
+
+# Celery configuration
+BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'

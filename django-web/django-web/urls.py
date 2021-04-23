@@ -24,4 +24,6 @@ urlpatterns = [
     path('', include('dcmm.urls')),
     path('accounts/', include('allauth.urls')),
     path('django_plotly_dash/', include('django_plotly_dash.urls')),
+    # Celery progress
+    path('celery-progress/', include('celery_progress.urls')),
 ]

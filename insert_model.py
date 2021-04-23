@@ -11,8 +11,9 @@ model = db['model_path']
 # Drop models and Github repositories
 if db['model_path'].count() != 0:
     db['model_path'].drop()
-if db['Github'].count() != 0:
-    db['Github'].drop()
+# todo: remove this
+if db['GithubMatovidlo'].count() != 0:
+    db['GithubMatovidlo'].drop()
 # serialization
 unique_id = uuid.uuid4()
 with open("/tmp/model/model.sav", "rb") as f:

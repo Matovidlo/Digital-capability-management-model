@@ -1,3 +1,4 @@
+from bootstrap_datepicker_plus import DatePickerInput
 from django import forms
 
 
@@ -13,4 +14,9 @@ class GithubForm(forms.Form):
                                                                 widget=forms.CheckboxSelectMultiple,
                                                                 choices=choices)
         self.fields['repositories'].label = 'Repositories'
-        pass
+
+
+class ToDoForm(forms.Form):
+    date = forms.DateField(
+     widget=DatePickerInput(format='%m/%d/%Y')
+    )
