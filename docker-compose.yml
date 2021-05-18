@@ -32,7 +32,7 @@ services:
     expose:
       - '5432'
     networks:
-      - jiranet
+      - postgreenet
     volumes:
       - postgresqldata:/var/lib/postgresql/data
     environment:
@@ -63,7 +63,7 @@ services:
       context: ./mongo
       dockerfile: Dockerfile_mongo
     networks:
-      - jiranet
+      - mongonet
     expose:
       - 27017
     ports:
@@ -96,6 +96,12 @@ services:
       MONGO_INITDB_ROOT_USERNAME: "${db_mongo_user_env}"
       MONGO_INITDB_ROOT_PASSWORD: "${db_mongo_pass_env}"
       DATABASE: "${db_mongo_database_env}"
+  redis:
+    image: "redis:alpine"
+    expose:
+      - '6379'
+    ports:
+      - '6379:6379'
 
 volumes:
   jiradata:
@@ -109,4 +115,8 @@ volumes:
 
 networks:
   jiranet:
+    driver: bridge
+  mongonet:
+    driver: bridge
+  postgreenet:
     driver: bridge

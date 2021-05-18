@@ -20,5 +20,10 @@ from django.urls import include, path
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    path('dcmm/', include('dcmm.urls')),
+    path('', include("authentication.urls")), # Auth routes - login / register
+    path('', include('dcmm.urls')),
+    path('accounts/', include('allauth.urls')),
+    path('django_plotly_dash/', include('django_plotly_dash.urls')),
+    # Celery progress
+    path('celery-progress/', include('celery_progress.urls')),
 ]

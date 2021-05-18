@@ -1,0 +1,144 @@
+{% extends 'layouts/base.html' %}
+
+{% load socialaccount %}
+{% load account %}
+
+{% block title %} Settings {% endblock title %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header pb-8 pt-lg-8 d-flex align-items-center"
+         style="min-height: 150px; background-image: url(/static/assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+      <!-- Mask -->
+
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <!-- Header container -->
+    </div>
+
+    <div class="container-fluid mt--7">
+
+      <div class="row">
+        <div class="col-xl-11 order-xl-1">
+          <div class="card">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">Choose project to visualise DCMM properties</h3>
+                </div>
+                <div class="col-4 text-right">
+                  <a href="#!" class="btn btn-sm btn-primary">Visualisations</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <form class="form-inline mr-9 d-none d-md-flex ml-lg-auto" method="POST">
+                {% csrf_token %}
+                  <div class="col">
+                    <h6 class="heading-small text-muted mb-4">Find based on the used tool</h6>
+                  </div>
+                <!-- Form -->
+                  <div class="form mb-3">
+                      <div class="row align-items-start">
+                        <div class="input-group mb-3 input-group-alternative">
+                          <input class="form-control" placeholder="Search" type="text">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row align-items-start">
+                        <div class="input-group date" data-target-input="nearest">
+                        {% load bootstrap4 %}
+                        {% bootstrap_css %}
+                        {% bootstrap_javascript jquery='full' %}
+                        {{ form.media }}
+                        {% bootstrap_form form %}
+                        </div>
+                      </div>
+                  </div>
+                <div class="pl-lg-4">
+                <div class="row">
+                  <div class="column">
+                    <button type="submit" class="btn btn-neutral btn-icon">
+                      <span class="btn-inner--icon"><img src="/static/assets/img/icons/common/github.svg"></span>
+                      <span class="btn-inner--text">Select Github repositories and visualise results</span>
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Repositories:
+                          <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <div>
+                          <ul id="id_repositories">
+                          {% for index, label in repositories %}
+                            <li>
+                                <label for="id_repositories_{{ index }}">
+                                    <input type="checkbox" name="repositories" value="{{ label }}" id="id_repositories_{{ index }}">
+                                    {{ label }}
+                                </label>
+                            </li>
+                          {% endfor %}
+                          </ul>
+                          </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-primary" name="tables" value="Generate DCMM tables"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="column">
+                    <a href="#" class="btn btn-neutral btn-icon">
+                      <span class="btn-inner--icon"><img src="/static/assets/img/icons/common/google.svg"></span>
+                      <span class="btn-inner--text">Select Google calendars to gather information from</span>
+                    </a>
+                  </div>
+                  <div class="column">
+                      <div class="text-muted  mt-2 mb-3">
+                            <div class="col-md-12 dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Repositories
+                                    <span class="caret"></span>
+                                </button>
+                                <input type="submit" class="btn btn-primary" value="Generate DCMM tables"/>
+                                <div class="dropdown-menu">
+                                    <div>{{ field }}</div>
+                                </div>
+                            </div>
+                      </div>
+                  </div>
+                </div>
+                  <div class="column">
+                    <a href="#" class="btn btn-neutral btn-icon">
+                      <span class="btn-inner--icon"><img src="/static/assets/img/icons/common/trello.png"></span>
+                      <span class="btn-inner--text">Select Trello boards to gather information from</span>
+                    </a>
+                </div>
+              </div>
+              </form>
+                {% if predictions %}
+                <div class="column">
+                    {%load plotly_dash%}
+                    <div class="{% plotly_class name='SimpleExample' %} card" style="height: 100%; width: 100%">
+                    {%plotly_app name="SimpleExample" ratio=0.65 %}
+                    </div>
+                </div>
+                {% endif %}
+                {% if error %}
+                <div class="column">
+                    <span class="">{{ error }}</span>
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}

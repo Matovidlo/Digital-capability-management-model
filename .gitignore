@@ -7,17 +7,24 @@ lib/*
 share/*
 lib64/*
 lib64
+venv/*
 **__pycache__
 **logs/
 *.log
 .idea/*
+# Ignore eggs
+.eggs/
+django-web/mydatabase
+dcmm_gatherer/dcmm_gatherer.egg-info
+dcmm_gatherer.egg-info/
+# Ignore dist and build
+dist/
+build/
 # Ignore credential.json
-src/credentials.json
+credentials.json
 # Ignore external repository
 dataset/github/compose/*
 dataset/github/puppeteer/
 dataset/github/node/
-# Ignore model, vectorier and tfidftransformer files
-finalized_model.sav
-vectorizer.sav
-tfidftransformer.sav
+dataset/github/go
+dataset/github/kubernetes
