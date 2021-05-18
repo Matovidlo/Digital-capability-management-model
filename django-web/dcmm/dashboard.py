@@ -84,6 +84,12 @@ def create_nodes(graph, connections):
     nodes = [connection['titles'] for connection in connections.values()]
     nodes = list(itertools.chain(*nodes))
     graph.add_nodes_from(nodes)
+    sizes = []
+    for node in graph.nodes():
+        if node in connections:
+            sizes.append(10 + 2 * len(connections[node]['titles']))
+        else:
+            sizes.append(10)
     # Add positions of the graph nodes
     pos = get_random_layout(graph, low=12, high=125.0)
     nodes_x = []
@@ -99,14 +105,10 @@ def create_nodes(graph, connections):
             hoverinfo='text',
             marker=dict(
                     showscale=True,
-                    # colorscale options
-                    # 'Greys' | 'YlGnBu' | 'Greens' | 'YlOrRd' | 'Bluered' | 'RdBu' |
-                    # 'Reds' | 'Blues' | 'Picnic' | 'Rainbow' | 'Portland' | 'Jet' |
-                    # 'Hot' | 'Blackbody' | 'Earth' | 'Electric' | 'Viridis' |
-                    colorscale='YlGnBu',
+                    colorscale='Viridis',
                     reversescale=True,
                     color=[],
-                    size=8,
+                    size=sizes,
                     colorbar=dict(
                             thickness=25,
                             title='Node Connections',
@@ -133,6 +135,24 @@ pie_chart_colors = ['rgb(56, 75, 126)', 'rgb(0, 102, 0)', 'rgb(18, 36, 37)',
                     'rgb(128, 0, 0)', 'rgb(6, 4, 4)']
 bar_colors = ['rgb(128, 0, 0)', 'rgb(56, 75, 126)', 'rgb(18, 36, 37)',
               'rgb(0, 102, 0)']
+
+
+def set_milestones_color(milestones, milestone, tags, index, color):
+    # Add tag as parent for each issue
+    bug_statement = [label
+                     for label in milestones[tags[index]]['label']
+                     if label == "Bug"]
+    improvement_statment = [label
+                            for label in
+                            milestones[tags[index]]['label']
+                            if
+                            label == "New Feature" or label == "Improvement"]
+    if len(bug_statement) / len(milestone['title']) > 0.5 or \
+            len(improvement_statment) / len(milestone['title']) < 0.1:
+        color.append('red')
+    else:
+        color.append('green')
+    return color
 
 
 def register_callbacks(app, dataframe, connections, milestones):
@@ -178,22 +198,34 @@ def register_callbacks(app, dataframe, connections, milestones):
         # fixme: add colors?
         color = []
         counter = 0
+        stories_color = []
         for index, milestone in enumerate(milestones.values()):
-            for title in milestone['title']:
-                # Add tag as parent for each issue
+            color = set_milestones_color(milestones, milestone, tags,
+                                         index, color)
+            for idx, title in enumerate(milestone['title']):
+                if milestone['label'][idx] == 'Bug':
+                    stories_color.append('red')
+                elif milestone['label'][idx] == 'Test':
+                    stories_color.append('purple')
+                elif milestone['label'][idx] == 'New Feature' or \
+                        milestone['label'][idx] == 'Improvement':
+                    stories_color.append('green')
+                else:
+                    stories_color.append('gray')
                 parents.append(tags[index])
                 # When title is present in tags, set new id
                 labels.append(title)
                 if title in tags:
                     # Add issue to treemap but change it's identifier
-                    idx = tags.index(title)
                     tags.append(title + '_' + str(counter))
                     counter += 1
                 else:
                     # Add issue to treemap
                     tags.append(title)
-
+        # Chain colors for the titles
+        color += stories_color
         fig = go.Figure(go.Treemap(
+                marker_colors=color,
                 labels=labels,
                 parents=parents,
                 ids=tags

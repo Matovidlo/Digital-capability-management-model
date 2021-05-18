@@ -22,10 +22,13 @@ GITHUB_API = 'https://api.github.com/repos/'
 API_LIMIT_EXCEEDED = "API rate limit exceeded"
 gathering_urls = {GITHUB: (REPOSITORIES,
                            USER_CREDENTIALS),
-                  # GOOGLE_CALENDAR: ('', JSON_CREDENTIALS),
-                  #JIRA: ('http://localhost:8001',
-                  #      USER_CREDENTIALS),
-                  # TRELLO: (HTTP_CREDENTIALS, NO_CREDENTIALS)
+                  GOOGLE_CALENDAR: ('', JSON_CREDENTIALS),
+                  JIRA: ('http://localhost:8001',
+                       USER_CREDENTIALS),
+                  TRELLO: (HTTP_CREDENTIALS, NO_CREDENTIALS)
                  }
-
-
+COMMON_ISSUE_TYPES = {
+    'New Feature': ['FEATURE', 'NEW-FEATURE', 'NEW_FEATURE', 'NEW FEATURE'],
+    'Improvement': ['ENHANCEMENT', 'IMPROVEMENT', 'DOC', 'DOCUMENTATION'],
+    'Test': ['TEST'],
+    'Bug': ['BUG'], }

@@ -32,7 +32,10 @@ class APIAdapter(Request):
         parsed = RequestParser()
         output = []
         for request_type, request in requests.items():
-            for entry in request:
+            iteration_type = request
+            if isinstance(request, dict):
+                iteration_type = request.items()
+            for entry in iteration_type:
                 # Parse request is implemented
                 if "parse_response" in dir(self._gatherer):
                     result = self._gatherer.parse_response(request_type, entry)
@@ -44,7 +47,6 @@ class APIAdapter(Request):
                     if entry:
                         output.append(entry)
                         parsed += str(entry)
-        # fixme: remove printing parsed data when parsing is correct
         return output
 
     def send_requests(self) -> list:

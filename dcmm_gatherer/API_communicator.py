@@ -36,13 +36,14 @@ class APICommunicator:
     def gather_resources(self):
         for gatherer_type, url_and_credentials in self.gathering_urls.items():
             url = url_and_credentials[0]
-            credentials = url_and_credentials[1]
+            credentials = None
+            if len(url_and_credentials) > 1:
+                credentials = url_and_credentials[1]
             self.resources = self.communicate(gatherer_type, url, credentials)
 
     def create_transactions(self, db):
-        for collection in self._adapters:
-            for resource in self._resources:
-                db.write_data(resource, collection)
+        for collection, resource in zip(self._adapters, self._resources):
+            db.write_data(resource, collection)
 
     def update_transactions(self, data, model_data, db, set_key=None):
         for collection in self._adapters:

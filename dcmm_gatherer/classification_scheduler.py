@@ -84,7 +84,7 @@ def main(args=None, **kwargs):
                                      basic_auth=github_username + ':' +
                                                 github_token)
         elif key is TRELLO:
-            new_url = url
+            new_url = [url[0]['http'].format(http_path='')]
         # Update gathering_url when new information added
         single_gathering_urls[key] = new_url
 

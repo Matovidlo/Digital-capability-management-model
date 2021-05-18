@@ -82,9 +82,10 @@ class DatabaseManipulator(metaclass=SingletonMeta):
                                if filter_collection.name == collection_name][0]
         is_nested = False
         for index, nested_value in enumerate(data):
-            if isinstance(nested_value, list):
+            if isinstance(nested_value, (list, tuple)):
                 is_nested = True
                 concrete_collection.insert_many(nested_value)
+                continue
             # Replace all dots to hyphen
             replace = []
             for key, value in nested_value.items():
@@ -93,7 +94,7 @@ class DatabaseManipulator(metaclass=SingletonMeta):
             for value in replace:
                 nested_value[value[0]] = nested_value.pop(value[1])
         # for key, value in data:
-        if not is_nested:
+        if not is_nested and data:
             concrete_collection.insert_many(data)
 
     def update_data(self, data, model_data, collection_name, set_key=None):

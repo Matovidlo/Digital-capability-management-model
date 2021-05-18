@@ -86,8 +86,13 @@ def settings(request):
 
 @login_required(login_url="/login/")
 def index(request):
-    html_template = loader.get_template('index.html')
-    return HttpResponse(html_template.render({'segment': 'index'}, request))
+    presenter = Presenter(request)
+    presenter.set_database_connection()
+    # Visualise either empty web page or web page
+    # with selected repositories charts
+    presenter.visualise()
+    context = {'Metrics': presenter.metrics}
+    return render(request, 'index.html', context=context)
 
 
 @login_required(login_url="/login/")

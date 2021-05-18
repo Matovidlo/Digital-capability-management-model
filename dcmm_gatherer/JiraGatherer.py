@@ -1,4 +1,6 @@
 import itertools
+
+import requests.exceptions
 from jira import JIRA, JIRAError
 from constants import TOKEN_AUTH, USER_AUTH
 from gatherer import Gatherer
@@ -15,12 +17,19 @@ class JiraGatherer(Gatherer):
         if USER_AUTH in credentials:
             credentials[USER_AUTH] = (credentials[USER_AUTH][0],
                                       credentials[USER_AUTH][1])
-            self.jira = JIRA(options, auth=credentials[USER_AUTH])
+            self.jira = None
+            try:
+                self.jira = JIRA(options, auth=credentials[USER_AUTH])
+            except (requests.exceptions.ConnectionError, JIRAError):
+                print("Jira service is not running, skipping")
+                pass
 
     def parse_response(self, request_type, response):
         return response
 
     def send_request(self):
+        if not self.jira:
+            return {"jira_issues": []}
         # Get all projects viewable by anonymous users.
         projects = self.jira.projects()
         # Sort available project keys, then return the second, third, and fourth keys.

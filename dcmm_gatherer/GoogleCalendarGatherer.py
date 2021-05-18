@@ -36,24 +36,23 @@ class GoogleCalendarGatherer:
                 pickle.dump(creds, token)
         self.service = build('calendar', 'v3', credentials=creds)
 
-    def parse_request(self, request_type, events):
-        output = []
+    def parse_response(self, request_type, events):
+        output = {}
         for request in events[1]:
             name = events[0].replace('.', '#')
-            output.append({name: [request['kind'], request['status'],
-                                  request['created'], request['summary'],
-                                  request['creator'], request['organizer'],
-                                  request['start'], request['end']]})
+            output = ({name: [request['kind'], request['status'],
+                              request['created'], request['summary'],
+                              request['creator'], request['organizer'],
+                              request['start'], request['end']]})
         return output
 
-    def request(self):
+    def send_request(self):
         # Call the Calendar API
         now = datetime.datetime.utcnow().isoformat() + 'Z'  # 'Z' indicates UTC time
-        print('Getting the upcoming 50 events')
         calendars = self.service.calendarList().list().execute()
         calendar_types = calendars.get('items', [])
         calendar_types = [calendar['id'] for calendar in calendar_types]
-        all_events = []
+        all_events = {}
         for calendar_name in calendar_types:
             events_result = self.service.events().list(calendarId=calendar_name,
                                                        timeMin=now,
@@ -63,7 +62,7 @@ class GoogleCalendarGatherer:
             events = events_result.get('items', '')
             if not events:
                 print('No upcoming events found.')
-            all_events.append((calendar_name, events))
+            all_events[calendar_name] = events
             # for event in events:
             #     start = event['start'].get('dateTime', event['start'].get('date'))
             #     print(start, event['summary'])

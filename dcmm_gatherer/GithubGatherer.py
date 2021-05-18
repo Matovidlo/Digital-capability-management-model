@@ -28,13 +28,13 @@ class GithubGatherer(Gatherer):
                                 self.authorization_header)
 
     def gather(self, request, resource, strip=False, options={},
-               multipage=False):
+               multipage=0):
         array_dict = None
-        if multipage:
+        if multipage > 0:
             old_data = None
             dumped_data = []
             options['page'] = 1
-            while True:
+            for _ in range(0, multipage):
                 if old_data is dumped_data:
                     break
                 old_data = copy.deepcopy(dumped_data)
@@ -202,7 +202,7 @@ class GithubGatherer(Gatherer):
         # Setup concrete url or opener based on the authentication process
         options = {"per_page": 100}
         issues = self.gather(self.url_request, self.ISSUES_URL,
-                             True, options=options, multipage=True)
+                             True, options=options, multipage=110)
         contributors = self.gather(self.url_request, self.CONTRIBUTORS_URL)
         contributors = self.get_contributors_info(contributors)
         commits = self.gather(self.url_request, self.COMMITS_URL, True)

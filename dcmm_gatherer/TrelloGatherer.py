@@ -10,6 +10,10 @@ class TrelloGatherer(Gatherer):
     def send_request(self):
         # Trello: ["data"]["card"]["name"] ["data"]["list"]["name"] ["data"]["board"]["name"]
         #         type, date, memberCreator["username"]
+        # No URL present
+        if not self.url_request:
+            print('No trello request was made')
+            return {"trello_events": []}
         dumped = open_url_element(self.url_request, None)
         dumped = json.loads(dumped)
         # for dump in dumped:

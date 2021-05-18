@@ -1,17 +1,11 @@
 import numpy
 import pickle
-# from sklearn.feature_extraction.text import TfidfTransformer
-# from sklearn.feature_extraction.text import CountVectorizer
+from constants import COMMON_ISSUE_TYPES
 
 
 class MLModel:
     DESCRIPTION_FIELD = 'description'
     LABEL_FIELD = 'labels'
-    COMMON_ISSUE_TYPES = {
-        'New Feature': ['FEATURE', 'NEW-FEATURE', 'NEW_FEATURE', 'NEW FEATURE'],
-        'Improvement': ['ENHANCEMENT', 'IMPROVEMENT', 'DOC', 'DOCUMENTATION'],
-        'Test': ['TEST'],
-        'Bug': ['BUG'], }
 
     def __init__(self, model_cursor, input_data=None, uid=None):
         uid = uid
@@ -34,7 +28,8 @@ class MLModel:
         if input_data:
             self.input_data = self._prepare_data(input_data)
 
-    def _issue_converter(self, value):
+    @staticmethod
+    def issue_converter(value):
         """
         Convert issue type field (github) in csv to issue type without whitespaces,
         'kind' forewords to be compatible with naming from Jira.
@@ -44,7 +39,7 @@ class MLModel:
         """
         splitted = value.split(';')
         for split in splitted:
-            for issue_type_key, issue_type_values in self.COMMON_ISSUE_TYPES.items():
+            for issue_type_key, issue_type_values in COMMON_ISSUE_TYPES.items():
                 if any(issue_type in split.upper() for issue_type in
                        issue_type_values):
                     return issue_type_key
@@ -95,12 +90,12 @@ class MLModel:
                     # be evaluated in predicted
                     for label in data[self.LABEL_FIELD]:
                         # fixme: add to show current mean value
-                        item = self._issue_converter(label['name'])
+                        item = self.issue_converter(label['name'])
                         # item = label['name']
                         if not isinstance(item, str) and numpy.isnan(item):
                             continue
                         # Check available types
-                        for index, issue_key in enumerate(self.COMMON_ISSUE_TYPES
+                        for index, issue_key in enumerate(COMMON_ISSUE_TYPES
                                                           .keys()):
                             # fixme: add to show current mean value
                             if item == issue_key:

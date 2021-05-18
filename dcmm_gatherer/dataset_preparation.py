@@ -81,7 +81,7 @@ def description_converter(value):
     #                '', value)
     value = re.sub(r'\((\d+(,)?(\s)?(\)\.\.\.)?)+', '', value)
     # Remove github markdown issuing steps
-    value = re.sub(r'\*\*(\w+(\s|:|\/|\'|\!))*(\w+)?', '', value)
+    # value = re.sub(r'\*\*(\w+(\s|:|\/|\'|\!))*(\w+)?', '', value)
     value = ' '.join(value.split())
     if not value or len(value.split()) < 20:
         return numpy.nan
@@ -215,9 +215,16 @@ if __name__ == '__main__':
     labels = df['category_id'].values
     # Change test size that is used to check the accuracy of the built model
     # If it is too trained on dataset it is problem.
-    sentences_train, sentences_test, y_train, y_test = \
-        train_test_split(sentences, labels, test_size=0.10, random_state=650)
-
+    sentences_train, sentences_test, _, _ = \
+        train_test_split(sentences, labels, train_size=0.99, test_size=0.01, random_state=650)
+    train_labels = []
+    issue_types = []
+    for train_sentence in sentences_train:
+        for description, category, issue_type in zip(df['Description'], df['category_id'], df['Issue Type']):
+            if train_sentence == description:
+                train_labels.append(category)
+                issue_types.append(issue_type)
+                break
     # Real repository examples
     # Add test senteces of puppeteer github
     testing_array = []
@@ -243,7 +250,7 @@ if __name__ == '__main__':
     # Scikit learn vectorizer
     vectorizer = CountVectorizer()
     vectorizer.fit(sentences_train)
-    x_train_counts = vectorizer.fit_transform(sentences)
+    x_train_counts = vectorizer.fit_transform(sentences_train)
     print(x_train_counts.shape)
 
     # Count frequencies instead of occurences
@@ -251,9 +258,8 @@ if __name__ == '__main__':
     x_train_tf = tf_transformer.fit_transform(x_train_counts)
     print(x_train_tf.shape)
 
-    # clf = MultinomialNB().fit(x_train_tf, labels)
     clf = SGDClassifier(loss='hinge', penalty='l2', alpha=0.0001, random_state=48,
-                        max_iter=1200, tol=None).fit(x_train_tf, labels)
+                        max_iter=1200, tol=None).fit(x_train_tf, train_labels)
     x_samples = vectorizer.transform(testing_array)
     x_samples_tf = tf_transformer.transform(x_samples)
 
@@ -276,8 +282,8 @@ if __name__ == '__main__':
     # Uncomment when visualisations of the data are output of the
     # dataset preparation. Otherwise output model,
     # vectorized and tfidf tranformer as output of the dataset_preparation.
-    import sys
-    sys.exit()
+    # import sys
+    # sys.exit()
 
     """
     Show dataset using matplotlib
@@ -318,7 +324,7 @@ if __name__ == '__main__':
 
     X_prep = []
     X_prep.append(
-        [remove_stop_words_and_tokenize(x) for x in df['Description'].values]
+        [remove_stop_words_and_tokenize(x) for x in sentences_train]
     )
 
     tfidfs = []
@@ -360,21 +366,22 @@ if __name__ == '__main__':
         X_emb_umap.append(X_umap)
 
     from itertools import chain
+    dataframe = pd.DataFrame(data={'Issue Type': issue_types})
     for embedding, X_umap in zip(embeddings, X_emb_umap):
         # fig, axs = plt.subplots(2, 2, figsize=(20, 20))
         fig = plt.figure()
-        plt.tight_layout()
-        ax = fig.add_subplot(111)
-        name = df['source']
+        ax = fig.add_subplot()
+        name = dataframe['Issue Type']
         for X in X_umap:
-            for color, label in zip(tab10.colors, numpy.unique(df['Issue Type'])):
-                ax.scatter(*X[df['Issue Type'] == label].T, color=color,
+            # issue_types
+            for color, label in zip(tab10.colors, numpy.unique(issue_types)):
+                ax.scatter(*X[dataframe['Issue Type'] == label].T, color=color,
                            alpha=0.6, label=label)
-                plt.tight_layout()
             ax.set_title(f"{name} ({embedding})")
             # ax.set_xticks([])
             # ax.set_yticks([])
             ax.legend()
+        # plt.tight_layout(w_pad=10, h_pad=1.0)
         # for X, ax in zip(X_umap, chain(*axs)):
         #     name = df['Issue Type']
         #     ax.set_title(f"{name} ({embedding})")

@@ -22,7 +22,7 @@ CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'q)$p%08p0iwlazg_e1b9+-tj3n70l7@^_3@*2#s$k3jf97mht-'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -195,7 +195,6 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 SITE_ID = 1
-
 # Celery configuration
 BROKER_URL = 'redis://localhost:6379'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379'

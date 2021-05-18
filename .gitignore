@@ -14,6 +14,7 @@ venv/*
 .idea/*
 # Ignore eggs
 .eggs/
+django-web/mydatabase
 dcmm_gatherer/dcmm_gatherer.egg-info
 dcmm_gatherer.egg-info/
 # Ignore dist and build
@@ -27,7 +28,3 @@ dataset/github/puppeteer/
 dataset/github/node/
 dataset/github/go
 dataset/github/kubernetes
-# Ignore model, vectorier and tfidftransformer files
-finalized_model.sav
-vectorizer.sav
-tfidftransformer.sav

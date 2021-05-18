@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from enum import Enum
 import json
 import os
@@ -7,7 +7,9 @@ import requests
 from django.http import HttpResponse, Http404
 from allauth.socialaccount.models import SocialToken, SocialAccount
 from dcmm_gatherer.database_manipulator import DatabaseManipulator
+from dcmm_gatherer.ml_model import MLModel
 import pandas as pd
+import itertools
 # Custom form
 from . import forms
 # Celery Task
@@ -30,14 +32,35 @@ class Presenter:
         self.predictions = {}
         self.connections = {}
         self.milestones = {}
+        self.metrics = {}
         self.db = None
         # Get social account username
-        self.user_data = SocialAccount.objects.filter(user=self.request.user)[0]
+        self.user_data = None
         # Github form
         self.form = None
         self.task_id = 0
+        self._repository_issues = {}
+
+    def check_issues_by_repository(self, repository, entity):
+        if not repository:
+            return
+        if repository in self._repository_issues:
+            try:
+                if entity['labels']:
+                    self._repository_issues[repository + 'labels'].append(entity)
+                self._repository_issues[repository].append(entity)
+            except KeyError:
+                return
+        else:
+            if entity['labels']:
+                self._repository_issues[repository + 'labels'] = [entity]
+            self._repository_issues[repository] = [entity]
 
     def set_database_connection(self):
+        try:
+            self.user_data = SocialAccount.objects.filter(user=self.request.user)[0]
+        except IndexError:
+            pass
         # Make query to database and retrieve all information
         nosql_username = os.environ.get('MONGO_INITDB_ROOT_USERNAME', 'user')
         nosql_password = os.environ.get('MONGO_INITDB_ROOT_PASSWORD',
@@ -72,53 +95,134 @@ class Presenter:
                      'Graph_type': graphs_types}
         return pd.DataFrame(data=dataframe), self.connections, self.milestones
 
-    def _get_repository_name(self, entity, selected_repositories):
-        if not entity['labels']:
-            return
-        match = re.search(r'(?<=repos).*(?=labels)',
-                          entity['labels'][0]['url'])
-        striped = match.group(0)[1:-1]
-        if striped in selected_repositories:
+    def _get_repository_name(self, entity, selected_repositories, check_labels=True):
+        if check_labels:
+            if not entity['labels']:
+                return
+            match = re.search(r'(?<=repos).*(?=labels)',
+                              entity['labels'][0]['url'])
+            striped = match.group(0)[1:-1]
+
+            if striped in selected_repositories:
+                return striped
+            # Set repository to 0
+            self.repositories[striped] = 0
+        else:
+            match = re.search(r'(?<=repos).*(?=issues)',
+                              entity['comments_url'])
+            striped = match.group(0)[1:-1]
             return striped
-        # Set repository to 0
-        self.repositories[striped] = 0
 
-    def _fill_connections(self, entity, selected_repository_name):
-        if selected_repository_name:
-            login = entity['user']['login']
-            if 'title' in entity and 'number' in entity and \
-                    login not in self.connections:
-                self.connections[login] = {'titles': [entity['title']],
-                                           'issue_number': [entity['number']]}
-            elif 'title' in entity and 'number' in entity:
-                self.connections[login]['titles'].append(entity['title'])
-                self.connections[login]['issue_number'].append(entity['number'])
+    def _get_label(self, entity):
+        label = [MLModel.issue_converter(filter_kind['name'])
+                 for filter_kind in entity['labels']]
+        # Filter nan values
+        label = [item for item in label if isinstance(item, str)]
+        # When no value is present, set None as default label
+        if not label:
+            label = ['None']
+        return label
 
-    def _fill_milestones(self, entity, selected_repository_name):
+    def _compute_time_delta(self):
+        if not 'TimeConsumption' in self.metrics:
+            return False
+        if len(self.metrics['TimeConsumption']) > 500:
+            consumption_delta = sum([date for date in
+                                     self.metrics['TimeConsumption'][:500]],
+                                    timedelta()) / len(self.metrics['TimeConsumption'][:500])
+        else:
+            consumption_delta = sum([date for date in
+                                     self.metrics['TimeConsumption']],
+                                    timedelta() / len(self.metrics['TimeConsumption']))
+        d = {"days": consumption_delta.days}
+        d["hours"], rem = divmod(consumption_delta.seconds, 3600)
+        d["minutes"], d["seconds"] = divmod(rem, 60)
+        self.metrics['TimeConsumption'] = "days: {}, hours:{}, minutes{} and seconds:{}"\
+            .format(d['days'], d['hours'], d['minutes'], d['seconds'])
+
+        # Sort TimeResources of top ten contributors for issues.
+        out = {k: len(v) for k, v in sorted(self.metrics['TimeResources'].items(),
+                                       key=lambda item: len(item[1]), reverse=True)}
+        self.metrics['TimeResources'] = dict(itertools.islice(out.items(), 10))
+
+    def _get_metrics(self, entity):
+        if 'TimeResources' in self.metrics and \
+           'TimeConsumption' in self.metrics:
+            if 'created_at' in entity and entity['created_at'] and \
+               'updated_at' in entity and entity['updated_at']:
+                created_date = datetime.strptime(entity['created_at'],
+                                              "%Y-%m-%dT%H:%M:%SZ")
+                # Check human resources
+                if entity['user']['login'] in self.metrics['TimeResources'] and\
+                   created_date not in self.metrics['TimeResources'][entity['user']['login']]:
+                    self.metrics['TimeResources']\
+                                [entity['user']['login']].append(created_date)
+                else:
+                    self.metrics['TimeResources'][entity['user']['login']] = [created_date]
+                # Check average time consumption
+                updated_date = datetime.strptime(entity['updated_at'],
+                                              "%Y-%m-%dT%H:%M:%SZ")
+                final_date = updated_date - created_date
+                self.metrics['TimeConsumption'].append(final_date)
+        else:
+            if 'created_at' in entity and entity['created_at'] and \
+               'updated_at' in entity and entity['updated_at']:
+                created_date = datetime.strptime(entity['created_at'],
+                                              "%Y-%m-%dT%H:%M:%SZ")
+                # Check human resources
+                self.metrics['TimeResources'] = {entity['user']['login']: [created_date]}
+                updated_date = datetime.strptime(entity['updated_at'],
+                                              "%Y-%m-%dT%H:%M:%SZ")
+                self.metrics['TimeConsumption'] = [updated_date - created_date]
+
+    def _fill_visualisations(self, entity, selected_repository_name):
         if selected_repository_name:
-            if 'milestone' in entity and entity['milestone']:
-                milestone_title = entity['milestone']['title']
-            else:
-                # No milestones present, end filling
-                return False
-            # Otherwise continue in filling milestones
-            if 'title' in entity and milestone_title not in self.milestones:
-                milestone_creator = entity['milestone']['creator']['login']
-                self.milestones[milestone_title] = {'title': [entity['title']],
-                                                    'creator': milestone_creator,
-                                                    'open_issues': entity['milestone']['open_issues']}
-            elif 'title' in entity and 'milestone' in entity and \
-                    entity['milestone']:
+            self._fill_predictions(entity, selected_repository_name)
+            self._fill_connections(entity)
+            self._fill_milestones(entity)
+
+    def _fill_connections(self, entity):
+        login = entity['user']['login']
+        if 'title' in entity and 'number' in entity and \
+                login not in self.connections:
+            self.connections[login] = {'titles': [entity['title']],
+                                       'issue_number': [entity['number']]}
+        elif 'title' in entity and 'number' in entity:
+            self.connections[login]['titles'].append(entity['title'])
+            self.connections[login]['issue_number'].append(entity['number'])
+
+    def _fill_milestones(self, entity):
+        if 'milestone' in entity and entity['milestone']:
+            milestone_title = entity['milestone']['title']
+        elif 'state' in entity and entity['state'] != "open":
+            # Issue is already closed
+            return False
+        else:
+            # No milestones present, end filling
+            return False
+        # Otherwise continue in filling milestones
+        if 'title' in entity and milestone_title not in self.milestones:
+            milestone_creator = entity['milestone']['creator']['login']
+            label = self._get_label(entity)
+            self.milestones[milestone_title] = {'title': [entity['title']],
+                                                'label': label,
+                                                'creator': milestone_creator,
+                                                'open_issues': entity['milestone']['open_issues']}
+        elif 'title' in entity and 'milestone' in entity and \
+                entity['milestone']:
+            label = self._get_label(entity)
+            if entity['title'] not in self.milestones[milestone_title]['title']:
                 self.milestones[milestone_title]['title'].append(entity['title'])
+                # Add label
+                self.milestones[milestone_title]['label'].append(label[0])
 
     def _fill_predictions(self, entity, selected_repository_name):
-        if selected_repository_name:
-            self.repositories[selected_repository_name] = 0
-            if 'predicted' in entity:
-                if str(entity['predicted']) in self.predictions:
-                    self.predictions[str(entity['predicted'])] += 1
-                else:
-                    self.predictions[str(entity['predicted'])] = 1
+        self.repositories[selected_repository_name] = 0
+        if 'predicted' in entity:
+            if str(entity['predicted']) in self.predictions:
+                self.predictions[str(entity['predicted'])] += 1
+            else:
+                self.predictions[str(entity['predicted'])] = 1
 
     def filter_database_data(self):
         # Get data that were selected by user
@@ -133,7 +237,7 @@ class Presenter:
         return selected_data, filtered_data
 
     def visualise(self):
-        if not self.db.collections:
+        if not self.db.collections and self.user_data:
             # Update collections
             self.db.collections.append(
                     self.db.client["DCMMDatabase"]['Github' + self.user_data.extra_data['login']])
@@ -143,14 +247,19 @@ class Presenter:
         if selected_data and 'repositories' in selected_data:
             selected_repositories = selected_data['repositories']
         for entity in filtered_data:
+            if self.request.method == "POST":
+                repo_name = self._get_repository_name(entity,
+                                                      selected_repositories,
+                                                      False)
+                self.check_issues_by_repository(repo_name, entity)
             if self.request.method == "POST" and 'labels' in entity:
                 repo_name = self._get_repository_name(entity,
                                                       selected_repositories)
-                self._fill_predictions(entity, repo_name)
-                self._fill_connections(entity, repo_name)
-                self._fill_milestones(entity, repo_name)
+                self._fill_visualisations(entity, repo_name)
             elif self.request.method == "GET" and 'labels' in entity:
+                self._get_metrics(entity)
                 self._get_repository_name(entity, selected_repositories)
+        self._compute_time_delta()
         if self.request.method == "GET":
             return False
         return True
@@ -161,7 +270,6 @@ class Presenter:
         token = None
         if query:
             token = query[0]
-            print(token)
             headers = {'Authorization': 'token ' + str(token)}
             repos = requests.get('https://api.github.com/user/repos',
                                  headers=headers)
